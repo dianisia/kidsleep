@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="kidsleep" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_picture" translatesAutoresizingMaskIntoConstraints="NO" id="eqS-Ck-a9s">
+                                <rect key="frame" x="0.0" y="-5" width="414" height="604"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lKH-Zf-UaR" customClass="GradientView" customModule="kidsleep" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="560" width="414" height="336"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поможем составить график сна, и поможем уложить ребенка спать с помощью подборки успокаивающих звуков." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvB-Ci-WJf">
+                                        <rect key="frame" x="16" y="166.5" width="382" height="51.5"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добро пожаловать" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpo-c3-nof">
+                                        <rect key="frame" x="68" y="62" width="278.5" height="33"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="27"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="highlightedColor" systemColor="secondarySystemBackgroundColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="в Kid'sleep" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aua-iO-BpR">
+                                        <rect key="frame" x="116.5" y="103" width="181" height="39.5"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="32"/>
+                                        <color key="textColor" red="0.40000000000000002" green="0.20392156862745098" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="highlightedColor" systemColor="secondarySystemBackgroundColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="nvB-Ci-WJf" firstAttribute="top" secondItem="aua-iO-BpR" secondAttribute="bottom" constant="24" id="1eF-2b-SI4"/>
+                                    <constraint firstItem="aua-iO-BpR" firstAttribute="top" secondItem="kpo-c3-nof" secondAttribute="bottom" constant="8" id="Fel-bH-Uxq"/>
+                                    <constraint firstItem="aua-iO-BpR" firstAttribute="centerX" secondItem="lKH-Zf-UaR" secondAttribute="centerX" id="PfQ-wA-NYg"/>
+                                    <constraint firstItem="nvB-Ci-WJf" firstAttribute="centerX" secondItem="lKH-Zf-UaR" secondAttribute="centerX" id="ZIx-gW-TNG"/>
+                                    <constraint firstItem="kpo-c3-nof" firstAttribute="centerX" secondItem="lKH-Zf-UaR" secondAttribute="centerX" id="iYw-ca-c6f"/>
+                                    <constraint firstItem="nvB-Ci-WJf" firstAttribute="leading" secondItem="lKH-Zf-UaR" secondAttribute="leading" constant="16" id="neV-Ea-Bw7"/>
+                                    <constraint firstItem="aua-iO-BpR" firstAttribute="centerX" secondItem="lKH-Zf-UaR" secondAttribute="centerX" id="rC3-al-M1C"/>
+                                    <constraint firstAttribute="trailing" secondItem="nvB-Ci-WJf" secondAttribute="trailing" constant="16" id="vdN-7k-15x"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="0.40784313725490196" green="0.27450980392156865" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalMode" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                                        <real key="value" value="0.40000000000000002"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lKH-Zf-UaR" firstAttribute="top" secondItem="eqS-Ck-a9s" secondAttribute="bottom" constant="-39" id="0dX-vU-ZUh"/>
+                            <constraint firstItem="kpo-c3-nof" firstAttribute="top" secondItem="eqS-Ck-a9s" secondAttribute="bottom" constant="23" id="7kA-Sb-zfJ"/>
+                            <constraint firstItem="eqS-Ck-a9s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-49" id="Nq8-jj-cI1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lKH-Zf-UaR" secondAttribute="bottom" constant="-34" id="cc4-Du-NrU"/>
+                            <constraint firstItem="eqS-Ck-a9s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="flL-D8-1mn"/>
+                            <constraint firstItem="eqS-Ck-a9s" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="p08-Jh-hNe"/>
+                            <constraint firstItem="lKH-Zf-UaR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="puX-s7-5br"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eqS-Ck-a9s" secondAttribute="bottom" constant="263" id="tba-yH-rJj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lKH-Zf-UaR" secondAttribute="trailing" id="wOt-vE-1ZQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gtK-WN-K1S"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="669.56521739130437" y="77.678571428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="main_picture" width="750" height="1126"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
