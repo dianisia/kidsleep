@@ -30,24 +30,34 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lKH-Zf-UaR" customClass="GradientView" customModule="kidsleep" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="560" width="414" height="336"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поможем составить график сна, и поможем уложить ребенка спать с помощью подборки успокаивающих звуков." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvB-Ci-WJf">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Поможем составить график сна, и поможем уложить ребенка спать с помощью подборки успокаивающих звуков." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvB-Ci-WJf">
                                         <rect key="frame" x="16" y="166.5" width="382" height="51.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добро пожаловать" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpo-c3-nof">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Добро пожаловать" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpo-c3-nof">
                                         <rect key="frame" x="68" y="62" width="278.5" height="33"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="27"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="highlightedColor" systemColor="secondarySystemBackgroundColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="в Kid'sleep" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aua-iO-BpR">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="в Kid'sleep" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aua-iO-BpR">
                                         <rect key="frame" x="116.5" y="103" width="181" height="39.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="32"/>
                                         <color key="textColor" red="0.40000000000000002" green="0.20392156862745098" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="highlightedColor" systemColor="secondarySystemBackgroundColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="225" placeholderIntrinsicHeight="56" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="tsn-hS-Wkd" customClass="CustomButton" customModule="kidsleep" customModuleProvider="target">
+                                        <rect key="frame" x="94.5" y="255" width="225" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Начать"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -55,8 +65,10 @@
                                     <constraint firstItem="aua-iO-BpR" firstAttribute="top" secondItem="kpo-c3-nof" secondAttribute="bottom" constant="8" id="Fel-bH-Uxq"/>
                                     <constraint firstItem="aua-iO-BpR" firstAttribute="centerX" secondItem="lKH-Zf-UaR" secondAttribute="centerX" id="PfQ-wA-NYg"/>
                                     <constraint firstItem="nvB-Ci-WJf" firstAttribute="centerX" secondItem="lKH-Zf-UaR" secondAttribute="centerX" id="ZIx-gW-TNG"/>
+                                    <constraint firstAttribute="bottom" secondItem="tsn-hS-Wkd" secondAttribute="bottom" constant="51" id="ewC-4w-dRW"/>
+                                    <constraint firstItem="tsn-hS-Wkd" firstAttribute="top" secondItem="nvB-Ci-WJf" secondAttribute="bottom" constant="37" id="hBS-It-rHW"/>
                                     <constraint firstItem="kpo-c3-nof" firstAttribute="centerX" secondItem="lKH-Zf-UaR" secondAttribute="centerX" id="iYw-ca-c6f"/>
-                                    <constraint firstItem="nvB-Ci-WJf" firstAttribute="leading" secondItem="lKH-Zf-UaR" secondAttribute="leading" constant="16" id="neV-Ea-Bw7"/>
+                                    <constraint firstItem="tsn-hS-Wkd" firstAttribute="centerX" secondItem="lKH-Zf-UaR" secondAttribute="centerX" id="jL8-06-J6X"/>
                                     <constraint firstItem="aua-iO-BpR" firstAttribute="centerX" secondItem="lKH-Zf-UaR" secondAttribute="centerX" id="rC3-al-M1C"/>
                                     <constraint firstAttribute="trailing" secondItem="nvB-Ci-WJf" secondAttribute="trailing" constant="16" id="vdN-7k-15x"/>
                                 </constraints>
@@ -99,6 +111,11 @@
             <point key="canvasLocation" x="669.56521739130437" y="77.678571428571431"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="tsn-hS-Wkd">
+            <size key="intrinsicContentSize" width="225" height="56"/>
+        </designable>
+    </designables>
     <resources>
         <image name="main_picture" width="750" height="1126"/>
         <systemColor name="secondarySystemBackgroundColor">
