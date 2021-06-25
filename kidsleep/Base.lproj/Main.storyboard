@@ -24,11 +24,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_picture" translatesAutoresizingMaskIntoConstraints="NO" id="eqS-Ck-a9s">
-                                <rect key="frame" x="0.0" y="-5" width="414" height="604"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lKH-Zf-UaR" customClass="GradientView" customModule="kidsleep" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="560" width="414" height="336"/>
+                                <rect key="frame" x="0.0" y="511" width="414" height="385"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Поможем составить график сна, и поможем уложить ребенка спать с помощью подборки успокаивающих звуков." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvB-Ci-WJf">
                                         <rect key="frame" x="16" y="166.5" width="382" height="51.5"/>
@@ -89,18 +86,21 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_picture" translatesAutoresizingMaskIntoConstraints="NO" id="eqS-Ck-a9s">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="512"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="lKH-Zf-UaR" firstAttribute="top" secondItem="eqS-Ck-a9s" secondAttribute="bottom" constant="-39" id="0dX-vU-ZUh"/>
-                            <constraint firstItem="kpo-c3-nof" firstAttribute="top" secondItem="eqS-Ck-a9s" secondAttribute="bottom" constant="23" id="7kA-Sb-zfJ"/>
-                            <constraint firstItem="eqS-Ck-a9s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-49" id="Nq8-jj-cI1"/>
+                            <constraint firstItem="lKH-Zf-UaR" firstAttribute="top" secondItem="eqS-Ck-a9s" secondAttribute="bottom" constant="-1" id="0dX-vU-ZUh"/>
+                            <constraint firstItem="kpo-c3-nof" firstAttribute="top" secondItem="eqS-Ck-a9s" secondAttribute="bottom" constant="61" id="7kA-Sb-zfJ"/>
+                            <constraint firstItem="eqS-Ck-a9s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-44" id="Nq8-jj-cI1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lKH-Zf-UaR" secondAttribute="bottom" constant="-34" id="cc4-Du-NrU"/>
                             <constraint firstItem="eqS-Ck-a9s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="flL-D8-1mn"/>
                             <constraint firstItem="eqS-Ck-a9s" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="p08-Jh-hNe"/>
                             <constraint firstItem="lKH-Zf-UaR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="puX-s7-5br"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eqS-Ck-a9s" secondAttribute="bottom" constant="263" id="tba-yH-rJj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eqS-Ck-a9s" secondAttribute="bottom" constant="350" id="tba-yH-rJj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lKH-Zf-UaR" secondAttribute="trailing" id="wOt-vE-1ZQ"/>
                         </constraints>
                     </view>
