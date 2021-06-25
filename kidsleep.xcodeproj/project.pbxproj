@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11793809F7709053134DDC7F /* Pods_kidsleep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5863B0CBBB751C9A8B7514 /* Pods_kidsleep.framework */; };
+		C9B816951AC9B9B8F4C39896 /* Pods_kidsleep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFACB7F9EBE269C007A138AE /* Pods_kidsleep.framework */; };
+		E439A4872685F7910056FA74 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E439A4862685F7910056FA74 /* CustomSegmentedControl.swift */; };
+		E439A4892685F8B80056FA74 /* CustomSegmentControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = E439A4882685F8B80056FA74 /* CustomSegmentControl.xib */; };
+		E48943EA2685E3F4007DF356 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48943E92685E3F4007DF356 /* Onboarding.storyboard */; };
+		E48943EC2685E60D007DF356 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48943EB2685E60D007DF356 /* OnboardingViewController.swift */; };
+		E48943EF2685ECBF007DF356 /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48943EE2685ECBF007DF356 /* CustomPageControl.swift */; };
+		E48943F12685ECD3007DF356 /* CustomPageControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = E48943F02685ECD3007DF356 /* CustomPageControl.xib */; };
 		E4A38E1A2684858C00E44AD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A38E192684858C00E44AD8 /* AppDelegate.swift */; };
 		E4A38E1C2684858C00E44AD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A38E1B2684858C00E44AD8 /* SceneDelegate.swift */; };
 		E4A38E1E2684858C00E44AD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A38E1D2684858C00E44AD8 /* ViewController.swift */; };
@@ -25,9 +31,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8F5863B0CBBB751C9A8B7514 /* Pods_kidsleep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kidsleep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9156368DF04200955DD0C233 /* Pods-kidsleep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kidsleep.debug.xcconfig"; path = "Target Support Files/Pods-kidsleep/Pods-kidsleep.debug.xcconfig"; sourceTree = "<group>"; };
-		CCBB747A67527A2B976CFFCF /* Pods-kidsleep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kidsleep.release.xcconfig"; path = "Target Support Files/Pods-kidsleep/Pods-kidsleep.release.xcconfig"; sourceTree = "<group>"; };
+		BB8E9E1697F0288782162630 /* Pods-kidsleep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kidsleep.debug.xcconfig"; path = "Target Support Files/Pods-kidsleep/Pods-kidsleep.debug.xcconfig"; sourceTree = "<group>"; };
+		BFACB7F9EBE269C007A138AE /* Pods_kidsleep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kidsleep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E439A4862685F7910056FA74 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		E439A4882685F8B80056FA74 /* CustomSegmentControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSegmentControl.xib; sourceTree = "<group>"; };
+		E48943E92685E3F4007DF356 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		E48943EB2685E60D007DF356 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		E48943EE2685ECBF007DF356 /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
+		E48943F02685ECD3007DF356 /* CustomPageControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomPageControl.xib; sourceTree = "<group>"; };
 		E4A38E162684858C00E44AD8 /* kidsleep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kidsleep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4A38E192684858C00E44AD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4A38E1B2684858C00E44AD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +55,7 @@
 		E4A7F4922684C23100BEB391 /* CustomButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomButton.xib; sourceTree = "<group>"; };
 		E4A7F4952684DF4D00BEB391 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		E4A7F4982684E11100BEB391 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F70EED7B90386BD4BD42E74D /* Pods-kidsleep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kidsleep.release.xcconfig"; path = "Target Support Files/Pods-kidsleep/Pods-kidsleep.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,17 +63,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11793809F7709053134DDC7F /* Pods_kidsleep.framework in Frameworks */,
+				C9B816951AC9B9B8F4C39896 /* Pods_kidsleep.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B8C131134C9E9392CEA12818 /* Frameworks */ = {
+		0B9EA8D67179FF97DC13EF78 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8F5863B0CBBB751C9A8B7514 /* Pods_kidsleep.framework */,
+				BFACB7F9EBE269C007A138AE /* Pods_kidsleep.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -69,10 +81,28 @@
 		D0C4DDBD483EDA3C5692E58B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9156368DF04200955DD0C233 /* Pods-kidsleep.debug.xcconfig */,
-				CCBB747A67527A2B976CFFCF /* Pods-kidsleep.release.xcconfig */,
+				BB8E9E1697F0288782162630 /* Pods-kidsleep.debug.xcconfig */,
+				F70EED7B90386BD4BD42E74D /* Pods-kidsleep.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E439A4852685F7500056FA74 /* CustomSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				E439A4862685F7910056FA74 /* CustomSegmentedControl.swift */,
+				E439A4882685F8B80056FA74 /* CustomSegmentControl.xib */,
+			);
+			path = CustomSegmentedControl;
+			sourceTree = "<group>";
+		};
+		E48943ED2685EC36007DF356 /* CustomPageControl */ = {
+			isa = PBXGroup;
+			children = (
+				E48943EE2685ECBF007DF356 /* CustomPageControl.swift */,
+				E48943F02685ECD3007DF356 /* CustomPageControl.xib */,
+			);
+			path = CustomPageControl;
 			sourceTree = "<group>";
 		};
 		E4A38E0D2684858C00E44AD8 = {
@@ -81,7 +111,7 @@
 				E4A38E182684858C00E44AD8 /* kidsleep */,
 				E4A38E172684858C00E44AD8 /* Products */,
 				D0C4DDBD483EDA3C5692E58B /* Pods */,
-				B8C131134C9E9392CEA12818 /* Frameworks */,
+				0B9EA8D67179FF97DC13EF78 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +136,8 @@
 				E4A38E222684859100E44AD8 /* Assets.xcassets */,
 				E4A38E242684859100E44AD8 /* LaunchScreen.storyboard */,
 				E4A38E272684859100E44AD8 /* Info.plist */,
+				E48943E92685E3F4007DF356 /* Onboarding.storyboard */,
+				E48943EB2685E60D007DF356 /* OnboardingViewController.swift */,
 			);
 			path = kidsleep;
 			sourceTree = "<group>";
@@ -137,6 +169,8 @@
 		E4A38E30268499D400E44AD8 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				E439A4852685F7500056FA74 /* CustomSegmentedControl */,
+				E48943ED2685EC36007DF356 /* CustomPageControl */,
 				E4A7F4902684C1A400BEB391 /* CustomButton */,
 				E4A38E31268499ED00E44AD8 /* GradientView.swift */,
 			);
@@ -186,11 +220,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4A38E2A2684859100E44AD8 /* Build configuration list for PBXNativeTarget "kidsleep" */;
 			buildPhases = (
-				76BB82EAAD044F2D2C9568F9 /* [CP] Check Pods Manifest.lock */,
+				BF3E5D635807BCCD6EDFC024 /* [CP] Check Pods Manifest.lock */,
 				E4A38E122684858C00E44AD8 /* Sources */,
 				E4A38E132684858C00E44AD8 /* Frameworks */,
 				E4A38E142684858C00E44AD8 /* Resources */,
-				2BCB3401D4D012FA02972585 /* [CP] Embed Pods Frameworks */,
+				E09AF02883689983535129A4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -239,11 +273,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4A7F48D2684B1CE00BEB391 /* Montserrat-Bold.ttf in Resources */,
+				E48943F12685ECD3007DF356 /* CustomPageControl.xib in Resources */,
 				E4A38E262684859100E44AD8 /* LaunchScreen.storyboard in Resources */,
 				E4A7F4942684C23100BEB391 /* CustomButton.xib in Resources */,
 				E4A7F48B2684B1BC00BEB391 /* Montserrat-Black.ttf in Resources */,
 				E4A38E232684859100E44AD8 /* Assets.xcassets in Resources */,
 				E4A7F48F2684B1D900BEB391 /* Montserrat-Medium.ttf in Resources */,
+				E439A4892685F8B80056FA74 /* CustomSegmentControl.xib in Resources */,
+				E48943EA2685E3F4007DF356 /* Onboarding.storyboard in Resources */,
 				E4A7F4962684DF4E00BEB391 /* Montserrat-SemiBold.ttf in Resources */,
 				E4A38E212684858C00E44AD8 /* Main.storyboard in Resources */,
 			);
@@ -252,24 +289,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2BCB3401D4D012FA02972585 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-kidsleep/Pods-kidsleep-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-kidsleep/Pods-kidsleep-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-kidsleep/Pods-kidsleep-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		76BB82EAAD044F2D2C9568F9 /* [CP] Check Pods Manifest.lock */ = {
+		BF3E5D635807BCCD6EDFC024 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -291,6 +311,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E09AF02883689983535129A4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kidsleep/Pods-kidsleep-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kidsleep/Pods-kidsleep-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-kidsleep/Pods-kidsleep-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -301,7 +338,10 @@
 				E4A38E1E2684858C00E44AD8 /* ViewController.swift in Sources */,
 				E4A7F4992684E11100BEB391 /* Extensions.swift in Sources */,
 				E4A38E1A2684858C00E44AD8 /* AppDelegate.swift in Sources */,
+				E48943EF2685ECBF007DF356 /* CustomPageControl.swift in Sources */,
 				E4A38E32268499ED00E44AD8 /* GradientView.swift in Sources */,
+				E439A4872685F7910056FA74 /* CustomSegmentedControl.swift in Sources */,
+				E48943EC2685E60D007DF356 /* OnboardingViewController.swift in Sources */,
 				E4A7F4932684C23100BEB391 /* CustomButton.swift in Sources */,
 				E4A38E1C2684858C00E44AD8 /* SceneDelegate.swift in Sources */,
 			);
@@ -447,7 +487,7 @@
 		};
 		E4A38E2B2684859100E44AD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9156368DF04200955DD0C233 /* Pods-kidsleep.debug.xcconfig */;
+			baseConfigurationReference = BB8E9E1697F0288782162630 /* Pods-kidsleep.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -467,7 +507,7 @@
 		};
 		E4A38E2C2684859100E44AD8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CCBB747A67527A2B976CFFCF /* Pods-kidsleep.release.xcconfig */;
+			baseConfigurationReference = F70EED7B90386BD4BD42E74D /* Pods-kidsleep.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

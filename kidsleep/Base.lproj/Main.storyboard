@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="smU-jP-m5Z">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -49,9 +49,6 @@
                                         <rect key="frame" x="94.5" y="312" width="225" height="56"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="text" value="Начать"/>
                                         </userDefinedRuntimeAttributes>
                                     </button>
@@ -64,28 +61,11 @@
                                     <constraint firstItem="nvB-Ci-WJf" firstAttribute="centerX" secondItem="lKH-Zf-UaR" secondAttribute="centerX" id="ZIx-gW-TNG"/>
                                     <constraint firstItem="tsn-hS-Wkd" firstAttribute="top" secondItem="nvB-Ci-WJf" secondAttribute="bottom" constant="56" id="iVv-pv-Uvw"/>
                                     <constraint firstItem="kpo-c3-nof" firstAttribute="centerX" secondItem="lKH-Zf-UaR" secondAttribute="centerX" id="iYw-ca-c6f"/>
-                                    <constraint firstItem="tsn-hS-Wkd" firstAttribute="centerX" secondItem="lKH-Zf-UaR" secondAttribute="centerX" id="jL8-06-J6X"/>
                                     <constraint firstItem="kpo-c3-nof" firstAttribute="top" secondItem="lKH-Zf-UaR" secondAttribute="top" constant="85" id="oM2-Qw-a3U"/>
                                     <constraint firstItem="nvB-Ci-WJf" firstAttribute="top" secondItem="aua-iO-BpR" secondAttribute="bottom" constant="24" id="oeQ-er-Kk8"/>
                                     <constraint firstItem="aua-iO-BpR" firstAttribute="centerX" secondItem="lKH-Zf-UaR" secondAttribute="centerX" id="rC3-al-M1C"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nvB-Ci-WJf" secondAttribute="trailing" id="vdN-7k-15x"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
-                                        <color key="value" red="0.40784313725490196" green="0.27450980392156865" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
-                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalMode" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
-                                        <real key="value" value="0.40000000000000002"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_picture" translatesAutoresizingMaskIntoConstraints="NO" id="eqS-Ck-a9s">
                                 <rect key="frame" x="0.0" y="-9" width="414" height="428"/>
@@ -114,8 +94,36 @@
             </objects>
             <point key="canvasLocation" x="669.56521739130437" y="77.678571428571431"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Gqz-HF-FZK">
+            <objects>
+                <viewController id="smU-jP-m5Z" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iBr-N2-DP3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PL1-KY-L6z" customClass="CustomSegmentControl" customModule="kidsleep" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="325" width="131" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tCM-v4-sPZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qbg-j3-q6Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1426" y="80"/>
+        </scene>
     </scenes>
     <designables>
+        <designable name="PL1-KY-L6z">
+            <size key="intrinsicContentSize" width="159" height="31"/>
+        </designable>
         <designable name="tsn-hS-Wkd">
             <size key="intrinsicContentSize" width="225" height="56"/>
         </designable>

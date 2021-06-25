@@ -19,12 +19,6 @@
             <color key="backgroundColor" red="0.40000000000000002" green="0.20392156859999999" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
             <userDefinedRuntimeAttributes>
-                <userDefinedRuntimeAttribute type="color" keyPath="color">
-                    <color key="value" red="0.40784313729999999" green="0.27450980390000002" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                </userDefinedRuntimeAttribute>
-                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                    <real key="value" value="17"/>
-                </userDefinedRuntimeAttribute>
                 <userDefinedRuntimeAttribute type="string" keyPath="text" value="Button"/>
             </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="-25.362318840579711" y="50.892857142857139"/>
@@ -32,7 +26,7 @@
     </objects>
     <designables>
         <designable name="3H4-61-mc4">
-            <size key="intrinsicContentSize" width="30" height="33"/>
+            <size key="intrinsicContentSize" width="62" height="33"/>
         </designable>
     </designables>
 </document>
