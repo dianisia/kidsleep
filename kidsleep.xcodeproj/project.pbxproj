@@ -14,6 +14,8 @@
 		E48943EC2685E60D007DF356 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48943EB2685E60D007DF356 /* OnboardingViewController.swift */; };
 		E48943EF2685ECBF007DF356 /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48943EE2685ECBF007DF356 /* CustomPageControl.swift */; };
 		E48943F12685ECD3007DF356 /* CustomPageControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = E48943F02685ECD3007DF356 /* CustomPageControl.xib */; };
+		E4921C7F2686188C00DB247D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4921C7E2686188C00DB247D /* CustomTextField.swift */; };
+		E4921C81268618EC00DB247D /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4921C80268618EC00DB247D /* CustomTextField.xib */; };
 		E4A38E1A2684858C00E44AD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A38E192684858C00E44AD8 /* AppDelegate.swift */; };
 		E4A38E1C2684858C00E44AD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A38E1B2684858C00E44AD8 /* SceneDelegate.swift */; };
 		E4A38E1E2684858C00E44AD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A38E1D2684858C00E44AD8 /* ViewController.swift */; };
@@ -39,6 +41,8 @@
 		E48943EB2685E60D007DF356 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		E48943EE2685ECBF007DF356 /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
 		E48943F02685ECD3007DF356 /* CustomPageControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomPageControl.xib; sourceTree = "<group>"; };
+		E4921C7E2686188C00DB247D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		E4921C80268618EC00DB247D /* CustomTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextField.xib; sourceTree = "<group>"; };
 		E4A38E162684858C00E44AD8 /* kidsleep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kidsleep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4A38E192684858C00E44AD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4A38E1B2684858C00E44AD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +109,15 @@
 			path = CustomPageControl;
 			sourceTree = "<group>";
 		};
+		E4921C7D2686186700DB247D /* CustomTextField */ = {
+			isa = PBXGroup;
+			children = (
+				E4921C7E2686188C00DB247D /* CustomTextField.swift */,
+				E4921C80268618EC00DB247D /* CustomTextField.xib */,
+			);
+			path = CustomTextField;
+			sourceTree = "<group>";
+		};
 		E4A38E0D2684858C00E44AD8 = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +182,7 @@
 		E4A38E30268499D400E44AD8 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				E4921C7D2686186700DB247D /* CustomTextField */,
 				E439A4852685F7500056FA74 /* CustomSegmentedControl */,
 				E48943ED2685EC36007DF356 /* CustomPageControl */,
 				E4A7F4902684C1A400BEB391 /* CustomButton */,
@@ -280,6 +294,7 @@
 				E4A38E232684859100E44AD8 /* Assets.xcassets in Resources */,
 				E4A7F48F2684B1D900BEB391 /* Montserrat-Medium.ttf in Resources */,
 				E439A4892685F8B80056FA74 /* CustomSegmentControl.xib in Resources */,
+				E4921C81268618EC00DB247D /* CustomTextField.xib in Resources */,
 				E48943EA2685E3F4007DF356 /* Onboarding.storyboard in Resources */,
 				E4A7F4962684DF4E00BEB391 /* Montserrat-SemiBold.ttf in Resources */,
 				E4A38E212684858C00E44AD8 /* Main.storyboard in Resources */,
@@ -339,6 +354,7 @@
 				E4A7F4992684E11100BEB391 /* Extensions.swift in Sources */,
 				E4A38E1A2684858C00E44AD8 /* AppDelegate.swift in Sources */,
 				E48943EF2685ECBF007DF356 /* CustomPageControl.swift in Sources */,
+				E4921C7F2686188C00DB247D /* CustomTextField.swift in Sources */,
 				E4A38E32268499ED00E44AD8 /* GradientView.swift in Sources */,
 				E439A4872685F7910056FA74 /* CustomSegmentedControl.swift in Sources */,
 				E48943EC2685E60D007DF356 /* OnboardingViewController.swift in Sources */,
