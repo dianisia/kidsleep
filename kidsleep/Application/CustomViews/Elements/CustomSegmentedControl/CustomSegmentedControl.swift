@@ -3,7 +3,11 @@ import UIKit
 
 @IBDesignable
 class CustomSegmentControl: UISegmentedControl {
-    let selectedTintColor = UIColor(rgb: 0x8000FF)
+    private let selectedTintColor = UIColor(rgb: 0x8000FF)
+    private let fontAttribute = [
+        NSAttributedString.Key.font: UIFont(name: "Montserrat-Medium", size: 16)!,
+        NSAttributedString.Key.foregroundColor: UIColor.white
+    ]
     
     override init(items: [Any]?) {
         super.init(items: items)
@@ -29,14 +33,8 @@ class CustomSegmentControl: UISegmentedControl {
     }
     
     private func setup() {
-        frame.size.height = 60
-        frame.size.width = 363
         selectedSegmentTintColor = selectedTintColor
         backgroundColor = .black
-        let fontAttribute = [
-            NSAttributedString.Key.font: UIFont(name: "Montserrat-Medium", size: 16)!,
-            NSAttributedString.Key.foregroundColor: UIColor.white
-        ]
         setTitleTextAttributes(fontAttribute, for: .normal)
     }
 }

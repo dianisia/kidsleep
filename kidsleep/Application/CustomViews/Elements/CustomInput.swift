@@ -127,6 +127,7 @@ class CustomInput: UITextField {
         backgroundColor = backColor
         borderStyle = UITextField.BorderStyle.none
         layer.cornerRadius = 10
+        textColor = .white
         
         let placeholderFontAttribute = [
             NSAttributedString.Key.font: UIFont(name: "Montserrat-Medium", size: 14)!,

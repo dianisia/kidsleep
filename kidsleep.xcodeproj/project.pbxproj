@@ -15,6 +15,8 @@
 		E42B95B72689DF8200F2312E /* CustomTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B95B62689DF8200F2312E /* CustomTimePicker.swift */; };
 		E439A4872685F7910056FA74 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E439A4862685F7910056FA74 /* CustomSegmentedControl.swift */; };
 		E439A4892685F8B80056FA74 /* CustomSegmentControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = E439A4882685F8B80056FA74 /* CustomSegmentControl.xib */; };
+		E43C04D12689F475000FD441 /* MainChildInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E43C04D02689F475000FD441 /* MainChildInfoView.xib */; };
+		E43C04D32689F487000FD441 /* MainChildInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C04D22689F487000FD441 /* MainChildInfo.swift */; };
 		E48943EA2685E3F4007DF356 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48943E92685E3F4007DF356 /* Onboarding.storyboard */; };
 		E48943EC2685E60D007DF356 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48943EB2685E60D007DF356 /* OnboardingViewController.swift */; };
 		E48943EF2685ECBF007DF356 /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48943EE2685ECBF007DF356 /* CustomPageControl.swift */; };
@@ -47,6 +49,8 @@
 		E42B95B62689DF8200F2312E /* CustomTimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTimePicker.swift; sourceTree = "<group>"; };
 		E439A4862685F7910056FA74 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		E439A4882685F8B80056FA74 /* CustomSegmentControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSegmentControl.xib; sourceTree = "<group>"; };
+		E43C04D02689F475000FD441 /* MainChildInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainChildInfoView.xib; sourceTree = "<group>"; };
+		E43C04D22689F487000FD441 /* MainChildInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChildInfo.swift; sourceTree = "<group>"; };
 		E48943E92685E3F4007DF356 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		E48943EB2685E60D007DF356 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		E48943EE2685ECBF007DF356 /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
@@ -126,6 +130,38 @@
 				E439A4882685F8B80056FA74 /* CustomSegmentControl.xib */,
 			);
 			path = CustomSegmentedControl;
+			sourceTree = "<group>";
+		};
+		E43C04CD2689F43B000FD441 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				E42B95B32689DF5900F2312E /* CustomTimePicker */,
+				E42B95AC2689C08500F2312E /* CustomDataPicker */,
+				E4921C7D2686186700DB247D /* CustomTextField */,
+				E439A4852685F7500056FA74 /* CustomSegmentedControl */,
+				E48943ED2685EC36007DF356 /* CustomPageControl */,
+				E4A7F4902684C1A400BEB391 /* CustomButton */,
+				E4A38E31268499ED00E44AD8 /* GradientView.swift */,
+				E42B95B12689D61900F2312E /* CustomInput.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		E43C04CE2689F44B000FD441 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				E43C04CF2689F455000FD441 /* MainChildInfoView */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		E43C04CF2689F455000FD441 /* MainChildInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				E43C04D02689F475000FD441 /* MainChildInfoView.xib */,
+				E43C04D22689F487000FD441 /* MainChildInfo.swift */,
+			);
+			path = MainChildInfoView;
 			sourceTree = "<group>";
 		};
 		E48943ED2685EC36007DF356 /* CustomPageControl */ = {
@@ -210,14 +246,8 @@
 		E4A38E30268499D400E44AD8 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				E42B95B32689DF5900F2312E /* CustomTimePicker */,
-				E42B95AC2689C08500F2312E /* CustomDataPicker */,
-				E4921C7D2686186700DB247D /* CustomTextField */,
-				E439A4852685F7500056FA74 /* CustomSegmentedControl */,
-				E48943ED2685EC36007DF356 /* CustomPageControl */,
-				E4A7F4902684C1A400BEB391 /* CustomButton */,
-				E4A38E31268499ED00E44AD8 /* GradientView.swift */,
-				E42B95B12689D61900F2312E /* CustomInput.swift */,
+				E43C04CE2689F44B000FD441 /* Screens */,
+				E43C04CD2689F43B000FD441 /* Elements */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -319,6 +349,7 @@
 			files = (
 				E4A7F48D2684B1CE00BEB391 /* Montserrat-Bold.ttf in Resources */,
 				E48943F12685ECD3007DF356 /* CustomPageControl.xib in Resources */,
+				E43C04D12689F475000FD441 /* MainChildInfoView.xib in Resources */,
 				E4A38E262684859100E44AD8 /* LaunchScreen.storyboard in Resources */,
 				E4A7F4942684C23100BEB391 /* CustomButton.xib in Resources */,
 				E4A7F48B2684B1BC00BEB391 /* Montserrat-Black.ttf in Resources */,
@@ -390,6 +421,7 @@
 				E42B95B02689C1E500F2312E /* CustomDataPicker.swift in Sources */,
 				E42B95B72689DF8200F2312E /* CustomTimePicker.swift in Sources */,
 				E4921C7F2686188C00DB247D /* CustomTextField.swift in Sources */,
+				E43C04D32689F487000FD441 /* MainChildInfo.swift in Sources */,
 				E4A38E32268499ED00E44AD8 /* GradientView.swift in Sources */,
 				E439A4872685F7910056FA74 /* CustomSegmentedControl.swift in Sources */,
 				E48943EC2685E60D007DF356 /* OnboardingViewController.swift in Sources */,

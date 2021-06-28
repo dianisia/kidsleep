@@ -9,7 +9,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="3HF-sd-jrc" customClass="CustomSegmentControl" customModule="kidsleep" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="363" height="60"/>
+            <rect key="frame" x="0.0" y="0.0" width="343" height="60"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <segments>
                 <segment title="First"/>
@@ -20,7 +20,7 @@
     </objects>
     <designables>
         <designable name="3HF-sd-jrc">
-            <size key="intrinsicContentSize" width="131" height="31"/>
+            <size key="intrinsicContentSize" width="159" height="31"/>
         </designable>
     </designables>
 </document>
