@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="fdgdfgdfg" textAlignment="natural" minimumFontSize="17" id="XDf-En-uSO" customClass="CustonTextField" customModule="kidsleep" customModuleProvider="target">
+        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="fdgdfgdfg" textAlignment="natural" minimumFontSize="17" id="XDf-En-uSO" customClass="CustomTextField" customModule="kidsleep" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="343" height="56"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -33,7 +33,7 @@
     </objects>
     <designables>
         <designable name="XDf-En-uSO">
-            <size key="intrinsicContentSize" width="115.5" height="21.5"/>
+            <size key="intrinsicContentSize" width="130.5" height="21.5"/>
         </designable>
     </designables>
     <resources>

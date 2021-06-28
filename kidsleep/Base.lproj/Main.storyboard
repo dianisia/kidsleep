@@ -102,8 +102,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="hgjgjg" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Eu-4y-woT" customClass="CustonTextField" customModule="kidsleep" customModuleProvider="target">
-                                <rect key="frame" x="50" y="431" width="343" height="56"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="hgjgjg" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Eu-4y-woT" customClass="CustomDataPicker" customModule="kidsleep" customModuleProvider="target">
+                                <rect key="frame" x="50" y="431" width="63" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="KCj-r1-3D5"/>
@@ -131,9 +131,6 @@
         </scene>
     </scenes>
     <designables>
-        <designable name="3Eu-4y-woT">
-            <size key="intrinsicContentSize" width="115" height="21.5"/>
-        </designable>
         <designable name="tsn-hS-Wkd">
             <size key="intrinsicContentSize" width="225" height="56"/>
         </designable>

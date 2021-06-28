@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C9B816951AC9B9B8F4C39896 /* Pods_kidsleep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFACB7F9EBE269C007A138AE /* Pods_kidsleep.framework */; };
+		E42B95AE2689C09900F2312E /* CustomDataPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = E42B95AD2689C09900F2312E /* CustomDataPicker.xib */; };
+		E42B95B02689C1E500F2312E /* CustomDataPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B95AF2689C1E500F2312E /* CustomDataPicker.swift */; };
+		E42B95B22689D61900F2312E /* CustomInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B95B12689D61900F2312E /* CustomInput.swift */; };
 		E439A4872685F7910056FA74 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E439A4862685F7910056FA74 /* CustomSegmentedControl.swift */; };
 		E439A4892685F8B80056FA74 /* CustomSegmentControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = E439A4882685F8B80056FA74 /* CustomSegmentControl.xib */; };
 		E48943EA2685E3F4007DF356 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48943E92685E3F4007DF356 /* Onboarding.storyboard */; };
@@ -35,6 +38,9 @@
 /* Begin PBXFileReference section */
 		BB8E9E1697F0288782162630 /* Pods-kidsleep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kidsleep.debug.xcconfig"; path = "Target Support Files/Pods-kidsleep/Pods-kidsleep.debug.xcconfig"; sourceTree = "<group>"; };
 		BFACB7F9EBE269C007A138AE /* Pods_kidsleep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kidsleep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E42B95AD2689C09900F2312E /* CustomDataPicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomDataPicker.xib; sourceTree = "<group>"; };
+		E42B95AF2689C1E500F2312E /* CustomDataPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDataPicker.swift; sourceTree = "<group>"; };
+		E42B95B12689D61900F2312E /* CustomInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInput.swift; sourceTree = "<group>"; };
 		E439A4862685F7910056FA74 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		E439A4882685F8B80056FA74 /* CustomSegmentControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSegmentControl.xib; sourceTree = "<group>"; };
 		E48943E92685E3F4007DF356 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
@@ -89,6 +95,15 @@
 				F70EED7B90386BD4BD42E74D /* Pods-kidsleep.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E42B95AC2689C08500F2312E /* CustomDataPicker */ = {
+			isa = PBXGroup;
+			children = (
+				E42B95AD2689C09900F2312E /* CustomDataPicker.xib */,
+				E42B95AF2689C1E500F2312E /* CustomDataPicker.swift */,
+			);
+			path = CustomDataPicker;
 			sourceTree = "<group>";
 		};
 		E439A4852685F7500056FA74 /* CustomSegmentedControl */ = {
@@ -182,11 +197,13 @@
 		E4A38E30268499D400E44AD8 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				E42B95AC2689C08500F2312E /* CustomDataPicker */,
 				E4921C7D2686186700DB247D /* CustomTextField */,
 				E439A4852685F7500056FA74 /* CustomSegmentedControl */,
 				E48943ED2685EC36007DF356 /* CustomPageControl */,
 				E4A7F4902684C1A400BEB391 /* CustomButton */,
 				E4A38E31268499ED00E44AD8 /* GradientView.swift */,
+				E42B95B12689D61900F2312E /* CustomInput.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -297,6 +314,7 @@
 				E4921C81268618EC00DB247D /* CustomTextField.xib in Resources */,
 				E48943EA2685E3F4007DF356 /* Onboarding.storyboard in Resources */,
 				E4A7F4962684DF4E00BEB391 /* Montserrat-SemiBold.ttf in Resources */,
+				E42B95AE2689C09900F2312E /* CustomDataPicker.xib in Resources */,
 				E4A38E212684858C00E44AD8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,12 +372,14 @@
 				E4A7F4992684E11100BEB391 /* Extensions.swift in Sources */,
 				E4A38E1A2684858C00E44AD8 /* AppDelegate.swift in Sources */,
 				E48943EF2685ECBF007DF356 /* CustomPageControl.swift in Sources */,
+				E42B95B02689C1E500F2312E /* CustomDataPicker.swift in Sources */,
 				E4921C7F2686188C00DB247D /* CustomTextField.swift in Sources */,
 				E4A38E32268499ED00E44AD8 /* GradientView.swift in Sources */,
 				E439A4872685F7910056FA74 /* CustomSegmentedControl.swift in Sources */,
 				E48943EC2685E60D007DF356 /* OnboardingViewController.swift in Sources */,
 				E4A7F4932684C23100BEB391 /* CustomButton.swift in Sources */,
 				E4A38E1C2684858C00E44AD8 /* SceneDelegate.swift in Sources */,
+				E42B95B22689D61900F2312E /* CustomInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
