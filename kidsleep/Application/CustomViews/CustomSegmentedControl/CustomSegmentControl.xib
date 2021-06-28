@@ -20,7 +20,7 @@
     </objects>
     <designables>
         <designable name="3HF-sd-jrc">
-            <size key="intrinsicContentSize" width="159" height="31"/>
+            <size key="intrinsicContentSize" width="131" height="31"/>
         </designable>
     </designables>
 </document>

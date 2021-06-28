@@ -11,6 +11,8 @@
 		E42B95AE2689C09900F2312E /* CustomDataPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = E42B95AD2689C09900F2312E /* CustomDataPicker.xib */; };
 		E42B95B02689C1E500F2312E /* CustomDataPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B95AF2689C1E500F2312E /* CustomDataPicker.swift */; };
 		E42B95B22689D61900F2312E /* CustomInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B95B12689D61900F2312E /* CustomInput.swift */; };
+		E42B95B52689DF7300F2312E /* CustomTimePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = E42B95B42689DF7300F2312E /* CustomTimePicker.xib */; };
+		E42B95B72689DF8200F2312E /* CustomTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B95B62689DF8200F2312E /* CustomTimePicker.swift */; };
 		E439A4872685F7910056FA74 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E439A4862685F7910056FA74 /* CustomSegmentedControl.swift */; };
 		E439A4892685F8B80056FA74 /* CustomSegmentControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = E439A4882685F8B80056FA74 /* CustomSegmentControl.xib */; };
 		E48943EA2685E3F4007DF356 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48943E92685E3F4007DF356 /* Onboarding.storyboard */; };
@@ -41,6 +43,8 @@
 		E42B95AD2689C09900F2312E /* CustomDataPicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomDataPicker.xib; sourceTree = "<group>"; };
 		E42B95AF2689C1E500F2312E /* CustomDataPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDataPicker.swift; sourceTree = "<group>"; };
 		E42B95B12689D61900F2312E /* CustomInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInput.swift; sourceTree = "<group>"; };
+		E42B95B42689DF7300F2312E /* CustomTimePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTimePicker.xib; sourceTree = "<group>"; };
+		E42B95B62689DF8200F2312E /* CustomTimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTimePicker.swift; sourceTree = "<group>"; };
 		E439A4862685F7910056FA74 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		E439A4882685F8B80056FA74 /* CustomSegmentControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSegmentControl.xib; sourceTree = "<group>"; };
 		E48943E92685E3F4007DF356 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
@@ -104,6 +108,15 @@
 				E42B95AF2689C1E500F2312E /* CustomDataPicker.swift */,
 			);
 			path = CustomDataPicker;
+			sourceTree = "<group>";
+		};
+		E42B95B32689DF5900F2312E /* CustomTimePicker */ = {
+			isa = PBXGroup;
+			children = (
+				E42B95B42689DF7300F2312E /* CustomTimePicker.xib */,
+				E42B95B62689DF8200F2312E /* CustomTimePicker.swift */,
+			);
+			path = CustomTimePicker;
 			sourceTree = "<group>";
 		};
 		E439A4852685F7500056FA74 /* CustomSegmentedControl */ = {
@@ -197,6 +210,7 @@
 		E4A38E30268499D400E44AD8 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				E42B95B32689DF5900F2312E /* CustomTimePicker */,
 				E42B95AC2689C08500F2312E /* CustomDataPicker */,
 				E4921C7D2686186700DB247D /* CustomTextField */,
 				E439A4852685F7500056FA74 /* CustomSegmentedControl */,
@@ -314,6 +328,7 @@
 				E4921C81268618EC00DB247D /* CustomTextField.xib in Resources */,
 				E48943EA2685E3F4007DF356 /* Onboarding.storyboard in Resources */,
 				E4A7F4962684DF4E00BEB391 /* Montserrat-SemiBold.ttf in Resources */,
+				E42B95B52689DF7300F2312E /* CustomTimePicker.xib in Resources */,
 				E42B95AE2689C09900F2312E /* CustomDataPicker.xib in Resources */,
 				E4A38E212684858C00E44AD8 /* Main.storyboard in Resources */,
 			);
@@ -373,6 +388,7 @@
 				E4A38E1A2684858C00E44AD8 /* AppDelegate.swift in Sources */,
 				E48943EF2685ECBF007DF356 /* CustomPageControl.swift in Sources */,
 				E42B95B02689C1E500F2312E /* CustomDataPicker.swift in Sources */,
+				E42B95B72689DF8200F2312E /* CustomTimePicker.swift in Sources */,
 				E4921C7F2686188C00DB247D /* CustomTextField.swift in Sources */,
 				E4A38E32268499ED00E44AD8 /* GradientView.swift in Sources */,
 				E439A4872685F7910056FA74 /* CustomSegmentedControl.swift in Sources */,

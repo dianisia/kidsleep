@@ -29,7 +29,6 @@ class CustomInput: UITextField {
     var titleColor: UIColor = .lightGray
     var hintYPadding: CGFloat = 0.0
     var titleYPadding: CGFloat = 9.0
-    var titleTextColor: UIColor = UIColor.white
     var titleActiveTextColour: UIColor! = UIColor.lightGray
     let backColor = UIColor(rgb: 0x181818)
     
@@ -39,19 +38,18 @@ class CustomInput: UITextField {
         }
     }
     
-    let placeholderFontAttribute = [
-        NSAttributedString.Key.font: UIFont(name: "Montserrat-Medium", size: 14)!,
-        NSAttributedString.Key.foregroundColor: UIColor.lightGray
-    ]
-    
     // MARK:- Init
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
+        
     }
     
     override init(frame: CGRect) {
-        super.init(frame: frame)
+        var frameRect = frame;
+        frameRect.size.height = CGFloat(height)
+        frameRect.size.width = CGFloat(width)
+        super.init(frame: frameRect)
         setup()
     }
     
@@ -119,16 +117,21 @@ class CustomInput: UITextField {
             rightView = nil
         }
     }
-    
+
     fileprivate func setup() {
-        var frameRect = frame;
-        frameRect.size.height = CGFloat(height)
-        frameRect.size.width = CGFloat(width)
-        frame = frameRect;
+//        var frameRect = frame;
+//        frameRect.size.height = CGFloat(height)
+//        frameRect.size.width = CGFloat(width)
+//        frame = frameRect;
         
         backgroundColor = backColor
         borderStyle = UITextField.BorderStyle.none
         layer.cornerRadius = 10
+        
+        let placeholderFontAttribute = [
+            NSAttributedString.Key.font: UIFont(name: "Montserrat-Medium", size: 14)!,
+            NSAttributedString.Key.foregroundColor: UIColor.lightGray
+        ]
         attributedPlaceholder = NSAttributedString(
             string: placeholder ?? "",
             attributes: placeholderFontAttribute
@@ -148,7 +151,7 @@ class CustomInput: UITextField {
         if let txt = text, !txt.isEmpty && isResp {
             title.textColor = titleActiveTextColour
         } else {
-            title.textColor = titleTextColor
+            title.textColor = titleColor
         }
         
         if let txt = text, txt.isEmpty {

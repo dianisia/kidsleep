@@ -3,13 +3,7 @@ import UIKit
 
 class CustomDataPicker: CustomInput {
     private var datePicker = UIDatePicker.init(frame: CGRect(x: 0, y: 0, width: 140, height: 200))
-    
-    var dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd/MM/yyyy"
-        return formatter
-    }()
-   
+  
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupDataPicker()
@@ -21,6 +15,7 @@ class CustomDataPicker: CustomInput {
     }
     
     override func layoutSubviews() {
+        super.layoutSubviews()
         setupDataPicker()
     }
     
