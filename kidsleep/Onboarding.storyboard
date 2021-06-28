@@ -12,6 +12,9 @@
         <array key="Montserrat-Bold.ttf">
             <string>Montserrat-Bold</string>
         </array>
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Onboarding View Controller-->
@@ -23,29 +26,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cbT-iP-M9i">
-                                <rect key="frame" x="0.0" y="118" width="414" height="494"/>
+                                <rect key="frame" x="0.0" y="248.5" width="414" height="414"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="jOP-sL-Yx6"/>
-                                    <constraint firstAttribute="height" constant="494" id="tl9-fU-50R"/>
+                                    <constraint firstAttribute="height" constant="414" id="760-Wj-RdN"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="M84-h0-QUb">
-                                    <size key="itemSize" width="414" height="486"/>
+                                    <size key="itemSize" width="414" height="440"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="vw4-wX-RQc">
-                                        <rect key="frame" x="0.0" y="4" width="414" height="486"/>
+                                        <rect key="frame" x="0.0" y="-13" width="414" height="440"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ia1-Pr-4E2">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="486"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="440"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <size key="customSize" width="414" height="486"/>
+                                        <size key="customSize" width="414" height="440"/>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -53,34 +55,48 @@
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="8EM-74-L3E"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="q1G-bh-K3W" customClass="CustomButton" customModule="kidsleep">
-                                <rect key="frame" x="94" y="730" width="225" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Продолжить"/>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="wHZ-iL-zOP" customClass="CustomPageControl" customModule="kidsleep">
-                                <rect key="frame" x="145.5" y="813" width="122" height="28"/>
+                                <rect key="frame" x="146" y="807" width="122" height="28"/>
                             </pageControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Kid'sleep" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snV-FZ-EyL">
-                                <rect key="frame" x="131" y="70" width="152" height="39.5"/>
+                                <rect key="frame" x="131" y="90" width="152" height="40"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="32"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.20392156859999999" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" systemColor="secondarySystemBackgroundColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thr-tj-hrK">
+                                <rect key="frame" x="16" y="154" width="382" height="51.5"/>
+                                <string key="text">Расскажите нам о своих детях, чтобы 
+мы могли предложить рекомендуемый режим сна для них</string>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWg-Tu-eq8" customClass="CustomButton" customModule="kidsleep" customModuleProvider="target">
+                                <rect key="frame" x="94.5" y="724" width="225" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="CzB-Xx-scq"/>
+                                    <constraint firstAttribute="width" constant="225" id="dAi-IH-86d"/>
+                                </constraints>
+                                <state key="normal" title="Продолжить"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="cbT-iP-M9i" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="74" id="7Br-ws-CqT"/>
-                            <constraint firstItem="cbT-iP-M9i" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="IrD-KV-6P4"/>
-                            <constraint firstItem="snV-FZ-EyL" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="26" id="PlL-lz-SfS"/>
-                            <constraint firstItem="wHZ-iL-zOP" firstAttribute="top" secondItem="q1G-bh-K3W" secondAttribute="bottom" constant="27" id="TzF-AK-s07"/>
-                            <constraint firstItem="cbT-iP-M9i" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Uca-n6-HBw"/>
-                            <constraint firstItem="wHZ-iL-zOP" firstAttribute="centerX" secondItem="q1G-bh-K3W" secondAttribute="centerX" id="Zye-Bp-6kA"/>
+                            <constraint firstItem="Thr-tj-hrK" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="16" id="GzE-Yn-Njx"/>
+                            <constraint firstItem="gWg-Tu-eq8" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="JRa-3p-6KU"/>
+                            <constraint firstItem="Thr-tj-hrK" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Msh-Z4-6mM"/>
+                            <constraint firstItem="snV-FZ-EyL" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="46" id="PlL-lz-SfS"/>
+                            <constraint firstItem="wHZ-iL-zOP" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="U11-G2-5Fq"/>
+                            <constraint firstItem="cbT-iP-M9i" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="bNM-E2-fgZ"/>
                             <constraint firstItem="snV-FZ-EyL" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="cMU-rL-w2a"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="wHZ-iL-zOP" secondAttribute="bottom" constant="27" id="g4Y-gq-F3k"/>
+                            <constraint firstItem="Thr-tj-hrK" firstAttribute="top" secondItem="snV-FZ-EyL" secondAttribute="bottom" constant="24" id="loK-Ma-PI4"/>
+                            <constraint firstItem="cbT-iP-M9i" firstAttribute="top" secondItem="Thr-tj-hrK" secondAttribute="bottom" constant="43" id="mAz-3K-DJ7"/>
+                            <constraint firstItem="wHZ-iL-zOP" firstAttribute="top" secondItem="gWg-Tu-eq8" secondAttribute="bottom" constant="27" id="rKd-ob-aza"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cbT-iP-M9i" secondAttribute="trailing" id="wXj-Mk-YHX"/>
+                            <constraint firstAttribute="trailing" secondItem="Thr-tj-hrK" secondAttribute="trailing" constant="16" id="x7I-5Q-qrn"/>
                         </constraints>
                     </view>
                     <connections>
@@ -93,9 +109,6 @@
         </scene>
     </scenes>
     <designables>
-        <designable name="q1G-bh-K3W">
-            <size key="intrinsicContentSize" width="116" height="33"/>
-        </designable>
         <designable name="wHZ-iL-zOP">
             <size key="intrinsicContentSize" width="121.5" height="27.5"/>
         </designable>

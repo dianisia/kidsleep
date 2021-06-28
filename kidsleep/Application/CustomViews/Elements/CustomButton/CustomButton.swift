@@ -8,11 +8,7 @@ class CustomButton: UIButton {
             setTitle(text, for: .normal)
         }
     }
-   
-    override class func prepareForInterfaceBuilder() {
-        super.prepareForInterfaceBuilder()
-    }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
         setupButton()
@@ -29,7 +25,6 @@ class CustomButton: UIButton {
     }
     
     private func setupButton() {
-        frame.size = CGSize(width: 225, height: 56)
         titleLabel?.font = UIFont(name: "Montserrat-SemiBold", size: 17)
         setTitleColor(.white, for: .normal)
         layer.cornerRadius = 25
