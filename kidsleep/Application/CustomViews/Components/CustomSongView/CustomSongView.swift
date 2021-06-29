@@ -15,11 +15,21 @@ class CustomSongView: UIView {
         }
     }
     
-    private var songNameLabel = UILabel(frame: CGRect(x: 65, y: 13, width: 72, height: 20))
-    private var durationLabel = UILabel(frame: CGRect(x: 65, y: 33, width: 72, height: 20))
+    private static let playImage = UIImage(named: "Play")
+    private static let pauseImage = UIImage(named: "Pause")
     
-    private var songNameFont = UIFont(name: "Montserrat-Bold", size: 16)!
-    private var durationFont = UIFont(name: "Montserrat-Medium", size: 14)!
+    private var isPlaying = false {
+        didSet {
+            actionView.image = isPlaying ? CustomSongView.pauseImage : CustomSongView.playImage
+        }
+    }
+    
+    private let songNameLabel = UILabel(frame: CGRect(x: 65, y: 13, width: 72, height: 20))
+    private let durationLabel = UILabel(frame: CGRect(x: 65, y: 33, width: 72, height: 20))
+    private let actionView = UIImageView(frame: CGRect(x: 17, y: 19, width: 30, height: 30))
+    
+    private let songNameFont = UIFont(name: "Montserrat-Bold", size: 16)!
+    private let durationFont = UIFont(name: "Montserrat-Medium", size: 14)!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,11 +45,18 @@ class CustomSongView: UIView {
         super.layoutSubviews()
         addSongNameLabel()
         addDurationLabel()
+        addActionImage()
     }
     
     private func setup() {
         backgroundColor = UIColor(rgb: 0x191919)
         layer.cornerRadius = 16
+    }
+    
+    private func addActionImage() {
+        actionView.image = CustomSongView.playImage
+        actionView.contentMode = .scaleAspectFit
+        addSubview(actionView)
     }
     
     private func addSongNameLabel() {
@@ -56,6 +73,10 @@ class CustomSongView: UIView {
         durationLabel.textAlignment = .center
         durationLabel.sizeToFit()
         addSubview(durationLabel)
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        isPlaying = !isPlaying
     }
     
 }
