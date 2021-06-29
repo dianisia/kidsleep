@@ -136,7 +136,7 @@
 			path = CustomSegmentedControl;
 			sourceTree = "<group>";
 		};
-		E43C04CD2689F43B000FD441 /* Elements */ = {
+		E43C04CD2689F43B000FD441 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				E42B95B32689DF5900F2312E /* CustomTimePicker */,
@@ -148,7 +148,7 @@
 				E4A38E31268499ED00E44AD8 /* GradientView.swift */,
 				E42B95B12689D61900F2312E /* CustomInput.swift */,
 			);
-			path = Elements;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		E43C04CE2689F44B000FD441 /* Screens */ = {
@@ -261,7 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				E43C04CE2689F44B000FD441 /* Screens */,
-				E43C04CD2689F43B000FD441 /* Elements */,
+				E43C04CD2689F43B000FD441 /* Components */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
