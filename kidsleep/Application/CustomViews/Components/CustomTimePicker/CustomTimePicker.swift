@@ -23,6 +23,7 @@ class CustomTimePicker: CustomInput {
         timePicker.datePickerMode = .time
         timePicker.preferredDatePickerStyle = .wheels
         timePicker.addTarget(self, action: #selector(self.timeChanged), for: .allEvents)
+        timePicker.locale = NSLocale(localeIdentifier: "en_GB") as Locale
         inputView = timePicker
         let doneButton = UIBarButtonItem.init(title: "Готово", style: .done, target: self, action: #selector(self.timePickerDone))
         let toolBar = UIToolbar.init(frame: CGRect(x: 0, y: 0, width: bounds.size.width, height: 44))
@@ -36,7 +37,7 @@ class CustomTimePicker: CustomInput {
     
     @objc func timeChanged() {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "hh:mm"
+        dateFormatter.dateFormat = "HH:mm"
         text = "\(dateFormatter.string(from: timePicker.date))"
     }
 }

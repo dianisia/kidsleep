@@ -212,7 +212,7 @@
         </view>
     </objects>
     <resources>
-        <image name="bottle" width="44" height="44"/>
+        <image name="bottle" width="22" height="22"/>
         <image name="sleep" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
