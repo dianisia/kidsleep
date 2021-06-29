@@ -16,7 +16,7 @@
 		E439A4872685F7910056FA74 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E439A4862685F7910056FA74 /* CustomSegmentedControl.swift */; };
 		E439A4892685F8B80056FA74 /* CustomSegmentControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = E439A4882685F8B80056FA74 /* CustomSegmentControl.xib */; };
 		E43C04D12689F475000FD441 /* MainChildInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E43C04D02689F475000FD441 /* MainChildInfoView.xib */; };
-		E43C04D32689F487000FD441 /* MainChildInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C04D22689F487000FD441 /* MainChildInfo.swift */; };
+		E43C04D32689F487000FD441 /* MainChildInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C04D22689F487000FD441 /* MainChildInfoView.swift */; };
 		E43C04D6268A2D5D000FD441 /* ScheduleInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E43C04D5268A2D5D000FD441 /* ScheduleInfoView.xib */; };
 		E43C04D8268A2D74000FD441 /* ScheduleInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C04D7268A2D74000FD441 /* ScheduleInfoView.swift */; };
 		E43C04DC268B2F79000FD441 /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C04DB268B2F79000FD441 /* CustomSwitch.swift */; };
@@ -54,7 +54,7 @@
 		E439A4862685F7910056FA74 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		E439A4882685F8B80056FA74 /* CustomSegmentControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSegmentControl.xib; sourceTree = "<group>"; };
 		E43C04D02689F475000FD441 /* MainChildInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainChildInfoView.xib; sourceTree = "<group>"; };
-		E43C04D22689F487000FD441 /* MainChildInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChildInfo.swift; sourceTree = "<group>"; };
+		E43C04D22689F487000FD441 /* MainChildInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChildInfoView.swift; sourceTree = "<group>"; };
 		E43C04D5268A2D5D000FD441 /* ScheduleInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleInfoView.xib; sourceTree = "<group>"; };
 		E43C04D7268A2D74000FD441 /* ScheduleInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleInfoView.swift; sourceTree = "<group>"; };
 		E43C04DB268B2F79000FD441 /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				E43C04D02689F475000FD441 /* MainChildInfoView.xib */,
-				E43C04D22689F487000FD441 /* MainChildInfo.swift */,
+				E43C04D22689F487000FD441 /* MainChildInfoView.swift */,
 			);
 			path = MainChildInfoView;
 			sourceTree = "<group>";
@@ -452,7 +452,7 @@
 				E42B95B72689DF8200F2312E /* CustomTimePicker.swift in Sources */,
 				E43C04D8268A2D74000FD441 /* ScheduleInfoView.swift in Sources */,
 				E4921C7F2686188C00DB247D /* CustomTextField.swift in Sources */,
-				E43C04D32689F487000FD441 /* MainChildInfo.swift in Sources */,
+				E43C04D32689F487000FD441 /* MainChildInfoView.swift in Sources */,
 				E4A38E32268499ED00E44AD8 /* GradientView.swift in Sources */,
 				E43C04DC268B2F79000FD441 /* CustomSwitch.swift in Sources */,
 				E439A4872685F7910056FA74 /* CustomSegmentedControl.swift in Sources */,

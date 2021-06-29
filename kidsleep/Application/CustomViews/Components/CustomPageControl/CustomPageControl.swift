@@ -22,7 +22,6 @@ class CustomPageControl: UIPageControl {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        setupPageControl()
     }
     
     private func setupPageControl() {
