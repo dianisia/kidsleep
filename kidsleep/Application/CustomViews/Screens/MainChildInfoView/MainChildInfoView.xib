@@ -74,9 +74,6 @@
         </view>
     </objects>
     <designables>
-        <designable name="AAq-vF-qHF">
-            <size key="intrinsicContentSize" width="149" height="21.5"/>
-        </designable>
         <designable name="M5c-J7-5x1">
             <size key="intrinsicContentSize" width="65.5" height="21.5"/>
         </designable>
