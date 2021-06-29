@@ -17,6 +17,8 @@
 		E439A4892685F8B80056FA74 /* CustomSegmentControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = E439A4882685F8B80056FA74 /* CustomSegmentControl.xib */; };
 		E43C04D12689F475000FD441 /* MainChildInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E43C04D02689F475000FD441 /* MainChildInfoView.xib */; };
 		E43C04D32689F487000FD441 /* MainChildInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C04D22689F487000FD441 /* MainChildInfo.swift */; };
+		E43C04D6268A2D5D000FD441 /* ScheduleInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E43C04D5268A2D5D000FD441 /* ScheduleInfoView.xib */; };
+		E43C04D8268A2D74000FD441 /* ScheduleInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C04D7268A2D74000FD441 /* ScheduleInfoView.swift */; };
 		E48943EA2685E3F4007DF356 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48943E92685E3F4007DF356 /* Onboarding.storyboard */; };
 		E48943EC2685E60D007DF356 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48943EB2685E60D007DF356 /* OnboardingViewController.swift */; };
 		E48943EF2685ECBF007DF356 /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48943EE2685ECBF007DF356 /* CustomPageControl.swift */; };
@@ -51,6 +53,8 @@
 		E439A4882685F8B80056FA74 /* CustomSegmentControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSegmentControl.xib; sourceTree = "<group>"; };
 		E43C04D02689F475000FD441 /* MainChildInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainChildInfoView.xib; sourceTree = "<group>"; };
 		E43C04D22689F487000FD441 /* MainChildInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChildInfo.swift; sourceTree = "<group>"; };
+		E43C04D5268A2D5D000FD441 /* ScheduleInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleInfoView.xib; sourceTree = "<group>"; };
+		E43C04D7268A2D74000FD441 /* ScheduleInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleInfoView.swift; sourceTree = "<group>"; };
 		E48943E92685E3F4007DF356 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		E48943EB2685E60D007DF356 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		E48943EE2685ECBF007DF356 /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
@@ -150,6 +154,7 @@
 		E43C04CE2689F44B000FD441 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				E43C04D4268A2D45000FD441 /* ScheduleInfoView */,
 				E43C04CF2689F455000FD441 /* MainChildInfoView */,
 			);
 			path = Screens;
@@ -162,6 +167,15 @@
 				E43C04D22689F487000FD441 /* MainChildInfo.swift */,
 			);
 			path = MainChildInfoView;
+			sourceTree = "<group>";
+		};
+		E43C04D4268A2D45000FD441 /* ScheduleInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				E43C04D5268A2D5D000FD441 /* ScheduleInfoView.xib */,
+				E43C04D7268A2D74000FD441 /* ScheduleInfoView.swift */,
+			);
+			path = ScheduleInfoView;
 			sourceTree = "<group>";
 		};
 		E48943ED2685EC36007DF356 /* CustomPageControl */ = {
@@ -356,6 +370,7 @@
 				E4A38E232684859100E44AD8 /* Assets.xcassets in Resources */,
 				E4A7F48F2684B1D900BEB391 /* Montserrat-Medium.ttf in Resources */,
 				E439A4892685F8B80056FA74 /* CustomSegmentControl.xib in Resources */,
+				E43C04D6268A2D5D000FD441 /* ScheduleInfoView.xib in Resources */,
 				E4921C81268618EC00DB247D /* CustomTextField.xib in Resources */,
 				E48943EA2685E3F4007DF356 /* Onboarding.storyboard in Resources */,
 				E4A7F4962684DF4E00BEB391 /* Montserrat-SemiBold.ttf in Resources */,
@@ -420,6 +435,7 @@
 				E48943EF2685ECBF007DF356 /* CustomPageControl.swift in Sources */,
 				E42B95B02689C1E500F2312E /* CustomDataPicker.swift in Sources */,
 				E42B95B72689DF8200F2312E /* CustomTimePicker.swift in Sources */,
+				E43C04D8268A2D74000FD441 /* ScheduleInfoView.swift in Sources */,
 				E4921C7F2686188C00DB247D /* CustomTextField.swift in Sources */,
 				E43C04D32689F487000FD441 /* MainChildInfo.swift in Sources */,
 				E4A38E32268499ED00E44AD8 /* GradientView.swift in Sources */,
