@@ -19,6 +19,8 @@
 		E43C04D32689F487000FD441 /* MainChildInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C04D22689F487000FD441 /* MainChildInfo.swift */; };
 		E43C04D6268A2D5D000FD441 /* ScheduleInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E43C04D5268A2D5D000FD441 /* ScheduleInfoView.xib */; };
 		E43C04D8268A2D74000FD441 /* ScheduleInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C04D7268A2D74000FD441 /* ScheduleInfoView.swift */; };
+		E43C04DC268B2F79000FD441 /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C04DB268B2F79000FD441 /* CustomSwitch.swift */; };
+		E43C04DE268B2F9B000FD441 /* CustomSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = E43C04DD268B2F9B000FD441 /* CustomSwitch.xib */; };
 		E48943EA2685E3F4007DF356 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48943E92685E3F4007DF356 /* Onboarding.storyboard */; };
 		E48943EC2685E60D007DF356 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48943EB2685E60D007DF356 /* OnboardingViewController.swift */; };
 		E48943EF2685ECBF007DF356 /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48943EE2685ECBF007DF356 /* CustomPageControl.swift */; };
@@ -55,6 +57,8 @@
 		E43C04D22689F487000FD441 /* MainChildInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChildInfo.swift; sourceTree = "<group>"; };
 		E43C04D5268A2D5D000FD441 /* ScheduleInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleInfoView.xib; sourceTree = "<group>"; };
 		E43C04D7268A2D74000FD441 /* ScheduleInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleInfoView.swift; sourceTree = "<group>"; };
+		E43C04DB268B2F79000FD441 /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
+		E43C04DD268B2F9B000FD441 /* CustomSwitch.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSwitch.xib; sourceTree = "<group>"; };
 		E48943E92685E3F4007DF356 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		E48943EB2685E60D007DF356 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		E48943EE2685ECBF007DF356 /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 		E43C04CD2689F43B000FD441 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E43C04DA268B2F4C000FD441 /* CustomSwitch */,
 				E42B95B32689DF5900F2312E /* CustomTimePicker */,
 				E42B95AC2689C08500F2312E /* CustomDataPicker */,
 				E4921C7D2686186700DB247D /* CustomTextField */,
@@ -176,6 +181,15 @@
 				E43C04D7268A2D74000FD441 /* ScheduleInfoView.swift */,
 			);
 			path = ScheduleInfoView;
+			sourceTree = "<group>";
+		};
+		E43C04DA268B2F4C000FD441 /* CustomSwitch */ = {
+			isa = PBXGroup;
+			children = (
+				E43C04DB268B2F79000FD441 /* CustomSwitch.swift */,
+				E43C04DD268B2F9B000FD441 /* CustomSwitch.xib */,
+			);
+			path = CustomSwitch;
 			sourceTree = "<group>";
 		};
 		E48943ED2685EC36007DF356 /* CustomPageControl */ = {
@@ -363,6 +377,7 @@
 			files = (
 				E4A7F48D2684B1CE00BEB391 /* Montserrat-Bold.ttf in Resources */,
 				E48943F12685ECD3007DF356 /* CustomPageControl.xib in Resources */,
+				E43C04DE268B2F9B000FD441 /* CustomSwitch.xib in Resources */,
 				E43C04D12689F475000FD441 /* MainChildInfoView.xib in Resources */,
 				E4A38E262684859100E44AD8 /* LaunchScreen.storyboard in Resources */,
 				E4A7F4942684C23100BEB391 /* CustomButton.xib in Resources */,
@@ -439,6 +454,7 @@
 				E4921C7F2686188C00DB247D /* CustomTextField.swift in Sources */,
 				E43C04D32689F487000FD441 /* MainChildInfo.swift in Sources */,
 				E4A38E32268499ED00E44AD8 /* GradientView.swift in Sources */,
+				E43C04DC268B2F79000FD441 /* CustomSwitch.swift in Sources */,
 				E439A4872685F7910056FA74 /* CustomSegmentedControl.swift in Sources */,
 				E48943EC2685E60D007DF356 /* OnboardingViewController.swift in Sources */,
 				E4A7F4932684C23100BEB391 /* CustomButton.swift in Sources */,
