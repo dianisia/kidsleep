@@ -118,12 +118,7 @@ class CustomInput: UITextField {
         }
     }
 
-    fileprivate func setup() {
-//        var frameRect = frame;
-//        frameRect.size.height = CGFloat(height)
-//        frameRect.size.width = CGFloat(width)
-//        frame = frameRect;
-        
+    fileprivate func setup() {        
         backgroundColor = backColor
         borderStyle = UITextField.BorderStyle.none
         layer.cornerRadius = 10

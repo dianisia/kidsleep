@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C9B816951AC9B9B8F4C39896 /* Pods_kidsleep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFACB7F9EBE269C007A138AE /* Pods_kidsleep.framework */; };
+		E423D9C8268B780500DF2222 /* CustomSongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423D9C7268B780500DF2222 /* CustomSongView.swift */; };
+		E423D9CA268B782800DF2222 /* CustomSongView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E423D9C9268B782800DF2222 /* CustomSongView.xib */; };
 		E42B95AE2689C09900F2312E /* CustomDataPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = E42B95AD2689C09900F2312E /* CustomDataPicker.xib */; };
 		E42B95B02689C1E500F2312E /* CustomDataPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B95AF2689C1E500F2312E /* CustomDataPicker.swift */; };
 		E42B95B22689D61900F2312E /* CustomInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B95B12689D61900F2312E /* CustomInput.swift */; };
@@ -41,11 +43,15 @@
 		E4A7F4942684C23100BEB391 /* CustomButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4A7F4922684C23100BEB391 /* CustomButton.xib */; };
 		E4A7F4962684DF4E00BEB391 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4A7F4952684DF4D00BEB391 /* Montserrat-SemiBold.ttf */; };
 		E4A7F4992684E11100BEB391 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A7F4982684E11100BEB391 /* Extensions.swift */; };
+		E4BE2271268B8583006E002E /* SongsInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4BE2270268B8583006E002E /* SongsInfoView.xib */; };
+		E4BE2273268B877D006E002E /* SongsInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BE2272268B877D006E002E /* SongsInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BB8E9E1697F0288782162630 /* Pods-kidsleep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kidsleep.debug.xcconfig"; path = "Target Support Files/Pods-kidsleep/Pods-kidsleep.debug.xcconfig"; sourceTree = "<group>"; };
 		BFACB7F9EBE269C007A138AE /* Pods_kidsleep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kidsleep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E423D9C7268B780500DF2222 /* CustomSongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSongView.swift; sourceTree = "<group>"; };
+		E423D9C9268B782800DF2222 /* CustomSongView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSongView.xib; sourceTree = "<group>"; };
 		E42B95AD2689C09900F2312E /* CustomDataPicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomDataPicker.xib; sourceTree = "<group>"; };
 		E42B95AF2689C1E500F2312E /* CustomDataPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDataPicker.swift; sourceTree = "<group>"; };
 		E42B95B12689D61900F2312E /* CustomInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInput.swift; sourceTree = "<group>"; };
@@ -81,6 +87,8 @@
 		E4A7F4922684C23100BEB391 /* CustomButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomButton.xib; sourceTree = "<group>"; };
 		E4A7F4952684DF4D00BEB391 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		E4A7F4982684E11100BEB391 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E4BE2270268B8583006E002E /* SongsInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongsInfoView.xib; sourceTree = "<group>"; };
+		E4BE2272268B877D006E002E /* SongsInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsInfoView.swift; sourceTree = "<group>"; };
 		F70EED7B90386BD4BD42E74D /* Pods-kidsleep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kidsleep.release.xcconfig"; path = "Target Support Files/Pods-kidsleep/Pods-kidsleep.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +121,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E423D9C6268B77E100DF2222 /* CustomSongView */ = {
+			isa = PBXGroup;
+			children = (
+				E423D9C7268B780500DF2222 /* CustomSongView.swift */,
+				E423D9C9268B782800DF2222 /* CustomSongView.xib */,
+			);
+			path = CustomSongView;
+			sourceTree = "<group>";
+		};
 		E42B95AC2689C08500F2312E /* CustomDataPicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +160,7 @@
 		E43C04CD2689F43B000FD441 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E423D9C6268B77E100DF2222 /* CustomSongView */,
 				E43C04DA268B2F4C000FD441 /* CustomSwitch */,
 				E42B95B32689DF5900F2312E /* CustomTimePicker */,
 				E42B95AC2689C08500F2312E /* CustomDataPicker */,
@@ -159,6 +177,7 @@
 		E43C04CE2689F44B000FD441 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				E4BE226D268B8438006E002E /* SongsInfoView */,
 				E43C04D4268A2D45000FD441 /* ScheduleInfoView */,
 				E43C04CF2689F455000FD441 /* MainChildInfoView */,
 			);
@@ -316,6 +335,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		E4BE226D268B8438006E002E /* SongsInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				E4BE2270268B8583006E002E /* SongsInfoView.xib */,
+				E4BE2272268B877D006E002E /* SongsInfoView.swift */,
+			);
+			path = SongsInfoView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -387,7 +415,9 @@
 				E439A4892685F8B80056FA74 /* CustomSegmentControl.xib in Resources */,
 				E43C04D6268A2D5D000FD441 /* ScheduleInfoView.xib in Resources */,
 				E4921C81268618EC00DB247D /* CustomTextField.xib in Resources */,
+				E423D9CA268B782800DF2222 /* CustomSongView.xib in Resources */,
 				E48943EA2685E3F4007DF356 /* Onboarding.storyboard in Resources */,
+				E4BE2271268B8583006E002E /* SongsInfoView.xib in Resources */,
 				E4A7F4962684DF4E00BEB391 /* Montserrat-SemiBold.ttf in Resources */,
 				E42B95B52689DF7300F2312E /* CustomTimePicker.xib in Resources */,
 				E42B95AE2689C09900F2312E /* CustomDataPicker.xib in Resources */,
@@ -449,7 +479,9 @@
 				E4A38E1A2684858C00E44AD8 /* AppDelegate.swift in Sources */,
 				E48943EF2685ECBF007DF356 /* CustomPageControl.swift in Sources */,
 				E42B95B02689C1E500F2312E /* CustomDataPicker.swift in Sources */,
+				E423D9C8268B780500DF2222 /* CustomSongView.swift in Sources */,
 				E42B95B72689DF8200F2312E /* CustomTimePicker.swift in Sources */,
+				E4BE2273268B877D006E002E /* SongsInfoView.swift in Sources */,
 				E43C04D8268A2D74000FD441 /* ScheduleInfoView.swift in Sources */,
 				E4921C7F2686188C00DB247D /* CustomTextField.swift in Sources */,
 				E43C04D32689F487000FD441 /* MainChildInfoView.swift in Sources */,

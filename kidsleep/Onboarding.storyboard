@@ -104,6 +104,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="cbT-iP-M9i" id="fCF-Tm-gKr"/>
+                        <outlet property="informationLabel" destination="Thr-tj-hrK" id="f5c-9X-QJf"/>
                         <outlet property="pageController" destination="wHZ-iL-zOP" id="abr-Bc-tGz"/>
                     </connections>
                 </viewController>
