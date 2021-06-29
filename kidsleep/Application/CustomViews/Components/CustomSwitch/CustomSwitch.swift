@@ -17,7 +17,7 @@ open class CustomSwitch: UIControl {
 
     var thumbOnTintColor: UIColor = UIColor(rgb: 0x4A0094)
     var thumbOffTintColor: UIColor = .gray
-    var trackOnTintColor: UIColor = UIColor(rgb: 0x271538)
+    var trackOnTintColor: UIColor = UIColor(rgb: 0x341256)
     var trackOffTintColor: UIColor = UIColor(rgb: 0x191919)
     var thumbDisabledTintColor: UIColor = .gray
     var trackDisabledTintColor: UIColor = .gray

@@ -3,5 +3,4 @@ import UIKit
 
 @IBDesignable
 class SongsInfoView: UICollectionViewCell {
-    
 }

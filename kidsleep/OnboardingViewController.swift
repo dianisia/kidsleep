@@ -12,20 +12,25 @@ class OnboardingViewController: UIViewController {
             setInformationLabelText(currentPage: currentPage)
         }
     }
-    var mainChildInfoCell: MainChildInfoView = MainChildInfoView()
-    var scheduleInfoCell: ScheduleInfoView = ScheduleInfoView()
-    var songsInfoCell: SongsInfoView = SongsInfoView()
+    
+    private var onboardingScreens: [UICollectionViewCell] = []
+    
+    private var onboardingScreensInfo = [
+        (xib: "MainChildInfoView", cell: "cell_info"),
+        (xib: "ScheduleInfoView", cell: "cell_schedule"),
+        (xib: "SongsInfoView", cell: "cell_songs"),
+    ]
     
     override func viewDidLoad() {
-        self.collectionView.register(UINib(nibName: "MainChildInfoView", bundle: nil), forCellWithReuseIdentifier: "cell_info")
-        self.collectionView.register(UINib(nibName: "ScheduleInfoView", bundle: nil), forCellWithReuseIdentifier: "cell_schedule")
-        self.collectionView.register(UINib(nibName: "SongsInfoView", bundle: nil), forCellWithReuseIdentifier: "cell_songs")
+        onboardingScreensInfo.forEach { screenInfo in
+            self.collectionView.register(UINib(nibName: screenInfo.xib, bundle: nil), forCellWithReuseIdentifier: screenInfo.cell)
+        }
         
-        mainChildInfoCell  = collectionView.dequeueReusableCell(withReuseIdentifier: "cell_info", for: IndexPath(item: 0, section: 0)) as! MainChildInfoView
+        onboardingScreens.append(collectionView.dequeueReusableCell(withReuseIdentifier: onboardingScreensInfo[0].cell, for: IndexPath(item: 0, section: 0)) as! MainChildInfoView)
         
-        scheduleInfoCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell_schedule", for: IndexPath(item: 1, section: 0)) as! ScheduleInfoView
+        onboardingScreens.append(collectionView.dequeueReusableCell(withReuseIdentifier: onboardingScreensInfo[1].cell, for: IndexPath(item: 1, section: 0)) as! ScheduleInfoView)
         
-        songsInfoCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell_songs", for: IndexPath(item: 2, section: 0)) as! SongsInfoView
+        onboardingScreens.append(collectionView.dequeueReusableCell(withReuseIdentifier: onboardingScreensInfo[2].cell, for: IndexPath(item: 2, section: 0)) as! SongsInfoView)
         
         super.viewDidLoad()
         currentPage = 0
@@ -61,17 +66,8 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if (indexPath.item == 0) {
-            return mainChildInfoCell
-        }
-        else if (indexPath.item == 1) {
-            return scheduleInfoCell
-        }
-        else if (indexPath.item == 2) {
-            return songsInfoCell
-        }
+        return onboardingScreens[indexPath.item]
 
-        return UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
