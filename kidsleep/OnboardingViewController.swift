@@ -5,6 +5,7 @@ class OnboardingViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageController: CustomPageControl!
     @IBOutlet weak var informationLabel: UILabel!
+    @IBOutlet weak var nextButton: CustomButton!
     
     private var currentPage = 0 {
         didSet {
@@ -22,27 +23,42 @@ class OnboardingViewController: UIViewController {
     ]
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         onboardingScreensInfo.forEach { screenInfo in
             self.collectionView.register(UINib(nibName: screenInfo.xib, bundle: nil), forCellWithReuseIdentifier: screenInfo.cell)
         }
         
         onboardingScreens.append(collectionView.dequeueReusableCell(withReuseIdentifier: onboardingScreensInfo[0].cell, for: IndexPath(item: 0, section: 0)) as! MainChildInfoView)
         
-        onboardingScreens.append(collectionView.dequeueReusableCell(withReuseIdentifier: onboardingScreensInfo[1].cell, for: IndexPath(item: 1, section: 0)) as! ScheduleInfoView)
+        let scheduleInfoView = collectionView.dequeueReusableCell(withReuseIdentifier: onboardingScreensInfo[1].cell, for: IndexPath(item: 1, section: 0)) as! ScheduleInfoView
+        scheduleInfoView.instantiate()
+        onboardingScreens.append(scheduleInfoView)
         
         onboardingScreens.append(collectionView.dequeueReusableCell(withReuseIdentifier: onboardingScreensInfo[2].cell, for: IndexPath(item: 2, section: 0)) as! SongsInfoView)
         
-        super.viewDidLoad()
         currentPage = 0
-        
+        collectionView.reloadData()
     }
     
     @IBAction func onNextClicked(_ sender: Any) {
+        
+        if (currentPage == onboardingScreens.count - 1) {
+            let storyboard = UIStoryboard(name: "App", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "AppViewController") as! AppViewController
+            vc.modalPresentationStyle = .overCurrentContext
+            present(vc, animated: true, completion: nil)
+            return
+        }
+        
         currentPage += 1
         let indexPath = IndexPath(item: currentPage, section: 0)
         collectionView.isPagingEnabled = false
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         collectionView.isPagingEnabled = true
+        
+        if (currentPage == onboardingScreens.count - 1) {
+            nextButton.setTitle("Начать", for: .normal)
+        }
     }
     
     private func setInformationLabelText(currentPage: Int) {
@@ -61,13 +77,12 @@ class OnboardingViewController: UIViewController {
 
 extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        3
+        onboardingScreens.count
     }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return onboardingScreens[indexPath.item]
-
+        onboardingScreens[indexPath.item]
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

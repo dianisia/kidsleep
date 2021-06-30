@@ -17,7 +17,7 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LaW-2P-E5Y">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="410"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1dM-qp-4BX" customClass="SongsInfoView" customModule="kidsleep" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1dM-qp-4BX">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="765"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1wt-Zm-fxr" customClass="CustomSongView" customModule="kidsleep" customModuleProvider="target">

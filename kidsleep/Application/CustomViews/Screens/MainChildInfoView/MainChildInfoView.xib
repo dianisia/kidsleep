@@ -75,10 +75,10 @@
     </objects>
     <designables>
         <designable name="M5c-J7-5x1">
-            <size key="intrinsicContentSize" width="65.5" height="21.5"/>
+            <size key="intrinsicContentSize" width="56.5" height="34"/>
         </designable>
         <designable name="RsI-BZ-MZS">
-            <size key="intrinsicContentSize" width="187" height="31"/>
+            <size key="intrinsicContentSize" width="151" height="31"/>
         </designable>
     </designables>
 </document>

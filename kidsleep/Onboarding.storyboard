@@ -20,7 +20,7 @@
         <!--Onboarding View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="OnboardingViewController" customModule="kidsleep" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnboardingViewController" id="Y6W-OH-hqX" customClass="OnboardingViewController" customModule="kidsleep" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,6 +103,7 @@
                     <connections>
                         <outlet property="collectionView" destination="cbT-iP-M9i" id="fCF-Tm-gKr"/>
                         <outlet property="informationLabel" destination="Thr-tj-hrK" id="f5c-9X-QJf"/>
+                        <outlet property="nextButton" destination="gWg-Tu-eq8" id="Jnk-ja-r7Y"/>
                         <outlet property="pageController" destination="wHZ-iL-zOP" id="abr-Bc-tGz"/>
                     </connections>
                 </viewController>
@@ -113,7 +114,7 @@
     </scenes>
     <designables>
         <designable name="gWg-Tu-eq8">
-            <size key="intrinsicContentSize" width="116" height="33"/>
+            <size key="intrinsicContentSize" width="90" height="30"/>
         </designable>
         <designable name="wHZ-iL-zOP">
             <size key="intrinsicContentSize" width="121.5" height="27.5"/>
