@@ -21,12 +21,12 @@ extension UIColor {
 
 extension UIView {
     @discardableResult
-    func applyGradient(colours: [UIColor]) -> CAGradientLayer {
-        return self.applyGradient(colours: colours, startPoint: nil, endPoint: nil, locations: nil)
+    func applyGradient(colors: [UIColor]) -> CAGradientLayer {
+        return self.applyGradient(colors: colors, startPoint: nil, endPoint: nil, locations: nil)
     }
 
     @discardableResult
-    func applyGradient(colours: [UIColor], startPoint: CGPoint?, endPoint: CGPoint?, locations: [NSNumber]?) -> CAGradientLayer {
+    func applyGradient(colors: [UIColor], startPoint: CGPoint?, endPoint: CGPoint?, locations: [NSNumber]?) -> CAGradientLayer {
         let gradient: CAGradientLayer = CAGradientLayer()
         if let sp = startPoint {
             gradient.startPoint = sp
@@ -36,9 +36,11 @@ extension UIView {
         }
         gradient.cornerRadius = self.layer.cornerRadius
         gradient.frame = self.bounds
-        gradient.colors = colours.map { $0.cgColor }
+        gradient.colors = colors.map { $0.cgColor }
         gradient.locations = locations
         self.layer.insertSublayer(gradient, at: 0)
         return gradient
     }
 }
+
+
