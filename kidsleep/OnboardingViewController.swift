@@ -1,19 +1,19 @@
 import UIKit
 import Foundation
+import RxSwift
+import RxCocoa
 
 class OnboardingViewController: UIViewController {
+    typealias ViewModelType = OnboardingViewModel
+    var viewModel: OnboardingViewModel! = OnboardingViewModel(repository: UserDefaultsRepository())
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageController: CustomPageControl!
     @IBOutlet weak var informationLabel: UILabel!
     @IBOutlet weak var nextButton: CustomButton!
     
-    private var currentPage = 0 {
-        didSet {
-            pageController.currentPage = currentPage
-            setInformationLabelText(currentPage: currentPage)
-        }
-    }
-    
+    private var disposeBag = DisposeBag()
+    private var currentPage = BehaviorSubject<Int>(value: 0)
     private var onboardingScreens: [UICollectionViewCell] = []
     
     private var onboardingScreensInfo = [
@@ -28,7 +28,8 @@ class OnboardingViewController: UIViewController {
             self.collectionView.register(UINib(nibName: screenInfo.xib, bundle: nil), forCellWithReuseIdentifier: screenInfo.cell)
         }
         
-        onboardingScreens.append(collectionView.dequeueReusableCell(withReuseIdentifier: onboardingScreensInfo[0].cell, for: IndexPath(item: 0, section: 0)) as! MainChildInfoView)
+        let mainChildInfoView = collectionView.dequeueReusableCell(withReuseIdentifier: onboardingScreensInfo[0].cell, for: IndexPath(item: 0, section: 0)) as! MainChildInfoView
+        onboardingScreens.append(mainChildInfoView)
         
         let scheduleInfoView = collectionView.dequeueReusableCell(withReuseIdentifier: onboardingScreensInfo[1].cell, for: IndexPath(item: 1, section: 0)) as! ScheduleInfoView
         scheduleInfoView.instantiate()
@@ -36,13 +37,50 @@ class OnboardingViewController: UIViewController {
         
         onboardingScreens.append(collectionView.dequeueReusableCell(withReuseIdentifier: onboardingScreensInfo[2].cell, for: IndexPath(item: 2, section: 0)) as! SongsInfoView)
         
-        currentPage = 0
         collectionView.reloadData()
-    }
-    
-    @IBAction func onNextClicked(_ sender: Any) {
         
-        if (currentPage == onboardingScreens.count - 1) {
+        mainChildInfoView.birthdayTextField.rx.text.orEmpty.bind(to: viewModel.birthday)
+            .disposed(by: disposeBag)
+        mainChildInfoView.nameTextField.rx.text.orEmpty.bind(to: viewModel.name)
+            .disposed(by: disposeBag)
+        
+        scheduleInfoView.breakfast.rx.text.orEmpty.bind(to: viewModel.breakfast)
+            .disposed(by: disposeBag)
+        scheduleInfoView.brunch.rx.text.orEmpty.bind(to: viewModel.brunch)
+            .disposed(by: disposeBag)
+        scheduleInfoView.dinner.rx.text.orEmpty.bind(to: viewModel.dinner)
+            .disposed(by: disposeBag)
+        scheduleInfoView.eveningMeal.rx.text.orEmpty.bind(to: viewModel.eveningMeal)
+            .disposed(by: disposeBag)
+        scheduleInfoView.firstDaySleep.rx.text.orEmpty.bind(to: viewModel.firstDaySleep)
+            .disposed(by: disposeBag)
+        scheduleInfoView.nightSleep.rx.text.orEmpty.bind(to: viewModel.nightSleep)
+            .disposed(by: disposeBag)
+        scheduleInfoView.nightMeal.rx.text.orEmpty.bind(to: viewModel.nightMeal)
+            .disposed(by: disposeBag)
+        scheduleInfoView.secondBrunch.rx.text.orEmpty.bind(to: viewModel.secondBrunch)
+            .disposed(by: disposeBag)
+        scheduleInfoView.secondDaySleep.rx.text.orEmpty.bind(to: viewModel.secondDaySleep)
+            .disposed(by: disposeBag)
+    
+        nextButton.rx.tap.bind { [unowned self] in
+            self.onNextButtonTapped()
+        }
+        .disposed(by: disposeBag)
+        
+        currentPage.subscribe(onNext: { [unowned self] value in
+            pageController.currentPage = value
+            setInformationLabelText(currentPage: value)
+        })
+        .disposed(by: disposeBag)
+        
+    }
+
+    private func onNextButtonTapped() {
+        let currPageValue = try! currentPage.value()
+        
+        if (currPageValue == onboardingScreens.count - 1) {
+            viewModel.save()
             let storyboard = UIStoryboard(name: "App", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "AppViewController") as! AppViewController
             vc.modalPresentationStyle = .overCurrentContext
@@ -50,13 +88,13 @@ class OnboardingViewController: UIViewController {
             return
         }
         
-        currentPage += 1
-        let indexPath = IndexPath(item: currentPage, section: 0)
+        currentPage.onNext(currPageValue + 1)
+        let indexPath = IndexPath(item: currPageValue + 1, section: 0)
         collectionView.isPagingEnabled = false
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         collectionView.isPagingEnabled = true
         
-        if (currentPage == onboardingScreens.count - 1) {
+        if (currPageValue == onboardingScreens.count - 2) {
             nextButton.setTitle("Начать", for: .normal)
         }
     }
@@ -91,6 +129,6 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let width = scrollView.frame.width
-        currentPage = Int(scrollView.contentOffset.x / width)
+        currentPage.onNext(Int(scrollView.contentOffset.x / width))
     }
 }

@@ -1,15 +1,21 @@
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
+    @IBOutlet weak var startButton: CustomButton!
+    
+    let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    @IBAction func onStartTapped(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController") as! OnboardingViewController
-        vc.modalPresentationStyle = .overCurrentContext
-        present(vc, animated: true, completion: nil)
+        startButton.rx.tap.bind { [unowned self] in
+            let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController") as! OnboardingViewController
+            vc.modalPresentationStyle = .overCurrentContext
+            self.present(vc, animated: true, completion: nil)
+        }
+        .disposed(by: disposeBag)
     }
 }
 

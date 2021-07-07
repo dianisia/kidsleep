@@ -67,7 +67,7 @@ open class CustomSwitch: UIControl {
         self.configureTrack(frame: frame)
         self.configureThumb(frame: frame)
         self.switchThumb.applyGradient(
-            colours: [UIColor(rgb: 0x4A0094), UIColor(rgb: 0x8000FF)],
+            colors: [UIColor(rgb: 0x4A0094), UIColor(rgb: 0x8000FF)],
             startPoint: CGPoint(x: 0.0, y: 0.5),
             endPoint: CGPoint(x: 1.0, y: 0.5),
             locations: [0.0, 0.9]

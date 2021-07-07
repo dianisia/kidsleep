@@ -1,29 +1,30 @@
-//
-//  AppViewController.swift
-//  kidsleep
-//
-//  Created by Диана Мансурова on 30.06.2021.
-//
-
 import UIKit
+import RxSwift
+import RxCocoa
 
 class AppViewController: UIViewController {
-
+    @IBOutlet weak var mainChildCardView: MainChildCard!
+    private let viewModel: MainViewModel = MainViewModel()
+    
+    private let bag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        bindModel()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func bindModel() {
+        let output = viewModel.transform(input: MainViewModel.Input())
+        
+        output.name.drive(mainChildCardView.nameLabel.rx.text)
+            .disposed(by: bag)
+        output.age.drive(mainChildCardView.ageLabel.rx.text)
+            .disposed(by: bag)
+        output.nextEvent.drive(onNext: {[unowned self] event in
+            print(event)
+            mainChildCardView.eventType = event.0
+            mainChildCardView.minutesToNextEvent = event.1
+        })
+        .disposed(by: bag)
     }
-    */
-
 }

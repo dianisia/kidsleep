@@ -29,6 +29,14 @@
 		E48943F12685ECD3007DF356 /* CustomPageControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = E48943F02685ECD3007DF356 /* CustomPageControl.xib */; };
 		E48B0289268C85C80068F438 /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48B0288268C85C80068F438 /* App.storyboard */; };
 		E48B028B268C85ED0068F438 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B028A268C85ED0068F438 /* AppViewController.swift */; };
+		E48B028D268C935F0068F438 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B028C268C935F0068F438 /* OnboardingViewModel.swift */; };
+		E48B0290268F03F90068F438 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B028F268F03F90068F438 /* ViewModelType.swift */; };
+		E48B0292268F58AD0068F438 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B0291268F58AC0068F438 /* UserInfo.swift */; };
+		E48B0295268F58F30068F438 /* UserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B0294268F58F30068F438 /* UserDefaultsRepository.swift */; };
+		E48B0297268F59050068F438 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B0296268F59050068F438 /* Repository.swift */; };
+		E48B029A2694B4B30068F438 /* MainChildCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B02992694B4B30068F438 /* MainChildCart.swift */; };
+		E48B029C2695C1BD0068F438 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B029B2695C1BD0068F438 /* MainViewModel.swift */; };
+		E48B029E2695E8740068F438 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B029D2695E8740068F438 /* Helpers.swift */; };
 		E4921C7F2686188C00DB247D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4921C7E2686188C00DB247D /* CustomTextField.swift */; };
 		E4921C81268618EC00DB247D /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4921C80268618EC00DB247D /* CustomTextField.xib */; };
 		E4A38E1A2684858C00E44AD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A38E192684858C00E44AD8 /* AppDelegate.swift */; };
@@ -73,6 +81,14 @@
 		E48943F02685ECD3007DF356 /* CustomPageControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomPageControl.xib; sourceTree = "<group>"; };
 		E48B0288268C85C80068F438 /* App.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
 		E48B028A268C85ED0068F438 /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
+		E48B028C268C935F0068F438 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		E48B028F268F03F90068F438 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		E48B0291268F58AC0068F438 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		E48B0294268F58F30068F438 /* UserDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepository.swift; sourceTree = "<group>"; };
+		E48B0296268F59050068F438 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		E48B02992694B4B30068F438 /* MainChildCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChildCart.swift; sourceTree = "<group>"; };
+		E48B029B2695C1BD0068F438 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		E48B029D2695E8740068F438 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		E4921C7E2686188C00DB247D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		E4921C80268618EC00DB247D /* CustomTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextField.xib; sourceTree = "<group>"; };
 		E4A38E162684858C00E44AD8 /* kidsleep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kidsleep.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +180,7 @@
 		E43C04CD2689F43B000FD441 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E48B02982694B49B0068F438 /* MainChildCard */,
 				E423D9C6268B77E100DF2222 /* CustomSongView */,
 				E43C04DA268B2F4C000FD441 /* CustomSwitch */,
 				E42B95B32689DF5900F2312E /* CustomTimePicker */,
@@ -224,6 +241,31 @@
 			path = CustomPageControl;
 			sourceTree = "<group>";
 		};
+		E48B028E268F03E60068F438 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E48B028F268F03F90068F438 /* ViewModelType.swift */,
+				E48B029D2695E8740068F438 /* Helpers.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E48B0293268F58CF0068F438 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				E48B0294268F58F30068F438 /* UserDefaultsRepository.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		E48B02982694B49B0068F438 /* MainChildCard */ = {
+			isa = PBXGroup;
+			children = (
+				E48B02992694B4B30068F438 /* MainChildCart.swift */,
+			);
+			path = MainChildCard;
+			sourceTree = "<group>";
+		};
 		E4921C7D2686186700DB247D /* CustomTextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +296,7 @@
 		E4A38E182684858C00E44AD8 /* kidsleep */ = {
 			isa = PBXGroup;
 			children = (
+				E48B028E268F03E60068F438 /* Common */,
 				E4A38E2F268486FE00E44AD8 /* Domain */,
 				E4A38E2E268486F500E44AD8 /* Platform */,
 				E4A38E2D268486E800E44AD8 /* Application */,
@@ -278,6 +321,8 @@
 				E4A7F4972684E0F900BEB391 /* Extensions */,
 				E4A38E332684A46C00E44AD8 /* Resources */,
 				E4A38E30268499D400E44AD8 /* CustomViews */,
+				E48B028C268C935F0068F438 /* OnboardingViewModel.swift */,
+				E48B029B2695C1BD0068F438 /* MainViewModel.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -285,6 +330,8 @@
 		E4A38E2E268486F500E44AD8 /* Platform */ = {
 			isa = PBXGroup;
 			children = (
+				E48B0293268F58CF0068F438 /* UserDefaults */,
+				E48B0296268F59050068F438 /* Repository.swift */,
 			);
 			path = Platform;
 			sourceTree = "<group>";
@@ -292,6 +339,7 @@
 		E4A38E2F268486FE00E44AD8 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				E48B0291268F58AC0068F438 /* UserInfo.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -486,20 +534,28 @@
 				E4A38E1A2684858C00E44AD8 /* AppDelegate.swift in Sources */,
 				E48943EF2685ECBF007DF356 /* CustomPageControl.swift in Sources */,
 				E42B95B02689C1E500F2312E /* CustomDataPicker.swift in Sources */,
+				E48B029C2695C1BD0068F438 /* MainViewModel.swift in Sources */,
 				E423D9C8268B780500DF2222 /* CustomSongView.swift in Sources */,
 				E48B028B268C85ED0068F438 /* AppViewController.swift in Sources */,
 				E42B95B72689DF8200F2312E /* CustomTimePicker.swift in Sources */,
 				E4BE2273268B877D006E002E /* SongsInfoView.swift in Sources */,
 				E43C04D8268A2D74000FD441 /* ScheduleInfoView.swift in Sources */,
 				E4921C7F2686188C00DB247D /* CustomTextField.swift in Sources */,
+				E48B0297268F59050068F438 /* Repository.swift in Sources */,
 				E43C04D32689F487000FD441 /* MainChildInfoView.swift in Sources */,
 				E4A38E32268499ED00E44AD8 /* GradientView.swift in Sources */,
 				E43C04DC268B2F79000FD441 /* CustomSwitch.swift in Sources */,
 				E439A4872685F7910056FA74 /* CustomSegmentedControl.swift in Sources */,
+				E48B028D268C935F0068F438 /* OnboardingViewModel.swift in Sources */,
 				E48943EC2685E60D007DF356 /* OnboardingViewController.swift in Sources */,
 				E4A7F4932684C23100BEB391 /* CustomButton.swift in Sources */,
 				E4A38E1C2684858C00E44AD8 /* SceneDelegate.swift in Sources */,
 				E42B95B22689D61900F2312E /* CustomInput.swift in Sources */,
+				E48B029E2695E8740068F438 /* Helpers.swift in Sources */,
+				E48B0292268F58AD0068F438 /* UserInfo.swift in Sources */,
+				E48B0295268F58F30068F438 /* UserDefaultsRepository.swift in Sources */,
+				E48B0290268F03F90068F438 /* ViewModelType.swift in Sources */,
+				E48B029A2694B4B30068F438 /* MainChildCart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

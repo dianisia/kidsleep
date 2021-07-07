@@ -206,7 +206,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="breakfastTime" destination="B6V-BB-TCa" id="q6Y-UZ-uAm"/>
+                <outlet property="breakfast" destination="B6V-BB-TCa" id="q6Y-UZ-uAm"/>
                 <outlet property="brunch" destination="bEl-yN-QgW" id="zgB-dG-bF0"/>
                 <outlet property="dinner" destination="KTQ-G7-sTt" id="OrC-du-XOK"/>
                 <outlet property="eveningMeal" destination="FRN-fm-J5v" id="juF-Dq-u40"/>

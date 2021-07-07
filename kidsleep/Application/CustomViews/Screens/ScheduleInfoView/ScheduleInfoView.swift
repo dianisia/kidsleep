@@ -4,7 +4,7 @@ import UIKit
 @IBDesignable
 class ScheduleInfoView: UICollectionViewCell {
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var breakfastTime: CustomTimePicker!
+    @IBOutlet weak var breakfast: CustomTimePicker!
     @IBOutlet weak var firstDaySleep: CustomTimePicker!
     @IBOutlet weak var dinner: CustomTimePicker!
     @IBOutlet weak var brunch: CustomTimePicker!
@@ -27,7 +27,7 @@ class ScheduleInfoView: UICollectionViewCell {
     }
     
     func instantiate() {
-        breakfastTime.text = "7:00"
+        breakfast.text = "7:00"
         firstDaySleep.text = "9:00"
         dinner.text = "11:30"
         brunch.text = "13:30"

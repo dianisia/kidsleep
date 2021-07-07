@@ -3,4 +3,6 @@ import UIKit
 
 
 class MainChildInfoView: UICollectionViewCell {
+    @IBOutlet weak var nameTextField: CustomTextField!
+    @IBOutlet weak var birthdayTextField: CustomDataPicker!
 }

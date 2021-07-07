@@ -15,7 +15,7 @@ class GradientView: UIView {
         let locations: [NSNumber] = [0.2, 0.8]
         
         applyGradient(
-            colours: colors,
+            colors: colors,
             startPoint: startPoint,
             endPoint: endPoint,
             locations: locations
