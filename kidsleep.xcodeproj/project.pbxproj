@@ -40,6 +40,7 @@
 		E48B02A12696ED260068F438 /* CustomStroriesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B02A02696ED260068F438 /* CustomStroriesViewCell.swift */; };
 		E48B02A42696F6DD0068F438 /* CustomStoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B02A32696F6DD0068F438 /* CustomStoriesView.swift */; };
 		E48B02A7269711CA0068F438 /* StoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B02A6269711CA0068F438 /* StoriesViewModel.swift */; };
+		E48B02A92697269C0068F438 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B02A82697269C0068F438 /* Story.swift */; };
 		E4921C7F2686188C00DB247D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4921C7E2686188C00DB247D /* CustomTextField.swift */; };
 		E4921C81268618EC00DB247D /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4921C80268618EC00DB247D /* CustomTextField.xib */; };
 		E4A38E1A2684858C00E44AD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A38E192684858C00E44AD8 /* AppDelegate.swift */; };
@@ -56,6 +57,7 @@
 		E4A7F4942684C23100BEB391 /* CustomButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4A7F4922684C23100BEB391 /* CustomButton.xib */; };
 		E4A7F4962684DF4E00BEB391 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4A7F4952684DF4D00BEB391 /* Montserrat-SemiBold.ttf */; };
 		E4A7F4992684E11100BEB391 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A7F4982684E11100BEB391 /* Extensions.swift */; };
+		E4BD1C4826973FDF00F66B08 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD1C4726973FDF00F66B08 /* APICaller.swift */; };
 		E4BE2271268B8583006E002E /* SongsInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4BE2270268B8583006E002E /* SongsInfoView.xib */; };
 		E4BE2273268B877D006E002E /* SongsInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BE2272268B877D006E002E /* SongsInfoView.swift */; };
 /* End PBXBuildFile section */
@@ -95,6 +97,7 @@
 		E48B02A02696ED260068F438 /* CustomStroriesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStroriesViewCell.swift; sourceTree = "<group>"; };
 		E48B02A32696F6DD0068F438 /* CustomStoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStoriesView.swift; sourceTree = "<group>"; };
 		E48B02A6269711CA0068F438 /* StoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewModel.swift; sourceTree = "<group>"; };
+		E48B02A82697269C0068F438 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		E4921C7E2686188C00DB247D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		E4921C80268618EC00DB247D /* CustomTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextField.xib; sourceTree = "<group>"; };
 		E4A38E162684858C00E44AD8 /* kidsleep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kidsleep.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +116,7 @@
 		E4A7F4922684C23100BEB391 /* CustomButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomButton.xib; sourceTree = "<group>"; };
 		E4A7F4952684DF4D00BEB391 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		E4A7F4982684E11100BEB391 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E4BD1C4726973FDF00F66B08 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		E4BE2270268B8583006E002E /* SongsInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongsInfoView.xib; sourceTree = "<group>"; };
 		E4BE2272268B877D006E002E /* SongsInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsInfoView.swift; sourceTree = "<group>"; };
 		F70EED7B90386BD4BD42E74D /* Pods-kidsleep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kidsleep.release.xcconfig"; path = "Target Support Files/Pods-kidsleep/Pods-kidsleep.release.xcconfig"; sourceTree = "<group>"; };
@@ -330,6 +334,7 @@
 		E4A38E182684858C00E44AD8 /* kidsleep */ = {
 			isa = PBXGroup;
 			children = (
+				E4BD1C4626973FC000F66B08 /* Services */,
 				E48B028E268F03E60068F438 /* Common */,
 				E4A38E2F268486FE00E44AD8 /* Domain */,
 				E4A38E2E268486F500E44AD8 /* Platform */,
@@ -373,6 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				E48B0291268F58AC0068F438 /* UserInfo.swift */,
+				E48B02A82697269C0068F438 /* Story.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -420,6 +426,14 @@
 				E4A7F4982684E11100BEB391 /* Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E4BD1C4626973FC000F66B08 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E4BD1C4726973FDF00F66B08 /* APICaller.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		E4BE226D268B8438006E002E /* SongsInfoView */ = {
@@ -585,9 +599,11 @@
 				E48B02A12696ED260068F438 /* CustomStroriesViewCell.swift in Sources */,
 				E48943EC2685E60D007DF356 /* OnboardingViewController.swift in Sources */,
 				E4A7F4932684C23100BEB391 /* CustomButton.swift in Sources */,
+				E4BD1C4826973FDF00F66B08 /* APICaller.swift in Sources */,
 				E4A38E1C2684858C00E44AD8 /* SceneDelegate.swift in Sources */,
 				E42B95B22689D61900F2312E /* CustomInput.swift in Sources */,
 				E48B029E2695E8740068F438 /* Helpers.swift in Sources */,
+				E48B02A92697269C0068F438 /* Story.swift in Sources */,
 				E48B0292268F58AD0068F438 /* UserInfo.swift in Sources */,
 				E48B0295268F58F30068F438 /* UserDefaultsRepository.swift in Sources */,
 				E48B0290268F03F90068F438 /* ViewModelType.swift in Sources */,

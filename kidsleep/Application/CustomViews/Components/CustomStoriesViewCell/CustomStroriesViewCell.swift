@@ -20,7 +20,7 @@ class CustomStoriesViewCell: UICollectionViewCell {
         super.layoutSubviews()
     }
     
-    func bind(story: Story) {
+    func configure(story: Story) {
         storyTextLabel.text = story.text
     }
     

@@ -39,7 +39,7 @@ class CustomStoriesView: UIView, UIScrollViewDelegate {
     func configure(with viewModel: StoriesViewModel) {
         let output = viewModel.transform(input: StoriesViewModel.Input())
         output.stories.bind(to: collectionView.rx.items(cellIdentifier: CustomStoriesViewCell.identifier, cellType: CustomStoriesViewCell.self)) { row, data, cell in
-            cell.bind(story: data)
+            cell.configure(story: data)
         }
         .disposed(by: bag)
     }

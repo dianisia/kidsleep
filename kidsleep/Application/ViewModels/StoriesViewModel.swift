@@ -2,10 +2,6 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-struct Story {
-    let text: String
-}
-
 class StoriesViewModel {
     private var stories = BehaviorRelay<[Story]>(value: [])
     struct Input {
@@ -22,6 +18,11 @@ class StoriesViewModel {
     }
     
     private func requestStories() {
-        stories.accept([Story(text: "Text 1"), Story(text: "Text 2"), Story(text: "Text 3")])
+        APICaller.shared.getStories {[unowned self] error, result in
+            guard error == nil, let result = result, result.count > 0 else {
+                return stories.accept([])
+            }
+            stories.accept(result)
+        }
     }
 }
