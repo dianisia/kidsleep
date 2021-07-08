@@ -39,10 +39,20 @@
                                     <constraint firstAttribute="height" constant="299" id="1yx-AC-cvf"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kYA-Ot-dbx" customClass="CustomStoriesLine" customModule="kidsleep" customModuleProvider="target">
+                                <rect key="frame" x="16" y="301" width="382" height="132"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="132" id="46u-vH-MvD"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZEx-VD-0ig"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="kYA-Ot-dbx" firstAttribute="leading" secondItem="ZEx-VD-0ig" secondAttribute="leading" constant="16" id="66c-ZD-hTH"/>
+                            <constraint firstItem="ZEx-VD-0ig" firstAttribute="trailing" secondItem="kYA-Ot-dbx" secondAttribute="trailing" constant="16" id="IDr-p0-ALh"/>
+                            <constraint firstItem="kYA-Ot-dbx" firstAttribute="top" secondItem="7BM-xZ-T6e" secondAttribute="bottom" constant="24" id="NT9-xK-w8F"/>
                             <constraint firstItem="7BM-xZ-T6e" firstAttribute="trailing" secondItem="ZEx-VD-0ig" secondAttribute="trailing" constant="3" id="Ujb-v6-Tte"/>
                             <constraint firstItem="7BM-xZ-T6e" firstAttribute="leading" secondItem="ZEx-VD-0ig" secondAttribute="leading" constant="-3" id="YR0-oY-Qzq"/>
                             <constraint firstItem="7BM-xZ-T6e" firstAttribute="top" secondItem="5xy-bx-Puz" secondAttribute="top" constant="-22" id="aYt-Gd-kD3"/>

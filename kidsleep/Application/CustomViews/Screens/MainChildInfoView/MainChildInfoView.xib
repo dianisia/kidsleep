@@ -47,7 +47,7 @@
                     </segments>
                 </segmentedControl>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqL-Z1-K6R">
-                    <rect key="frame" x="140" y="362" width="134" height="29"/>
+                    <rect key="frame" x="132.5" y="362" width="149" height="30"/>
                     <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
                     <state key="normal" title="+ Добавить ребенка">
                         <color key="titleColor" red="0.46666666666666667" green="0.0039215686274509803" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
@@ -79,10 +79,10 @@
     </objects>
     <designables>
         <designable name="M5c-J7-5x1">
-            <size key="intrinsicContentSize" width="56.5" height="34"/>
+            <size key="intrinsicContentSize" width="65.5" height="21.5"/>
         </designable>
         <designable name="RsI-BZ-MZS">
-            <size key="intrinsicContentSize" width="151" height="31"/>
+            <size key="intrinsicContentSize" width="187" height="31"/>
         </designable>
     </designables>
 </document>

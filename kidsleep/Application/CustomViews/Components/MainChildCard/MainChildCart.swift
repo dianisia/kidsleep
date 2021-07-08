@@ -43,7 +43,7 @@ class MainChildCard: UIView {
     }
     
     private func setup() {
-        backgroundColor = .black
+        backgroundColor = UIColor(rgb: 0x131313)
         layer.cornerRadius = 50
         layer.borderColor = UIColor(rgb: 0x242424).cgColor
         layer.borderWidth = 2
@@ -81,7 +81,7 @@ class MainChildCard: UIView {
         infoLabel.center.x = bounds.size.width / 2.0
         addSubview(infoLabel)
         
-        eventTimeLabel = UILabel(frame: CGRect(x: 0, y: infoLabel.frame.maxY + 5, width: 189, height: 22))
+        eventTimeLabel = UILabel(frame: CGRect(x: 0, y: infoLabel.frame.maxY + 5, width: bounds.size.width, height: 22))
         eventTimeLabel.font = eventTimeFont
         eventTimeLabel.textColor = .white
         eventTimeLabel.textAlignment = .center

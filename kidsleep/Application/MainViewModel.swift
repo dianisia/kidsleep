@@ -65,8 +65,7 @@ class MainViewModel {
         let diffInSeconds = currEpoch - date
         let years = Int(diffInSeconds / secondsInYear)
         let months = Int((diffInSeconds - (Double(years) * secondsInYear)) / secondsInMonth)
-        let result = formAgeString(years: years, months: months
-        )
+        let result = formAgeString(years: years, months: months)
         return result
     }
     

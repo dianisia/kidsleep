@@ -37,6 +37,8 @@
 		E48B029A2694B4B30068F438 /* MainChildCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B02992694B4B30068F438 /* MainChildCart.swift */; };
 		E48B029C2695C1BD0068F438 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B029B2695C1BD0068F438 /* MainViewModel.swift */; };
 		E48B029E2695E8740068F438 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B029D2695E8740068F438 /* Helpers.swift */; };
+		E48B02A12696ED260068F438 /* CustomStroriesElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B02A02696ED260068F438 /* CustomStroriesElement.swift */; };
+		E48B02A42696F6DD0068F438 /* CustomStoriesLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B02A32696F6DD0068F438 /* CustomStoriesLine.swift */; };
 		E4921C7F2686188C00DB247D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4921C7E2686188C00DB247D /* CustomTextField.swift */; };
 		E4921C81268618EC00DB247D /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4921C80268618EC00DB247D /* CustomTextField.xib */; };
 		E4A38E1A2684858C00E44AD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A38E192684858C00E44AD8 /* AppDelegate.swift */; };
@@ -89,6 +91,8 @@
 		E48B02992694B4B30068F438 /* MainChildCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChildCart.swift; sourceTree = "<group>"; };
 		E48B029B2695C1BD0068F438 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		E48B029D2695E8740068F438 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		E48B02A02696ED260068F438 /* CustomStroriesElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStroriesElement.swift; sourceTree = "<group>"; };
+		E48B02A32696F6DD0068F438 /* CustomStoriesLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStoriesLine.swift; sourceTree = "<group>"; };
 		E4921C7E2686188C00DB247D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		E4921C80268618EC00DB247D /* CustomTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextField.xib; sourceTree = "<group>"; };
 		E4A38E162684858C00E44AD8 /* kidsleep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kidsleep.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +184,8 @@
 		E43C04CD2689F43B000FD441 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E48B02A22696F6BB0068F438 /* CustomStoriesLine */,
+				E48B029F2696ED010068F438 /* CustomStoriesElement */,
 				E48B02982694B49B0068F438 /* MainChildCard */,
 				E423D9C6268B77E100DF2222 /* CustomSongView */,
 				E43C04DA268B2F4C000FD441 /* CustomSwitch */,
@@ -264,6 +270,22 @@
 				E48B02992694B4B30068F438 /* MainChildCart.swift */,
 			);
 			path = MainChildCard;
+			sourceTree = "<group>";
+		};
+		E48B029F2696ED010068F438 /* CustomStoriesElement */ = {
+			isa = PBXGroup;
+			children = (
+				E48B02A02696ED260068F438 /* CustomStroriesElement.swift */,
+			);
+			path = CustomStoriesElement;
+			sourceTree = "<group>";
+		};
+		E48B02A22696F6BB0068F438 /* CustomStoriesLine */ = {
+			isa = PBXGroup;
+			children = (
+				E48B02A32696F6DD0068F438 /* CustomStoriesLine.swift */,
+			);
+			path = CustomStoriesLine;
 			sourceTree = "<group>";
 		};
 		E4921C7D2686186700DB247D /* CustomTextField */ = {
@@ -545,8 +567,10 @@
 				E43C04D32689F487000FD441 /* MainChildInfoView.swift in Sources */,
 				E4A38E32268499ED00E44AD8 /* GradientView.swift in Sources */,
 				E43C04DC268B2F79000FD441 /* CustomSwitch.swift in Sources */,
+				E48B02A42696F6DD0068F438 /* CustomStoriesLine.swift in Sources */,
 				E439A4872685F7910056FA74 /* CustomSegmentedControl.swift in Sources */,
 				E48B028D268C935F0068F438 /* OnboardingViewModel.swift in Sources */,
+				E48B02A12696ED260068F438 /* CustomStroriesElement.swift in Sources */,
 				E48943EC2685E60D007DF356 /* OnboardingViewController.swift in Sources */,
 				E4A7F4932684C23100BEB391 /* CustomButton.swift in Sources */,
 				E4A38E1C2684858C00E44AD8 /* SceneDelegate.swift in Sources */,
