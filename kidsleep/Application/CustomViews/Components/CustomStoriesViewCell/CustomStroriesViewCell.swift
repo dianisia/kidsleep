@@ -4,6 +4,8 @@ import UIKit
 class CustomStoriesViewCell: UICollectionViewCell {
     static let identifier = "CustomStoriesViewCell"
     
+    private var storyTextLabel = UILabel()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -18,6 +20,10 @@ class CustomStoriesViewCell: UICollectionViewCell {
         super.layoutSubviews()
     }
     
+    func bind(story: Story) {
+        storyTextLabel.text = story.text
+    }
+    
     private func setup() {
         backgroundColor = UIColor(rgb: 0x191919)
         frame = CGRect(x: 0, y: 0, width: 120, height: 128)
@@ -29,15 +35,14 @@ class CustomStoriesViewCell: UICollectionViewCell {
         imageView.image = image
         imageView.center.x = bounds.size.width / 2
         
-        let label = UILabel(frame: CGRect(x: 0, y: imageView.frame.maxY + 3, width: 95, height: 48))
-        label.text = "Как правильно укладывать ребенка спать"
-        label.font = UIFont(name: "Montserrat-Medium", size: 11)!
-        label.center.x = bounds.size.width / 2
-        label.textColor = .white
-        label.numberOfLines = 3
-        label.textAlignment = .center
+        storyTextLabel = UILabel(frame: CGRect(x: 0, y: imageView.frame.maxY + 3, width: 95, height: 48))
+        storyTextLabel.font = UIFont(name: "Montserrat-Medium", size: 11)!
+        storyTextLabel.center.x = bounds.size.width / 2
+        storyTextLabel.textColor = .white
+        storyTextLabel.numberOfLines = 3
+        storyTextLabel.textAlignment = .center
         
         addSubview(imageView)
-        addSubview(label)
+        addSubview(storyTextLabel)
     }
 }

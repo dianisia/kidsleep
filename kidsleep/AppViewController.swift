@@ -4,12 +4,16 @@ import RxCocoa
 
 class AppViewController: UIViewController {
     @IBOutlet weak var mainChildCardView: MainChildCard!
+    @IBOutlet weak var storiesView: CustomStoriesView!
+    
     private let viewModel: MainViewModel = MainViewModel()
+    private let storiesViewModel: StoriesViewModel = StoriesViewModel()
     
     private let bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        storiesView.configure(with: storiesViewModel)
         bindModel()
     }
     
@@ -30,7 +34,6 @@ class AppViewController: UIViewController {
         output.age.drive(mainChildCardView.ageLabel.rx.text)
             .disposed(by: bag)
         output.nextEvent.drive(onNext: {[unowned self] event in
-            print(event)
             mainChildCardView.eventType = event.0
             mainChildCardView.minutesToNextEvent = event.1
         })

@@ -39,7 +39,7 @@
                                     <constraint firstAttribute="height" constant="299" id="1yx-AC-cvf"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kYA-Ot-dbx" customClass="CustomStoriesLine" customModule="kidsleep" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kYA-Ot-dbx" customClass="CustomStoriesView" customModule="kidsleep" customModuleProvider="target">
                                 <rect key="frame" x="16" y="301" width="382" height="132"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -61,6 +61,7 @@
                     <navigationItem key="navigationItem" id="mAp-VW-RxC"/>
                     <connections>
                         <outlet property="mainChildCardView" destination="7BM-xZ-T6e" id="KSO-u8-ss9"/>
+                        <outlet property="storiesView" destination="kYA-Ot-dbx" id="aIk-XZ-Oge"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jt0-4N-mlj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
