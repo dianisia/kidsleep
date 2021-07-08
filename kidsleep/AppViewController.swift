@@ -13,6 +13,15 @@ class AppViewController: UIViewController {
         bindModel()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setNeedsStatusBarAppearanceUpdate()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
+    
     private func bindModel() {
         let output = viewModel.transform(input: MainViewModel.Input())
         
