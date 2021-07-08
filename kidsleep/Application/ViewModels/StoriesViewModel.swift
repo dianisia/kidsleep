@@ -5,7 +5,7 @@ import RxCocoa
 class StoriesViewModel {
     private var stories = BehaviorRelay<[Story]>(value: [])
     struct Input {
-
+        
     }
     
     struct Output {
@@ -18,11 +18,13 @@ class StoriesViewModel {
     }
     
     private func requestStories() {
-        APICaller.shared.getStories {[unowned self] error, result in
-            guard error == nil, let result = result, result.count > 0 else {
-                return stories.accept([])
+        DispatchQueue.global(qos: .utility).async {
+            APICaller.shared.getStories {[unowned self] error, result in
+                guard error == nil, let result = result, result.count > 0 else {
+                    return stories.accept([])
+                }
+                stories.accept(result)
             }
-            stories.accept(result)
         }
     }
 }

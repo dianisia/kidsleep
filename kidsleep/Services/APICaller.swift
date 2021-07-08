@@ -17,7 +17,6 @@ final class APICaller {
         ]
         let storiesURL = "\(Constants.baseUrl)/stories"
         return AF.request(storiesURL, method: .get, headers: headers).responseJSON { response in
-            
             switch response.result {
             case .success(let value):
                 if let array = value as? [[String: Any]] {
