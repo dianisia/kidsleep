@@ -17,7 +17,6 @@ class CustomStoriesLine: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        setup()
     }
     
     private func setup() {
@@ -27,7 +26,7 @@ class CustomStoriesLine: UIView {
         layout.itemSize = CGSize(width: 120, height: 128)
         layout.scrollDirection = .horizontal
         collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height), collectionViewLayout: layout)
-        
+        collectionView.showsHorizontalScrollIndicator = false
         collectionView.register(CustomStoriesViewCell.self, forCellWithReuseIdentifier: CustomStoriesViewCell.identifier)
         addSubview(collectionView)
         collectionView.delegate = self
