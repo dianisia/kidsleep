@@ -1,10 +1,12 @@
 import UIKit
+import SDWebImage
 
 @IBDesignable
 class CustomStoriesViewCell: UICollectionViewCell {
     static let identifier = "CustomStoriesViewCell"
     
     private var storyTextLabel = UILabel()
+    private var storyImageView = UIImageView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,6 +24,7 @@ class CustomStoriesViewCell: UICollectionViewCell {
     
     func configure(story: Story) {
         storyTextLabel.text = story.text
+        storyImageView.sd_setImage(with: story.imageURL, completed: nil)
     }
     
     private func setup() {
@@ -30,19 +33,24 @@ class CustomStoriesViewCell: UICollectionViewCell {
         layer.cornerRadius = 16
         
         let image = UIImage(named: "child")
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 16, width: 48, height: 48))
-        imageView.contentMode = .scaleAspectFit
-        imageView.image = image
-        imageView.center.x = bounds.size.width / 2
+        storyImageView = UIImageView(frame: CGRect(x: 0, y: 16, width: 48, height: 48))
+        storyImageView.image = image
+        storyImageView.center.x = bounds.size.width / 2
+        storyImageView.layer.borderWidth = 1
+        storyImageView.layer.masksToBounds = false
+        storyImageView.layer.borderColor = UIColor.black.cgColor
+        storyImageView.layer.cornerRadius = storyImageView.frame.height/2
+        storyImageView.clipsToBounds = true
+        storyImageView.contentMode = .scaleAspectFill
         
-        storyTextLabel = UILabel(frame: CGRect(x: 0, y: imageView.frame.maxY + 3, width: 95, height: 48))
+        storyTextLabel = UILabel(frame: CGRect(x: 0, y: storyImageView.frame.maxY + 3, width: 95, height: 48))
         storyTextLabel.font = UIFont(name: "Montserrat-Medium", size: 11)!
         storyTextLabel.center.x = bounds.size.width / 2
         storyTextLabel.textColor = .white
         storyTextLabel.numberOfLines = 3
         storyTextLabel.textAlignment = .center
         
-        addSubview(imageView)
+        addSubview(storyImageView)
         addSubview(storyTextLabel)
     }
 }

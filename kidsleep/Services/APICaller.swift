@@ -22,10 +22,10 @@ final class APICaller {
                 if let array = value as? [[String: Any]] {
                     var result = [Story]()
                     for val in array {
-                        guard let text = val["text"] as? String else {
+                        guard let text = val["text"] as? String, let url = val["image"] as? String else {
                             continue
                         }
-                        result.append(Story(text: text))
+                        result.append(Story(text: text, imageURL: URL(string: url)))
                     }
                     completion(nil, result)
                 }
