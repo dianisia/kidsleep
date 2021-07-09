@@ -5,15 +5,18 @@ import RxCocoa
 class AppViewController: UIViewController {
     @IBOutlet weak var mainChildCardView: MainChildCard!
     @IBOutlet weak var storiesView: CustomStoriesView!
+    @IBOutlet weak var eventsView: CustomEventsView!
     
     private let viewModel: MainViewModel = MainViewModel()
     private let storiesViewModel: StoriesViewModel = StoriesViewModel()
+    private let eventsViewModel: EventsViewModel = EventsViewModel()
     
     private let bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         storiesView.configure(with: storiesViewModel)
+        eventsView.configure(with: eventsViewModel)
         bindModel()
     }
     

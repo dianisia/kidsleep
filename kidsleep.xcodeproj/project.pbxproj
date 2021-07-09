@@ -60,6 +60,7 @@
 		E4BD1C4826973FDF00F66B08 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD1C4726973FDF00F66B08 /* APICaller.swift */; };
 		E4BD1C4B269846B600F66B08 /* CustomEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD1C4A269846B600F66B08 /* CustomEventsView.swift */; };
 		E4BD1C4D269872EF00F66B08 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD1C4C269872EF00F66B08 /* Events.swift */; };
+		E4BD1C4F26988A4B00F66B08 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD1C4E26988A4B00F66B08 /* EventsViewModel.swift */; };
 		E4BE2271268B8583006E002E /* SongsInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4BE2270268B8583006E002E /* SongsInfoView.xib */; };
 		E4BE2273268B877D006E002E /* SongsInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BE2272268B877D006E002E /* SongsInfoView.swift */; };
 /* End PBXBuildFile section */
@@ -121,6 +122,7 @@
 		E4BD1C4726973FDF00F66B08 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		E4BD1C4A269846B600F66B08 /* CustomEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEventsView.swift; sourceTree = "<group>"; };
 		E4BD1C4C269872EF00F66B08 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		E4BD1C4E26988A4B00F66B08 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		E4BE2270268B8583006E002E /* SongsInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongsInfoView.xib; sourceTree = "<group>"; };
 		E4BE2272268B877D006E002E /* SongsInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsInfoView.swift; sourceTree = "<group>"; };
 		F70EED7B90386BD4BD42E74D /* Pods-kidsleep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kidsleep.release.xcconfig"; path = "Target Support Files/Pods-kidsleep/Pods-kidsleep.release.xcconfig"; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 				E48B028C268C935F0068F438 /* OnboardingViewModel.swift */,
 				E48B029B2695C1BD0068F438 /* MainViewModel.swift */,
 				E48B02A6269711CA0068F438 /* StoriesViewModel.swift */,
+				E4BD1C4E26988A4B00F66B08 /* EventsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -615,6 +618,7 @@
 				E48B02A12696ED260068F438 /* CustomStroriesViewCell.swift in Sources */,
 				E48943EC2685E60D007DF356 /* OnboardingViewController.swift in Sources */,
 				E4A7F4932684C23100BEB391 /* CustomButton.swift in Sources */,
+				E4BD1C4F26988A4B00F66B08 /* EventsViewModel.swift in Sources */,
 				E4BD1C4826973FDF00F66B08 /* APICaller.swift in Sources */,
 				E4A38E1C2684858C00E44AD8 /* SceneDelegate.swift in Sources */,
 				E42B95B22689D61900F2312E /* CustomInput.swift in Sources */,

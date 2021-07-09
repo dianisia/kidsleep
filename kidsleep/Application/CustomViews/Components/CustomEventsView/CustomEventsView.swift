@@ -1,7 +1,10 @@
 import UIKit
+import RxCocoa
+import RxSwift
 
 @IBDesignable
 class CustomEventsView: UIView {
+    private let bag = DisposeBag()
     
     var breakfastTimeInput: CustomTimePicker = {
         let input = CustomTimePicker()
@@ -75,8 +78,8 @@ class CustomEventsView: UIView {
         return input
     }()
     
-    let scrollView = UIScrollView()
-    let contentView = UIView()
+    private let scrollView = UIScrollView()
+    private let contentView = UIView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -94,7 +97,29 @@ class CustomEventsView: UIView {
         super.layoutSubviews()
     }
     
-    func setupScrollView() {
+    func configure(with viewModel: EventsViewModel) {
+        let output = viewModel.transform()
+        output.breakfast.drive(breakfastTimeInput.rx.text)
+            .disposed(by: bag)
+        output.firstDaySleep.drive(firstdaySleepTimeInput.rx.text)
+            .disposed(by: bag)
+        output.brunch.drive(brunchTimeInput.rx.text)
+            .disposed(by: bag)
+        output.dinner.drive(dinnerTimeInput.rx.text)
+            .disposed(by: bag)
+        output.secondDaySleep.drive(secondDaySleepInput.rx.text)
+            .disposed(by: bag)
+        output.secondBrunch.drive(secondBrunchTimeInput.rx.text)
+            .disposed(by: bag)
+        output.eveningMeal.drive(eveningMealTimeInput.rx.text)
+            .disposed(by: bag)
+        output.nightSleep.drive(nightSleepTimeInput.rx.text)
+            .disposed(by: bag)
+        output.nightMeal.drive(nightMealTimeInput.rx.text)
+            .disposed(by: bag)
+    }
+    
+    private func setupScrollView() {
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         contentView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.backgroundColor = .clear

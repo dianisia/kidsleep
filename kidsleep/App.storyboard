@@ -70,6 +70,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="mAp-VW-RxC"/>
                     <connections>
+                        <outlet property="eventsView" destination="yzO-1T-bfc" id="96k-2i-Yut"/>
                         <outlet property="mainChildCardView" destination="7BM-xZ-T6e" id="KSO-u8-ss9"/>
                         <outlet property="storiesView" destination="kYA-Ot-dbx" id="aIk-XZ-Oge"/>
                     </connections>
