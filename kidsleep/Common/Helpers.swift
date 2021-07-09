@@ -33,17 +33,23 @@ func formTimeString(hours: Int, minutes: Int) -> String {
         result += "\(hours) час "
     case 2...4:
         result += "\(hours) часа "
+    case 5...12:
+        result += "\(hours) часов"
     default:
-        result += "\(hours) часов "
+        result += ""
     }
     
-    switch minutes {
+    switch minutes % 10 {
+    case 0:
+        result += "\(minutes) минут"
     case 1:
         result += "\(minutes) минута"
     case 2...4:
         result += "\(minutes) минуты"
-    default:
+    case 5...9:
         result += "\(minutes) минут"
+    default:
+        result += ""
     }
     
     return result

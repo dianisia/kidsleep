@@ -95,7 +95,7 @@ class MainChildCard: UIView {
     }
     
     private func makeEventInfoString(event: String) -> String {
-        return "По графику дня, \(event) через"
+        return "По графику дня, \(event.lowercased()) через"
     }
     
     private func makeNextEventTimeString(minutes: Int) -> String {
