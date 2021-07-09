@@ -2,8 +2,11 @@ import RxSwift
 import RxCocoa
 
 class MainViewModel {
+    private let bag = DisposeBag()
     private var user: UserInfo
     private var events = [(Events, Int)]()
+    private var nextEv = BehaviorRelay<(String, Int)>(value: ("", 0))
+    static private let checkEventInterval = 30
     
     init() {
         let repository = UserDefaultsRepository()
@@ -32,10 +35,18 @@ class MainViewModel {
     }
     
     func transform(input: Input) -> Output {
+        nextEv.accept(getNextEvent())
+        
+        Observable<Int>.interval(.seconds(Self.checkEventInterval), scheduler: MainScheduler.instance)
+            .subscribe(onNext: { [unowned self] _ in
+                nextEv.accept(getNextEvent())
+            })
+            .disposed(by: bag)
+        
         return Output(
             name: Driver.just(getName()),
             age: Driver.just(getAge()),
-            nextEvent: Driver.just(getNextEvent())
+            nextEvent: nextEv.asDriver()
         )
     }
     
