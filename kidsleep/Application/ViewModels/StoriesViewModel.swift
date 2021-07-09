@@ -3,9 +3,15 @@ import RxSwift
 import RxCocoa
 
 class StoriesViewModel {
-    private var stories = BehaviorRelay<[Story]>(value: [])
+    // Dirty hack
+    private var stories = BehaviorRelay<[Story]>(
+        value: [
+            Story(text: "", imageURL: URL(string: "")),
+            Story(text: "", imageURL: URL(string: "")),
+            Story(text: "", imageURL: URL(string: ""))
+        ])
     struct Input {
-        
+    
     }
     
     struct Output {
