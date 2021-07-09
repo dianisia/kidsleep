@@ -58,6 +58,8 @@
 		E4A7F4962684DF4E00BEB391 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4A7F4952684DF4D00BEB391 /* Montserrat-SemiBold.ttf */; };
 		E4A7F4992684E11100BEB391 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A7F4982684E11100BEB391 /* Extensions.swift */; };
 		E4BD1C4826973FDF00F66B08 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD1C4726973FDF00F66B08 /* APICaller.swift */; };
+		E4BD1C4B269846B600F66B08 /* CustomEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD1C4A269846B600F66B08 /* CustomEventsView.swift */; };
+		E4BD1C4D269872EF00F66B08 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD1C4C269872EF00F66B08 /* Events.swift */; };
 		E4BE2271268B8583006E002E /* SongsInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4BE2270268B8583006E002E /* SongsInfoView.xib */; };
 		E4BE2273268B877D006E002E /* SongsInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BE2272268B877D006E002E /* SongsInfoView.swift */; };
 /* End PBXBuildFile section */
@@ -117,6 +119,8 @@
 		E4A7F4952684DF4D00BEB391 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		E4A7F4982684E11100BEB391 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E4BD1C4726973FDF00F66B08 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		E4BD1C4A269846B600F66B08 /* CustomEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEventsView.swift; sourceTree = "<group>"; };
+		E4BD1C4C269872EF00F66B08 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		E4BE2270268B8583006E002E /* SongsInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongsInfoView.xib; sourceTree = "<group>"; };
 		E4BE2272268B877D006E002E /* SongsInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsInfoView.swift; sourceTree = "<group>"; };
 		F70EED7B90386BD4BD42E74D /* Pods-kidsleep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kidsleep.release.xcconfig"; path = "Target Support Files/Pods-kidsleep/Pods-kidsleep.release.xcconfig"; sourceTree = "<group>"; };
@@ -190,6 +194,7 @@
 		E43C04CD2689F43B000FD441 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E4BD1C49269846A300F66B08 /* CustomEventsView */,
 				E48B02A22696F6BB0068F438 /* CustomStoriesLine */,
 				E48B029F2696ED010068F438 /* CustomStoriesViewCell */,
 				E48B02982694B49B0068F438 /* MainChildCard */,
@@ -379,6 +384,7 @@
 			children = (
 				E48B0291268F58AC0068F438 /* UserInfo.swift */,
 				E48B02A82697269C0068F438 /* Story.swift */,
+				E4BD1C4C269872EF00F66B08 /* Events.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -434,6 +440,14 @@
 				E4BD1C4726973FDF00F66B08 /* APICaller.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		E4BD1C49269846A300F66B08 /* CustomEventsView */ = {
+			isa = PBXGroup;
+			children = (
+				E4BD1C4A269846B600F66B08 /* CustomEventsView.swift */,
+			);
+			path = CustomEventsView;
 			sourceTree = "<group>";
 		};
 		E4BE226D268B8438006E002E /* SongsInfoView */ = {
@@ -590,7 +604,9 @@
 				E43C04D8268A2D74000FD441 /* ScheduleInfoView.swift in Sources */,
 				E4921C7F2686188C00DB247D /* CustomTextField.swift in Sources */,
 				E48B0297268F59050068F438 /* Repository.swift in Sources */,
+				E4BD1C4D269872EF00F66B08 /* Events.swift in Sources */,
 				E43C04D32689F487000FD441 /* MainChildInfoView.swift in Sources */,
+				E4BD1C4B269846B600F66B08 /* CustomEventsView.swift in Sources */,
 				E4A38E32268499ED00E44AD8 /* GradientView.swift in Sources */,
 				E43C04DC268B2F79000FD441 /* CustomSwitch.swift in Sources */,
 				E48B02A42696F6DD0068F438 /* CustomStoriesView.swift in Sources */,

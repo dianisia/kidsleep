@@ -1,18 +1,6 @@
 import RxSwift
 import RxCocoa
 
-enum Events: String, CaseIterable {
-    case breakfast = "завтрак"
-    case firstDaySleep = "1-й дневной сон"
-    case dinner = "обед"
-    case brunch = "полдник"
-    case secondDaySleep = "2-й дневной сон"
-    case secondBrunch = "2-й полдник"
-    case eveningMeal = "ужин"
-    case nightSleep = "ночной сон"
-    case nightMeal = "ночное кормление"
-}
-
 class MainViewModel {
     private var user: UserInfo
     private var events = [(Events, Int)]()

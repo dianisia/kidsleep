@@ -11,7 +11,6 @@
         <!--Главная-->
         <scene sceneID="ZpH-9a-88Z">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Z8-bz-UPF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController navigationBarHidden="YES" id="QaS-PI-OJ3" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Главная" image="Time" id="ZBS-QX-2bh"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aae-wD-p43">
@@ -21,6 +20,7 @@
                         <segue destination="49l-t2-QBe" kind="relationship" relationship="rootViewController" id="DhL-vZ-nbH"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Z8-bz-UPF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-226" y="447"/>
         </scene>
@@ -46,13 +46,23 @@
                                     <constraint firstAttribute="height" constant="132" id="46u-vH-MvD"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzO-1T-bfc" customClass="CustomEventsView" customModule="kidsleep" customModuleProvider="target">
+                                <rect key="frame" x="16" y="457" width="382" height="332"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="332" id="Td1-Jx-Okh"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZEx-VD-0ig"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ZEx-VD-0ig" firstAttribute="trailing" secondItem="yzO-1T-bfc" secondAttribute="trailing" constant="16" id="5JJ-1W-883"/>
                             <constraint firstItem="kYA-Ot-dbx" firstAttribute="leading" secondItem="ZEx-VD-0ig" secondAttribute="leading" constant="16" id="66c-ZD-hTH"/>
+                            <constraint firstItem="yzO-1T-bfc" firstAttribute="leading" secondItem="ZEx-VD-0ig" secondAttribute="leading" constant="16" id="Bhi-Js-J6m"/>
                             <constraint firstItem="ZEx-VD-0ig" firstAttribute="trailing" secondItem="kYA-Ot-dbx" secondAttribute="trailing" constant="16" id="IDr-p0-ALh"/>
                             <constraint firstItem="kYA-Ot-dbx" firstAttribute="top" secondItem="7BM-xZ-T6e" secondAttribute="bottom" constant="24" id="NT9-xK-w8F"/>
+                            <constraint firstItem="yzO-1T-bfc" firstAttribute="top" secondItem="kYA-Ot-dbx" secondAttribute="bottom" constant="24" id="Pa7-2Y-dOp"/>
                             <constraint firstItem="7BM-xZ-T6e" firstAttribute="trailing" secondItem="ZEx-VD-0ig" secondAttribute="trailing" constant="3" id="Ujb-v6-Tte"/>
                             <constraint firstItem="7BM-xZ-T6e" firstAttribute="leading" secondItem="ZEx-VD-0ig" secondAttribute="leading" constant="-3" id="YR0-oY-Qzq"/>
                             <constraint firstItem="7BM-xZ-T6e" firstAttribute="top" secondItem="5xy-bx-Puz" secondAttribute="top" constant="-22" id="aYt-Gd-kD3"/>
@@ -71,7 +81,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="7Wg-Xa-jE5">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="w8o-cA-aKm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController id="klK-1T-02A" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="w7q-H3-4fF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -86,13 +95,13 @@
                         <segue destination="khD-tk-gQd" kind="relationship" relationship="viewControllers" id="WvG-gE-pMx"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w8o-cA-aKm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="767" y="-382"/>
         </scene>
         <!--Помощники-->
         <scene sceneID="Qpf-Qg-ha8">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VLl-J6-b9B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController navigationBarHidden="YES" id="T4y-8z-V4F" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Помощники" image="Apps" id="IbQ-Uv-baR"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QqS-gP-CiT">
@@ -102,13 +111,13 @@
                         <segue destination="Nno-Jg-MHr" kind="relationship" relationship="rootViewController" id="0HI-Pn-DxN"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VLl-J6-b9B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="768" y="447"/>
         </scene>
         <!--Профиль-->
         <scene sceneID="xet-Zf-Gmb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1Vn-hC-huE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController navigationBarHidden="YES" id="khD-tk-gQd" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Профиль" image="Profile" id="JPT-i0-7UE"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MlB-Cq-tgu">
@@ -118,6 +127,7 @@
                         <segue destination="Ci8-WS-xEb" kind="relationship" relationship="rootViewController" id="5qc-Wv-z0c"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Vn-hC-huE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1829" y="447"/>
         </scene>
