@@ -28,6 +28,7 @@ class NightLightViewController: UIViewController {
                 sections: 10
         )
         
+        slider.delegate = self
         view.addSubview(slider)
         view.addSubview(label)
         
@@ -45,8 +46,10 @@ extension NightLightViewController: PanModalPresentable {
     var shortFormHeight: PanModalHeight {
         return .contentHeight(500)
     }
-    
-//    func panModalWillDismiss() {
-//        closePanel?()
-//    }
+}
+
+extension NightLightViewController: SectionedSliderDelegate {
+    func sectionChanged(slider: CustomSlider, selected: Int) {
+        UIScreen.main.brightness = CGFloat(selected) * 0.1
+    }
 }
