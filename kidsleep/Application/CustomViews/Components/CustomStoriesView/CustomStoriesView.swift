@@ -42,5 +42,11 @@ class CustomStoriesView: UIView, UIScrollViewDelegate {
             cell.configure(story: data)
         }
         .disposed(by: bag)
+        
+        collectionView.rx.itemSelected
+            .subscribe(onNext: { indexPath in
+                print(indexPath)
+            })
+            .disposed(by: bag)
     }
 }

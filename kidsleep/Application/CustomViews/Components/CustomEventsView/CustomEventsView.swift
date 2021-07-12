@@ -5,7 +5,7 @@ import RxSwift
 @IBDesignable
 class CustomEventsView: UIView {
     private let bag = DisposeBag()
-   
+
     var breakfastTimeInput: CustomTimePicker = {
         let input = CustomTimePicker()
         input.placeholder = Events.breakfast.rawValue

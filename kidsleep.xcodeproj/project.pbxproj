@@ -63,6 +63,9 @@
 		E4BD1C4F26988A4B00F66B08 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD1C4E26988A4B00F66B08 /* EventsViewModel.swift */; };
 		E4BE2271268B8583006E002E /* SongsInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4BE2270268B8583006E002E /* SongsInfoView.xib */; };
 		E4BE2273268B877D006E002E /* SongsInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BE2272268B877D006E002E /* SongsInfoView.swift */; };
+		E4DDF842269C559100BF1F1F /* HelpersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DDF841269C559100BF1F1F /* HelpersViewController.swift */; };
+		E4DDF845269C59E300BF1F1F /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DDF844269C59E300BF1F1F /* CustomSlider.swift */; };
+		E4DDF847269C78E900BF1F1F /* NightLightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DDF846269C78E900BF1F1F /* NightLightViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,6 +128,9 @@
 		E4BD1C4E26988A4B00F66B08 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		E4BE2270268B8583006E002E /* SongsInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongsInfoView.xib; sourceTree = "<group>"; };
 		E4BE2272268B877D006E002E /* SongsInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsInfoView.swift; sourceTree = "<group>"; };
+		E4DDF841269C559100BF1F1F /* HelpersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpersViewController.swift; sourceTree = "<group>"; };
+		E4DDF844269C59E300BF1F1F /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
+		E4DDF846269C78E900BF1F1F /* NightLightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightLightViewController.swift; sourceTree = "<group>"; };
 		F70EED7B90386BD4BD42E74D /* Pods-kidsleep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kidsleep.release.xcconfig"; path = "Target Support Files/Pods-kidsleep/Pods-kidsleep.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,8 +202,9 @@
 		E43C04CD2689F43B000FD441 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E4DDF843269C59CF00BF1F1F /* CustomSlider */,
 				E4BD1C49269846A300F66B08 /* CustomEventsView */,
-				E48B02A22696F6BB0068F438 /* CustomStoriesLine */,
+				E48B02A22696F6BB0068F438 /* CustomStoriesView */,
 				E48B029F2696ED010068F438 /* CustomStoriesViewCell */,
 				E48B02982694B49B0068F438 /* MainChildCard */,
 				E423D9C6268B77E100DF2222 /* CustomSongView */,
@@ -293,12 +300,12 @@
 			path = CustomStoriesViewCell;
 			sourceTree = "<group>";
 		};
-		E48B02A22696F6BB0068F438 /* CustomStoriesLine */ = {
+		E48B02A22696F6BB0068F438 /* CustomStoriesView */ = {
 			isa = PBXGroup;
 			children = (
 				E48B02A32696F6DD0068F438 /* CustomStoriesView.swift */,
 			);
-			path = CustomStoriesLine;
+			path = CustomStoriesView;
 			sourceTree = "<group>";
 		};
 		E48B02A5269711A50068F438 /* ViewModels */ = {
@@ -358,6 +365,8 @@
 				E48B0288268C85C80068F438 /* App.storyboard */,
 				E48B028A268C85ED0068F438 /* AppViewController.swift */,
 				E48943EB2685E60D007DF356 /* OnboardingViewController.swift */,
+				E4DDF841269C559100BF1F1F /* HelpersViewController.swift */,
+				E4DDF846269C78E900BF1F1F /* NightLightViewController.swift */,
 			);
 			path = kidsleep;
 			sourceTree = "<group>";
@@ -460,6 +469,14 @@
 				E4BE2272268B877D006E002E /* SongsInfoView.swift */,
 			);
 			path = SongsInfoView;
+			sourceTree = "<group>";
+		};
+		E4DDF843269C59CF00BF1F1F /* CustomSlider */ = {
+			isa = PBXGroup;
+			children = (
+				E4DDF844269C59E300BF1F1F /* CustomSlider.swift */,
+			);
+			path = CustomSlider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -593,6 +610,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4DDF842269C559100BF1F1F /* HelpersViewController.swift in Sources */,
 				E48B02A7269711CA0068F438 /* StoriesViewModel.swift in Sources */,
 				E4A38E1E2684858C00E44AD8 /* ViewController.swift in Sources */,
 				E4A7F4992684E11100BEB391 /* Extensions.swift in Sources */,
@@ -607,12 +625,14 @@
 				E43C04D8268A2D74000FD441 /* ScheduleInfoView.swift in Sources */,
 				E4921C7F2686188C00DB247D /* CustomTextField.swift in Sources */,
 				E48B0297268F59050068F438 /* Repository.swift in Sources */,
+				E4DDF845269C59E300BF1F1F /* CustomSlider.swift in Sources */,
 				E4BD1C4D269872EF00F66B08 /* Events.swift in Sources */,
 				E43C04D32689F487000FD441 /* MainChildInfoView.swift in Sources */,
 				E4BD1C4B269846B600F66B08 /* CustomEventsView.swift in Sources */,
 				E4A38E32268499ED00E44AD8 /* GradientView.swift in Sources */,
 				E43C04DC268B2F79000FD441 /* CustomSwitch.swift in Sources */,
 				E48B02A42696F6DD0068F438 /* CustomStoriesView.swift in Sources */,
+				E4DDF847269C78E900BF1F1F /* NightLightViewController.swift in Sources */,
 				E439A4872685F7910056FA74 /* CustomSegmentedControl.swift in Sources */,
 				E48B028D268C935F0068F438 /* OnboardingViewModel.swift in Sources */,
 				E48B02A12696ED260068F438 /* CustomStroriesViewCell.swift in Sources */,

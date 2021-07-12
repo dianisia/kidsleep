@@ -7,6 +7,14 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Главная-->
         <scene sceneID="ZpH-9a-88Z">
@@ -46,27 +54,27 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="732"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kYA-Ot-dbx" customClass="CustomStoriesView" customModule="kidsleep" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="132"/>
+                                                <rect key="frame" x="16" y="0.0" width="382" height="132"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="132" id="yvt-Ga-Hkj"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzO-1T-bfc" customClass="CustomEventsView" customModule="kidsleep" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="132" width="414" height="600"/>
+                                                <rect key="frame" x="16" y="132" width="382" height="600"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="kYA-Ot-dbx" firstAttribute="top" secondItem="8Oa-zJ-20j" secondAttribute="top" id="AJn-yK-eVy"/>
-                                            <constraint firstAttribute="trailing" secondItem="yzO-1T-bfc" secondAttribute="trailing" id="Awc-08-JZ6"/>
+                                            <constraint firstAttribute="trailing" secondItem="yzO-1T-bfc" secondAttribute="trailing" constant="16" id="Awc-08-JZ6"/>
                                             <constraint firstAttribute="bottom" secondItem="yzO-1T-bfc" secondAttribute="bottom" id="B5B-0R-oax"/>
-                                            <constraint firstItem="yzO-1T-bfc" firstAttribute="leading" secondItem="8Oa-zJ-20j" secondAttribute="leading" id="OQ8-sh-Pf4"/>
-                                            <constraint firstAttribute="trailing" secondItem="kYA-Ot-dbx" secondAttribute="trailing" id="fIU-cB-f1s"/>
+                                            <constraint firstItem="yzO-1T-bfc" firstAttribute="leading" secondItem="8Oa-zJ-20j" secondAttribute="leading" constant="16" id="OQ8-sh-Pf4"/>
+                                            <constraint firstAttribute="trailing" secondItem="kYA-Ot-dbx" secondAttribute="trailing" constant="16" id="fIU-cB-f1s"/>
                                             <constraint firstAttribute="height" constant="732" id="pqO-xv-Xaa"/>
                                             <constraint firstItem="yzO-1T-bfc" firstAttribute="top" secondItem="kYA-Ot-dbx" secondAttribute="bottom" id="tqJ-nK-PUF"/>
-                                            <constraint firstItem="kYA-Ot-dbx" firstAttribute="leading" secondItem="8Oa-zJ-20j" secondAttribute="leading" id="uAF-KE-pCI"/>
+                                            <constraint firstItem="kYA-Ot-dbx" firstAttribute="leading" secondItem="8Oa-zJ-20j" secondAttribute="leading" constant="16" id="uAF-KE-pCI"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -155,21 +163,66 @@
             </objects>
             <point key="canvasLocation" x="1829" y="447"/>
         </scene>
-        <!--View Controller-->
+        <!--Helpers View Controller-->
         <scene sceneID="ry0-jJ-ZKa">
             <objects>
-                <viewController id="Nno-Jg-MHr" sceneMemberID="viewController">
+                <viewController id="Nno-Jg-MHr" customClass="HelpersViewController" customModule="kidsleep" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gR2-e9-6z3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Помощники" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udp-nh-mOl">
+                                <rect key="frame" x="16" y="111" width="160" height="30"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="24"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.20392156862745098" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Помощники" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQ4-Ak-QKS">
+                                <rect key="frame" x="147.5" y="57" width="119" height="22"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkk-7S-mjP">
+                                <rect key="frame" x="16" y="165" width="77" height="77"/>
+                                <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="JGc-TO-UTI"/>
+                                    <constraint firstAttribute="width" constant="77" id="wtr-bK-U7i"/>
+                                </constraints>
+                                <state key="normal" image="moon"/>
+                                <connections>
+                                    <action selector="turnOnLightTapped:" destination="Nno-Jg-MHr" eventType="touchUpInside" id="jgP-Zs-fMJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ночник" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mga-sa-MXl">
+                                <rect key="frame" x="26" y="246" width="57.5" height="17.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="829-aX-AF3"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="udp-nh-mOl" firstAttribute="top" secondItem="uQ4-Ak-QKS" secondAttribute="bottom" constant="32" id="0nL-AD-nkx"/>
+                            <constraint firstItem="kkk-7S-mjP" firstAttribute="leading" secondItem="829-aX-AF3" secondAttribute="leading" constant="16" id="8lo-TM-MqG"/>
+                            <constraint firstItem="kkk-7S-mjP" firstAttribute="top" secondItem="udp-nh-mOl" secondAttribute="bottom" constant="24" id="Mba-hK-S0r"/>
+                            <constraint firstItem="Mga-sa-MXl" firstAttribute="top" secondItem="kkk-7S-mjP" secondAttribute="bottom" constant="4" id="TD2-bM-maM"/>
+                            <constraint firstItem="udp-nh-mOl" firstAttribute="leading" secondItem="829-aX-AF3" secondAttribute="leading" constant="16" id="Wtk-ow-617"/>
+                            <constraint firstItem="uQ4-Ak-QKS" firstAttribute="top" secondItem="829-aX-AF3" secondAttribute="top" constant="13" id="XV4-pY-58C"/>
+                            <constraint firstItem="Mga-sa-MXl" firstAttribute="centerX" secondItem="kkk-7S-mjP" secondAttribute="centerX" id="Y5K-AM-xuN"/>
+                            <constraint firstItem="uQ4-Ak-QKS" firstAttribute="centerX" secondItem="gR2-e9-6z3" secondAttribute="centerX" id="bPa-l9-7bP"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dxp-fE-CmG"/>
+                    <connections>
+                        <outlet property="nighLightButton" destination="kkk-7S-mjP" id="QXL-Be-AXf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oYg-j6-rqP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="767" y="1158"/>
+            <point key="canvasLocation" x="766.66666666666674" y="1157.8125"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="VbN-kN-zOb">
@@ -192,6 +245,7 @@
         <image name="Apps" width="30" height="30"/>
         <image name="Profile" width="30" height="30"/>
         <image name="Time" width="30" height="30"/>
+        <image name="moon" width="52" height="53"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
