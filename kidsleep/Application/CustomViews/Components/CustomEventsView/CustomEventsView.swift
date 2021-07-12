@@ -5,7 +5,7 @@ import RxSwift
 @IBDesignable
 class CustomEventsView: UIView {
     private let bag = DisposeBag()
-    
+   
     var breakfastTimeInput: CustomTimePicker = {
         let input = CustomTimePicker()
         input.placeholder = Events.breakfast.rawValue
@@ -78,18 +78,13 @@ class CustomEventsView: UIView {
         return input
     }()
     
-    private let scrollView = UIScrollView()
-    private let contentView = UIView()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupScrollView()
         setup()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setupScrollView()
         setup()
     }
     
@@ -119,39 +114,20 @@ class CustomEventsView: UIView {
             .disposed(by: bag)
     }
     
-    private func setupScrollView() {
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.backgroundColor = .clear
-        scrollView.showsVerticalScrollIndicator = false
-        addSubview(scrollView)
-        scrollView.addSubview(contentView)
-        
-        scrollView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        scrollView.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
-        scrollView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        scrollView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-       
-        contentView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor).isActive = true
-        contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
-        contentView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
-        contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
-        contentView.heightAnchor.constraint(equalToConstant: 650).isActive = true
-    }
-    
     private func setup() {
-        contentView.addSubview(breakfastTimeInput)
-        contentView.addSubview(firstdaySleepTimeInput)
-        contentView.addSubview(dinnerTimeInput)
-        contentView.addSubview(brunchTimeInput)
-        contentView.addSubview(secondDaySleepInput)
-        contentView.addSubview(secondBrunchTimeInput)
-        contentView.addSubview(eveningMealTimeInput)
-        contentView.addSubview(nightSleepTimeInput)
-        contentView.addSubview(nightMealTimeInput)
-        
+        backgroundColor = .black
+        addSubview(breakfastTimeInput)
+        addSubview(firstdaySleepTimeInput)
+        addSubview(dinnerTimeInput)
+        addSubview(brunchTimeInput)
+        addSubview(secondDaySleepInput)
+        addSubview(secondBrunchTimeInput)
+        addSubview(eveningMealTimeInput)
+        addSubview(nightSleepTimeInput)
+        addSubview(nightMealTimeInput)
+            
         addConstraintToElement(item: breakfastTimeInput)
-        breakfastTimeInput.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+        breakfastTimeInput.topAnchor.constraint(equalTo: topAnchor, constant: 12).isActive = true
 
         addConstraintToElement(item: firstdaySleepTimeInput)
         firstdaySleepTimeInput.topAnchor.constraint(equalTo: breakfastTimeInput.bottomAnchor, constant: 8).isActive = true
@@ -179,8 +155,8 @@ class CustomEventsView: UIView {
     }
     
     private func addConstraintToElement(item: UIView) {
-        item.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0).isActive = true
-        item.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0).isActive = true
+        item.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0).isActive = true
+        item.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0).isActive = true
         item.heightAnchor.constraint(equalToConstant: 56).isActive = true
     }
 }

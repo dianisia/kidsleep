@@ -39,33 +39,56 @@
                                     <constraint firstAttribute="height" constant="299" id="1yx-AC-cvf"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kYA-Ot-dbx" customClass="CustomStoriesView" customModule="kidsleep" customModuleProvider="target">
-                                <rect key="frame" x="16" y="301" width="382" height="132"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eti-Oi-9we">
+                                <rect key="frame" x="0.0" y="281" width="414" height="532"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Oa-zJ-20j">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="732"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kYA-Ot-dbx" customClass="CustomStoriesView" customModule="kidsleep" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="132"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="132" id="yvt-Ga-Hkj"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzO-1T-bfc" customClass="CustomEventsView" customModule="kidsleep" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="132" width="414" height="600"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="kYA-Ot-dbx" firstAttribute="top" secondItem="8Oa-zJ-20j" secondAttribute="top" id="AJn-yK-eVy"/>
+                                            <constraint firstAttribute="trailing" secondItem="yzO-1T-bfc" secondAttribute="trailing" id="Awc-08-JZ6"/>
+                                            <constraint firstAttribute="bottom" secondItem="yzO-1T-bfc" secondAttribute="bottom" id="B5B-0R-oax"/>
+                                            <constraint firstItem="yzO-1T-bfc" firstAttribute="leading" secondItem="8Oa-zJ-20j" secondAttribute="leading" id="OQ8-sh-Pf4"/>
+                                            <constraint firstAttribute="trailing" secondItem="kYA-Ot-dbx" secondAttribute="trailing" id="fIU-cB-f1s"/>
+                                            <constraint firstAttribute="height" constant="732" id="pqO-xv-Xaa"/>
+                                            <constraint firstItem="yzO-1T-bfc" firstAttribute="top" secondItem="kYA-Ot-dbx" secondAttribute="bottom" id="tqJ-nK-PUF"/>
+                                            <constraint firstItem="kYA-Ot-dbx" firstAttribute="leading" secondItem="8Oa-zJ-20j" secondAttribute="leading" id="uAF-KE-pCI"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="132" id="46u-vH-MvD"/>
+                                    <constraint firstAttribute="bottom" secondItem="8Oa-zJ-20j" secondAttribute="bottom" id="OgX-6T-a3o"/>
+                                    <constraint firstAttribute="trailing" secondItem="8Oa-zJ-20j" secondAttribute="trailing" id="br6-fo-OSR"/>
+                                    <constraint firstItem="8Oa-zJ-20j" firstAttribute="leading" secondItem="Eti-Oi-9we" secondAttribute="leading" id="oSP-Z7-98B"/>
+                                    <constraint firstItem="8Oa-zJ-20j" firstAttribute="width" secondItem="Eti-Oi-9we" secondAttribute="width" id="vbe-BK-Zm9"/>
+                                    <constraint firstItem="8Oa-zJ-20j" firstAttribute="top" secondItem="Eti-Oi-9we" secondAttribute="top" id="z4r-dH-CuJ"/>
                                 </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzO-1T-bfc" customClass="CustomEventsView" customModule="kidsleep" customModuleProvider="target">
-                                <rect key="frame" x="16" y="457" width="382" height="332"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="332" id="Td1-Jx-Okh"/>
-                                </constraints>
-                            </view>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZEx-VD-0ig"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ZEx-VD-0ig" firstAttribute="trailing" secondItem="yzO-1T-bfc" secondAttribute="trailing" constant="16" id="5JJ-1W-883"/>
-                            <constraint firstItem="kYA-Ot-dbx" firstAttribute="leading" secondItem="ZEx-VD-0ig" secondAttribute="leading" constant="16" id="66c-ZD-hTH"/>
-                            <constraint firstItem="yzO-1T-bfc" firstAttribute="leading" secondItem="ZEx-VD-0ig" secondAttribute="leading" constant="16" id="Bhi-Js-J6m"/>
-                            <constraint firstItem="ZEx-VD-0ig" firstAttribute="trailing" secondItem="kYA-Ot-dbx" secondAttribute="trailing" constant="16" id="IDr-p0-ALh"/>
-                            <constraint firstItem="kYA-Ot-dbx" firstAttribute="top" secondItem="7BM-xZ-T6e" secondAttribute="bottom" constant="24" id="NT9-xK-w8F"/>
-                            <constraint firstItem="yzO-1T-bfc" firstAttribute="top" secondItem="kYA-Ot-dbx" secondAttribute="bottom" constant="24" id="Pa7-2Y-dOp"/>
+                            <constraint firstItem="Eti-Oi-9we" firstAttribute="trailing" secondItem="ZEx-VD-0ig" secondAttribute="trailing" id="ALL-FU-CJj"/>
+                            <constraint firstItem="Eti-Oi-9we" firstAttribute="bottom" secondItem="ZEx-VD-0ig" secondAttribute="bottom" id="QPB-Qs-Zs3"/>
                             <constraint firstItem="7BM-xZ-T6e" firstAttribute="trailing" secondItem="ZEx-VD-0ig" secondAttribute="trailing" constant="3" id="Ujb-v6-Tte"/>
                             <constraint firstItem="7BM-xZ-T6e" firstAttribute="leading" secondItem="ZEx-VD-0ig" secondAttribute="leading" constant="-3" id="YR0-oY-Qzq"/>
                             <constraint firstItem="7BM-xZ-T6e" firstAttribute="top" secondItem="5xy-bx-Puz" secondAttribute="top" constant="-22" id="aYt-Gd-kD3"/>
+                            <constraint firstItem="Eti-Oi-9we" firstAttribute="top" secondItem="7BM-xZ-T6e" secondAttribute="bottom" constant="4" id="ld1-eR-itq"/>
+                            <constraint firstItem="Eti-Oi-9we" firstAttribute="leading" secondItem="ZEx-VD-0ig" secondAttribute="leading" id="vkF-pr-SDW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mAp-VW-RxC"/>
