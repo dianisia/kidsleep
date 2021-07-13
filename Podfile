@@ -9,6 +9,8 @@ target 'kidsleep' do
   pod 'Alamofire', '~> 5.4'
   pod 'SDWebImage'
   pod 'PanModal'
+  pod 'RxMusicPlayer'
+
   # Pods for kidsleep
 
 end

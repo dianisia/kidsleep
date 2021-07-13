@@ -201,6 +201,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мелодии" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYM-Vh-vau">
+                                <rect key="frame" x="16" y="303.5" width="121" height="30"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="24"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.20392156859999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="829-aX-AF3"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -208,16 +214,19 @@
                             <constraint firstItem="udp-nh-mOl" firstAttribute="top" secondItem="uQ4-Ak-QKS" secondAttribute="bottom" constant="32" id="0nL-AD-nkx"/>
                             <constraint firstItem="kkk-7S-mjP" firstAttribute="leading" secondItem="829-aX-AF3" secondAttribute="leading" constant="16" id="8lo-TM-MqG"/>
                             <constraint firstItem="kkk-7S-mjP" firstAttribute="top" secondItem="udp-nh-mOl" secondAttribute="bottom" constant="24" id="Mba-hK-S0r"/>
+                            <constraint firstItem="tYM-Vh-vau" firstAttribute="top" secondItem="Mga-sa-MXl" secondAttribute="bottom" constant="40" id="Qml-hx-Igs"/>
                             <constraint firstItem="Mga-sa-MXl" firstAttribute="top" secondItem="kkk-7S-mjP" secondAttribute="bottom" constant="4" id="TD2-bM-maM"/>
                             <constraint firstItem="udp-nh-mOl" firstAttribute="leading" secondItem="829-aX-AF3" secondAttribute="leading" constant="16" id="Wtk-ow-617"/>
                             <constraint firstItem="uQ4-Ak-QKS" firstAttribute="top" secondItem="829-aX-AF3" secondAttribute="top" constant="13" id="XV4-pY-58C"/>
                             <constraint firstItem="Mga-sa-MXl" firstAttribute="centerX" secondItem="kkk-7S-mjP" secondAttribute="centerX" id="Y5K-AM-xuN"/>
                             <constraint firstItem="uQ4-Ak-QKS" firstAttribute="centerX" secondItem="gR2-e9-6z3" secondAttribute="centerX" id="bPa-l9-7bP"/>
+                            <constraint firstItem="tYM-Vh-vau" firstAttribute="leading" secondItem="829-aX-AF3" secondAttribute="leading" constant="16" id="kRN-fF-tQI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dxp-fE-CmG"/>
                     <connections>
                         <outlet property="nighLightButton" destination="kkk-7S-mjP" id="QXL-Be-AXf"/>
+                        <outlet property="songsLabel" destination="tYM-Vh-vau" id="ROu-S4-H31"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oYg-j6-rqP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

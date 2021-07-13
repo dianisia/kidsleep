@@ -4,6 +4,10 @@ PODS:
   - RxCocoa (6.2.0):
     - RxRelay (= 6.2.0)
     - RxSwift (= 6.2.0)
+  - RxMusicPlayer (2.1.0):
+    - RxCocoa
+    - RxRelay
+    - RxSwift
   - RxRelay (6.2.0):
     - RxSwift (= 6.2.0)
   - RxSwift (6.2.0)
@@ -15,6 +19,7 @@ DEPENDENCIES:
   - Alamofire (~> 5.4)
   - PanModal
   - RxCocoa (= 6.2.0)
+  - RxMusicPlayer
   - RxSwift (= 6.2.0)
   - SDWebImage
 
@@ -23,6 +28,7 @@ SPEC REPOS:
     - Alamofire
     - PanModal
     - RxCocoa
+    - RxMusicPlayer
     - RxRelay
     - RxSwift
     - SDWebImage
@@ -31,10 +37,11 @@ SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxMusicPlayer: 4cef33c4544d8599c53eb9c6f0c04f41d0c00691
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
 
-PODFILE CHECKSUM: c30c15406ad1abd47c0eb6dbbe728f62ef260ea3
+PODFILE CHECKSUM: da7b29cfc7b54739adcf327deec5235efcae9245
 
 COCOAPODS: 1.10.0
