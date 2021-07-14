@@ -41,7 +41,6 @@
 		E48B02A42696F6DD0068F438 /* CustomStoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B02A32696F6DD0068F438 /* CustomStoriesView.swift */; };
 		E48B02A7269711CA0068F438 /* StoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B02A6269711CA0068F438 /* StoriesViewModel.swift */; };
 		E48B02A92697269C0068F438 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B02A82697269C0068F438 /* Story.swift */; };
-		E48BE64D269D8C3B00B8C8D3 /* 1.mpga in Resources */ = {isa = PBXBuildFile; fileRef = E48BE64C269D8C3B00B8C8D3 /* 1.mpga */; };
 		E48BE64F269DA48600B8C8D3 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BE64E269DA48600B8C8D3 /* Song.swift */; };
 		E4921C7F2686188C00DB247D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4921C7E2686188C00DB247D /* CustomTextField.swift */; };
 		E4921C81268618EC00DB247D /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4921C80268618EC00DB247D /* CustomTextField.xib */; };
@@ -106,7 +105,6 @@
 		E48B02A32696F6DD0068F438 /* CustomStoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStoriesView.swift; sourceTree = "<group>"; };
 		E48B02A6269711CA0068F438 /* StoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewModel.swift; sourceTree = "<group>"; };
 		E48B02A82697269C0068F438 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
-		E48BE64C269D8C3B00B8C8D3 /* 1.mpga */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.mpga; sourceTree = "<group>"; };
 		E48BE64E269DA48600B8C8D3 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		E4921C7E2686188C00DB247D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		E4921C80268618EC00DB247D /* CustomTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextField.xib; sourceTree = "<group>"; };
@@ -323,14 +321,6 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		E48BE64B269D8C1500B8C8D3 /* Music */ = {
-			isa = PBXGroup;
-			children = (
-				E48BE64C269D8C3B00B8C8D3 /* 1.mpga */,
-			);
-			path = Music;
-			sourceTree = "<group>";
-		};
 		E4921C7D2686186700DB247D /* CustomTextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,6 +328,29 @@
 				E4921C80268618EC00DB247D /* CustomTextField.xib */,
 			);
 			path = CustomTextField;
+			sourceTree = "<group>";
+		};
+		E4A38C8D269ED53100D041CA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E4A38E1F2684858C00E44AD8 /* Main.storyboard */,
+				E48943E92685E3F4007DF356 /* Onboarding.storyboard */,
+				E48B0288268C85C80068F438 /* App.storyboard */,
+				E4A38E242684859100E44AD8 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E4A38C8E269ED55800D041CA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E4A38E1D2684858C00E44AD8 /* ViewController.swift */,
+				E48B028A268C85ED0068F438 /* AppViewController.swift */,
+				E48943EB2685E60D007DF356 /* OnboardingViewController.swift */,
+				E4DDF841269C559100BF1F1F /* HelpersViewController.swift */,
+				E4DDF846269C78E900BF1F1F /* NightLightViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		E4A38E0D2684858C00E44AD8 = {
@@ -368,17 +381,8 @@
 				E4A38E2D268486E800E44AD8 /* Application */,
 				E4A38E192684858C00E44AD8 /* AppDelegate.swift */,
 				E4A38E1B2684858C00E44AD8 /* SceneDelegate.swift */,
-				E4A38E1D2684858C00E44AD8 /* ViewController.swift */,
-				E4A38E1F2684858C00E44AD8 /* Main.storyboard */,
 				E4A38E222684859100E44AD8 /* Assets.xcassets */,
-				E4A38E242684859100E44AD8 /* LaunchScreen.storyboard */,
 				E4A38E272684859100E44AD8 /* Info.plist */,
-				E48943E92685E3F4007DF356 /* Onboarding.storyboard */,
-				E48B0288268C85C80068F438 /* App.storyboard */,
-				E48B028A268C85ED0068F438 /* AppViewController.swift */,
-				E48943EB2685E60D007DF356 /* OnboardingViewController.swift */,
-				E4DDF841269C559100BF1F1F /* HelpersViewController.swift */,
-				E4DDF846269C78E900BF1F1F /* NightLightViewController.swift */,
 			);
 			path = kidsleep;
 			sourceTree = "<group>";
@@ -386,6 +390,8 @@
 		E4A38E2D268486E800E44AD8 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				E4A38C8E269ED55800D041CA /* ViewControllers */,
+				E4A38C8D269ED53100D041CA /* Views */,
 				E48B02A5269711A50068F438 /* ViewModels */,
 				E4A7F4972684E0F900BEB391 /* Extensions */,
 				E4A38E332684A46C00E44AD8 /* Resources */,
@@ -426,7 +432,6 @@
 		E4A38E332684A46C00E44AD8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E48BE64B269D8C1500B8C8D3 /* Music */,
 				E4A7F4892684B1A400BEB391 /* Fonts */,
 			);
 			path = Resources;
@@ -562,7 +567,6 @@
 				E4A38E232684859100E44AD8 /* Assets.xcassets in Resources */,
 				E4A7F48F2684B1D900BEB391 /* Montserrat-Medium.ttf in Resources */,
 				E439A4892685F8B80056FA74 /* CustomSegmentControl.xib in Resources */,
-				E48BE64D269D8C3B00B8C8D3 /* 1.mpga in Resources */,
 				E43C04D6268A2D5D000FD441 /* ScheduleInfoView.xib in Resources */,
 				E4921C81268618EC00DB247D /* CustomTextField.xib in Resources */,
 				E423D9CA268B782800DF2222 /* CustomSongView.xib in Resources */,

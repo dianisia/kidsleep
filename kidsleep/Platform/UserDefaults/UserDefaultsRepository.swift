@@ -2,7 +2,6 @@ import Foundation
 
 class UserDefaultsRepository: Repository {
     func save(info: UserInfo) {
-        print(info)
         UserDefaults.standard.setValue(info.name, forKey: "name")
         UserDefaults.standard.setValue(info.birthday, forKey: "birthday")
         UserDefaults.standard.setValue(info.breakfast, forKey: "breakfast")
