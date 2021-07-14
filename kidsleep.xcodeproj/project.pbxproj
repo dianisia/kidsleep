@@ -44,6 +44,7 @@
 		E48BE64F269DA48600B8C8D3 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BE64E269DA48600B8C8D3 /* Song.swift */; };
 		E4921C7F2686188C00DB247D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4921C7E2686188C00DB247D /* CustomTextField.swift */; };
 		E4921C81268618EC00DB247D /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4921C80268618EC00DB247D /* CustomTextField.xib */; };
+		E4A38C90269ED60900D041CA /* SongsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A38C8F269ED60900D041CA /* SongsViewModel.swift */; };
 		E4A38E1A2684858C00E44AD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A38E192684858C00E44AD8 /* AppDelegate.swift */; };
 		E4A38E1C2684858C00E44AD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A38E1B2684858C00E44AD8 /* SceneDelegate.swift */; };
 		E4A38E1E2684858C00E44AD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A38E1D2684858C00E44AD8 /* ViewController.swift */; };
@@ -108,6 +109,7 @@
 		E48BE64E269DA48600B8C8D3 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		E4921C7E2686188C00DB247D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		E4921C80268618EC00DB247D /* CustomTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextField.xib; sourceTree = "<group>"; };
+		E4A38C8F269ED60900D041CA /* SongsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsViewModel.swift; sourceTree = "<group>"; };
 		E4A38E162684858C00E44AD8 /* kidsleep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kidsleep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4A38E192684858C00E44AD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4A38E1B2684858C00E44AD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 				E48B029B2695C1BD0068F438 /* MainViewModel.swift */,
 				E48B02A6269711CA0068F438 /* StoriesViewModel.swift */,
 				E4BD1C4E26988A4B00F66B08 /* EventsViewModel.swift */,
+				E4A38C8F269ED60900D041CA /* SongsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -650,6 +653,7 @@
 				E4BD1C4B269846B600F66B08 /* CustomEventsView.swift in Sources */,
 				E4A38E32268499ED00E44AD8 /* GradientView.swift in Sources */,
 				E43C04DC268B2F79000FD441 /* CustomSwitch.swift in Sources */,
+				E4A38C90269ED60900D041CA /* SongsViewModel.swift in Sources */,
 				E48B02A42696F6DD0068F438 /* CustomStoriesView.swift in Sources */,
 				E4DDF847269C78E900BF1F1F /* NightLightViewController.swift in Sources */,
 				E439A4872685F7910056FA74 /* CustomSegmentedControl.swift in Sources */,
