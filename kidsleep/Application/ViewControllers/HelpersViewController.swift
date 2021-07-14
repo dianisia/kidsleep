@@ -67,26 +67,20 @@ class HelpersViewController: UIViewController {
             .map({ RxMusicPlayerItem(url: $0) })
         
         let player = RxMusicPlayer(items: items)!
-    
+        
         let actions: [SharedSequence<DriverSharingStrategy, RxMusicPlayer.Command>] = songViews.enumerated().map { (index, t) in
-            t.tapGesture.rx.event.asDriver().map { [unowned self] _ in
+            t.tapGesture.rx.event.asDriver().map { _ in
                 if t.isPlaying {
                     t.isPlaying = false
                     return RxMusicPlayer.Command.pause
                 }
-                songViews.forEach{ $0.isPlaying = false }
-                t.isPlaying = true
                 return RxMusicPlayer.Command.playAt(index: index)
             }
         }
     
         let cmd = Driver.merge(actions)
             .startWith(.prefetch)
-            .debug()
-            .do(onNext: { event in
-                print(event)
-            })
-        
+
         player.rx.currentItemRestDurationDisplay()
             .do(onNext: { [unowned self] value in
                 songViews[player.playIndex].songDuration = value ?? ""
@@ -102,14 +96,17 @@ class HelpersViewController: UIViewController {
             })
             .drive()
             .disposed(by: bag)
-        
+                
         player.run(cmd: cmd)
-            .flatMap { status -> Driver<()> in
+            .flatMap { [unowned self] status -> Driver<()> in
                 switch status {
                 case let RxMusicPlayer.Status.failed(err: err):
                     print(err)
                 case let RxMusicPlayer.Status.critical(err: err):
                     print(err)
+                case RxMusicPlayer.Status.playing:
+                    songViews.forEach{ $0.isPlaying = false }
+                    songViews[player.playIndex].isPlaying = true
                 default:
                     print(status)
                 }
