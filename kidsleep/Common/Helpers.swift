@@ -55,5 +55,8 @@ func convertMinutes(min: Int, forms: [String]) -> String {
 
 func timeStringToMinutes(time: String) -> Int {
     let t = time.split(separator: ":")
+    if t.count < 2 {
+        return 0
+    }
     return (Int(t[0]) ?? 0) * 60 + (Int(t[1]) ?? 0)
 }

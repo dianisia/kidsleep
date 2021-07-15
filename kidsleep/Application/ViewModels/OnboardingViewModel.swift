@@ -37,6 +37,7 @@ final class OnboardingViewModel {
             nightMeal: try! nightMeal.value()
         )
         repository.save(info: info)
+        OnboardingManager.shared.setOnboarded()
     }
     
 }
