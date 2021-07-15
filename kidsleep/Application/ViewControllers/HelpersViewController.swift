@@ -33,86 +33,17 @@ class HelpersViewController: UIViewController {
         let output = songsViewModel.transform(input: SongsViewModel.Input())
         songs = output.songs
         nighLightButton.layer.cornerRadius = 16
-        
-        songViewsSetup()
-        setupPlayer()
+        setupSongsPlayer()
     }
     
-    private func songViewsSetup() {
-        let songsView = UIView(frame: .zero)
-        view.addSubview(songsView)
-        songsView.translatesAutoresizingMaskIntoConstraints = false
-        songsView.topAnchor.constraint(equalTo: songsLabel.bottomAnchor, constant: 24).isActive = true
-        songsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
-        songsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
-        songsView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 16).isActive = true
-        
-        var top = songsLabel.bottomAnchor
-        for song in songs {
-            let songView = CustomSongView(frame: .zero)
-            songView.configure(with: song)
-            songsView.addSubview(songView)
-            songView.translatesAutoresizingMaskIntoConstraints = false
-            songView.topAnchor.constraint(equalTo: top, constant: 8).isActive = true
-            songView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
-            songView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
-            songView.heightAnchor.constraint(equalToConstant: 63).isActive = true
-            top = songView.bottomAnchor
-            songViews.append(songView)
-        }
+    private func setupSongsPlayer() {
+        let songsPlayerView = SongsPlayerView(songs: songs)
+        view.addSubview(songsPlayerView)
+        songsPlayerView.translatesAutoresizingMaskIntoConstraints = false
+        songsPlayerView.topAnchor.constraint(equalTo: songsLabel.bottomAnchor, constant: 24).isActive = true
+        songsPlayerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
+        songsPlayerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
+        songsPlayerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 16).isActive = true
     }
     
-    private func setupPlayer() {
-        let items = songs.map {$0.sourceURL!}
-            .map({ RxMusicPlayerItem(url: $0) })
-        
-        let player = RxMusicPlayer(items: items)!
-        
-        let actions: [SharedSequence<DriverSharingStrategy, RxMusicPlayer.Command>] = songViews.enumerated().map { (index, t) in
-            t.tapGesture.rx.event.asDriver().map { _ in
-                if t.isPlaying {
-                    t.isPlaying = false
-                    return RxMusicPlayer.Command.pause
-                }
-                return RxMusicPlayer.Command.playAt(index: index)
-            }
-        }
-    
-        let cmd = Driver.merge(actions)
-            .startWith(.prefetch)
-
-        player.rx.currentItemRestDurationDisplay()
-            .do(onNext: { [unowned self] value in
-                songViews[player.playIndex].songDuration = value ?? ""
-            })
-            .drive()
-            .disposed(by: bag)
-        
-        player.rx.currentItemTime()
-            .do(onNext: { [unowned self] value in
-                let diff = Double(songs[player.playIndex].duration - (songs[player.playIndex].duration - (value?.value ?? 0)))
-                let progress = diff / Double(songs[player.playIndex].duration)
-                songViews[player.playIndex].progressView.setProgress(Float(progress), animated: true)
-            })
-            .drive()
-            .disposed(by: bag)
-                
-        player.run(cmd: cmd)
-            .flatMap { [unowned self] status -> Driver<()> in
-                switch status {
-                case let RxMusicPlayer.Status.failed(err: err):
-                    print(err)
-                case let RxMusicPlayer.Status.critical(err: err):
-                    print(err)
-                case RxMusicPlayer.Status.playing:
-                    songViews.forEach{ $0.isPlaying = false }
-                    songViews[player.playIndex].isPlaying = true
-                default:
-                    print(status)
-                }
-                return .just(())
-            }
-            .drive()
-            .disposed(by: bag)
-    }
 }

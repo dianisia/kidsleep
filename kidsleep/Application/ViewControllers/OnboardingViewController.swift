@@ -22,47 +22,31 @@ class OnboardingViewController: UIViewController {
         (xib: "SongsInfoView", cell: "cell_songs"),
     ]
     
+    private var mainChildInfoView = MainChildInfoView()
+    private var scheduleInfoView = ScheduleInfoView()
+    private var songsInfoView = SongsInfoView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         onboardingScreensInfo.forEach { screenInfo in
             self.collectionView.register(UINib(nibName: screenInfo.xib, bundle: nil), forCellWithReuseIdentifier: screenInfo.cell)
         }
         
-        let mainChildInfoView = collectionView.dequeueReusableCell(withReuseIdentifier: onboardingScreensInfo[0].cell, for: IndexPath(item: 0, section: 0)) as! MainChildInfoView
+        mainChildInfoView = collectionView.dequeueReusableCell(withReuseIdentifier: onboardingScreensInfo[0].cell, for: IndexPath(item: 0, section: 0)) as! MainChildInfoView
         onboardingScreens.append(mainChildInfoView)
         
-        let scheduleInfoView = collectionView.dequeueReusableCell(withReuseIdentifier: onboardingScreensInfo[1].cell, for: IndexPath(item: 1, section: 0)) as! ScheduleInfoView
+        scheduleInfoView = collectionView.dequeueReusableCell(withReuseIdentifier: onboardingScreensInfo[1].cell, for: IndexPath(item: 1, section: 0)) as! ScheduleInfoView
         scheduleInfoView.instantiate()
         onboardingScreens.append(scheduleInfoView)
         
-        onboardingScreens.append(collectionView.dequeueReusableCell(withReuseIdentifier: onboardingScreensInfo[2].cell, for: IndexPath(item: 2, section: 0)) as! SongsInfoView)
+        songsInfoView = collectionView.dequeueReusableCell(withReuseIdentifier: onboardingScreensInfo[2].cell, for: IndexPath(item: 2, section: 0)) as! SongsInfoView
+        onboardingScreens.append(songsInfoView)
         
         collectionView.reloadData()
         
-        mainChildInfoView.birthdayTextField.rx.text.orEmpty.bind(to: viewModel.birthday)
-            .disposed(by: disposeBag)
-        mainChildInfoView.nameTextField.rx.text.orEmpty.bind(to: viewModel.name)
-            .disposed(by: disposeBag)
+        bindMainChildInfo()
+        bindScheduleInfoView()
         
-        scheduleInfoView.breakfast.rx.text.orEmpty.bind(to: viewModel.breakfast)
-            .disposed(by: disposeBag)
-        scheduleInfoView.brunch.rx.text.orEmpty.bind(to: viewModel.brunch)
-            .disposed(by: disposeBag)
-        scheduleInfoView.dinner.rx.text.orEmpty.bind(to: viewModel.dinner)
-            .disposed(by: disposeBag)
-        scheduleInfoView.eveningMeal.rx.text.orEmpty.bind(to: viewModel.eveningMeal)
-            .disposed(by: disposeBag)
-        scheduleInfoView.firstDaySleep.rx.text.orEmpty.bind(to: viewModel.firstDaySleep)
-            .disposed(by: disposeBag)
-        scheduleInfoView.nightSleep.rx.text.orEmpty.bind(to: viewModel.nightSleep)
-            .disposed(by: disposeBag)
-        scheduleInfoView.nightMeal.rx.text.orEmpty.bind(to: viewModel.nightMeal)
-            .disposed(by: disposeBag)
-        scheduleInfoView.secondBrunch.rx.text.orEmpty.bind(to: viewModel.secondBrunch)
-            .disposed(by: disposeBag)
-        scheduleInfoView.secondDaySleep.rx.text.orEmpty.bind(to: viewModel.secondDaySleep)
-            .disposed(by: disposeBag)
-    
         nextButton.rx.tap.bind { [unowned self] in
             self.onNextButtonTapped()
         }
@@ -73,7 +57,6 @@ class OnboardingViewController: UIViewController {
             setInformationLabelText(currentPage: value)
         })
         .disposed(by: disposeBag)
-        
     }
 
     private func onNextButtonTapped() {
@@ -82,7 +65,7 @@ class OnboardingViewController: UIViewController {
         if (currPageValue == onboardingScreens.count - 1) {
             viewModel.save()
             let storyboard = UIStoryboard(name: "App", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "AppViewController") as! AppViewController
+            let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as! AppViewController
             vc.modalPresentationStyle = .overCurrentContext
             present(vc, animated: true, completion: nil)
             return
@@ -111,13 +94,48 @@ class OnboardingViewController: UIViewController {
             informationLabel.text = "Zzzzz..."
         }
     }
+    
+    private func bindMainChildInfo() {
+        mainChildInfoView.birthdayTextField.rx.text.orEmpty.bind(to: viewModel.birthday)
+            .disposed(by: disposeBag)
+        mainChildInfoView.nameTextField.rx.text.orEmpty.bind(to: viewModel.name)
+            .disposed(by: disposeBag)
+        let nameIsEmpty = mainChildInfoView.nameTextField.rx.text.orEmpty.map { !$0.isEmpty }
+        let birthdayIsEmpty = mainChildInfoView.birthdayTextField.rx.text.orEmpty.map { !$0.isEmpty }
+        
+        Observable.combineLatest(nameIsEmpty, birthdayIsEmpty) {
+            return $0 && $1
+        }
+        .bind(to: nextButton.rx.isEnabled)
+        .disposed(by: disposeBag)
+    }
+    
+    private func bindScheduleInfoView() {
+        scheduleInfoView.breakfast.rx.text.orEmpty.bind(to: viewModel.breakfast)
+            .disposed(by: disposeBag)
+        scheduleInfoView.brunch.rx.text.orEmpty.bind(to: viewModel.brunch)
+            .disposed(by: disposeBag)
+        scheduleInfoView.dinner.rx.text.orEmpty.bind(to: viewModel.dinner)
+            .disposed(by: disposeBag)
+        scheduleInfoView.eveningMeal.rx.text.orEmpty.bind(to: viewModel.eveningMeal)
+            .disposed(by: disposeBag)
+        scheduleInfoView.firstDaySleep.rx.text.orEmpty.bind(to: viewModel.firstDaySleep)
+            .disposed(by: disposeBag)
+        scheduleInfoView.nightSleep.rx.text.orEmpty.bind(to: viewModel.nightSleep)
+            .disposed(by: disposeBag)
+        scheduleInfoView.nightMeal.rx.text.orEmpty.bind(to: viewModel.nightMeal)
+            .disposed(by: disposeBag)
+        scheduleInfoView.secondBrunch.rx.text.orEmpty.bind(to: viewModel.secondBrunch)
+            .disposed(by: disposeBag)
+        scheduleInfoView.secondDaySleep.rx.text.orEmpty.bind(to: viewModel.secondDaySleep)
+            .disposed(by: disposeBag)
+    }
 }
 
 extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         onboardingScreens.count
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         onboardingScreens[indexPath.item]
