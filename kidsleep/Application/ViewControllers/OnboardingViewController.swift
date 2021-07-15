@@ -6,6 +6,7 @@ import RxCocoa
 class OnboardingViewController: UIViewController {
     typealias ViewModelType = OnboardingViewModel
     var viewModel: OnboardingViewModel! = OnboardingViewModel(repository: UserDefaultsRepository())
+    var songsViewModel = SongsViewModel()
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageController: CustomPageControl!
@@ -31,6 +32,7 @@ class OnboardingViewController: UIViewController {
         onboardingScreensInfo.forEach { screenInfo in
             self.collectionView.register(UINib(nibName: screenInfo.xib, bundle: nil), forCellWithReuseIdentifier: screenInfo.cell)
         }
+        collectionView.register(SongsInfoView.self, forCellWithReuseIdentifier: "cell_songs")
         
         mainChildInfoView = collectionView.dequeueReusableCell(withReuseIdentifier: onboardingScreensInfo[0].cell, for: IndexPath(item: 0, section: 0)) as! MainChildInfoView
         onboardingScreens.append(mainChildInfoView)
@@ -40,6 +42,7 @@ class OnboardingViewController: UIViewController {
         onboardingScreens.append(scheduleInfoView)
         
         songsInfoView = collectionView.dequeueReusableCell(withReuseIdentifier: onboardingScreensInfo[2].cell, for: IndexPath(item: 2, section: 0)) as! SongsInfoView
+        songsInfoView.configure(with: songsViewModel.transform(input: SongsViewModel.Input()).songs)
         onboardingScreens.append(songsInfoView)
         
         collectionView.reloadData()
@@ -65,7 +68,7 @@ class OnboardingViewController: UIViewController {
         if (currPageValue == onboardingScreens.count - 1) {
             viewModel.save()
             let storyboard = UIStoryboard(name: "App", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as! AppViewController
+            let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
             vc.modalPresentationStyle = .overCurrentContext
             present(vc, animated: true, completion: nil)
             return
