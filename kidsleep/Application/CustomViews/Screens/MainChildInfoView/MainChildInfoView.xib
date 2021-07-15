@@ -47,7 +47,7 @@
                     </segments>
                 </segmentedControl>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqL-Z1-K6R">
-                    <rect key="frame" x="140" y="362" width="134" height="29"/>
+                    <rect key="frame" x="132.5" y="362" width="149" height="30"/>
                     <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
                     <state key="normal" title="+ Добавить ребенка">
                         <color key="titleColor" red="0.46666666666666667" green="0.0039215686274509803" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
@@ -72,6 +72,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="birthdayTextField" destination="AAq-vF-qHF" id="kAx-5k-7Uf"/>
+                <outlet property="genderSegmentControl" destination="RsI-BZ-MZS" id="1pV-UB-RHD"/>
                 <outlet property="nameTextField" destination="M5c-J7-5x1" id="GGv-ql-Gcd"/>
             </connections>
             <point key="canvasLocation" x="-85.507246376811594" y="64.955357142857139"/>

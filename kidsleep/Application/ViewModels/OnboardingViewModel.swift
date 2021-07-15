@@ -8,6 +8,7 @@ final class OnboardingViewModel {
     
     let name = BehaviorSubject<String>(value: "")
     let birthday = BehaviorSubject<String>(value: "")
+    let gender = BehaviorSubject<Int>(value: 0)
     let breakfast = BehaviorSubject<String>(value: "")
     let firstDaySleep = BehaviorSubject<String>(value: "")
     let dinner = BehaviorSubject<String>(value: "")
@@ -26,6 +27,7 @@ final class OnboardingViewModel {
         let info = UserInfo(
             name: try! name.value(),
             birthday: try! birthday.value(),
+            gender: try! gender.value(),
             breakfast: try! breakfast.value(),
             firstDaySleep: try! firstDaySleep.value(),
             dinner: try! dinner.value(),

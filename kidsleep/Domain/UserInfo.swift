@@ -3,6 +3,7 @@ import Foundation
 struct UserInfo {
     let name: String
     let birthday: String
+    let gender: Int
     let breakfast: String
     let firstDaySleep: String
     let dinner: String

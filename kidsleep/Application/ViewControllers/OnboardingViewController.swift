@@ -103,6 +103,8 @@ class OnboardingViewController: UIViewController {
             .disposed(by: disposeBag)
         mainChildInfoView.nameTextField.rx.text.orEmpty.bind(to: viewModel.name)
             .disposed(by: disposeBag)
+        mainChildInfoView.genderSegmentControl.rx.selectedSegmentIndex.bind(to: viewModel.gender)
+            .disposed(by: disposeBag)
         let nameIsEmpty = mainChildInfoView.nameTextField.rx.text.orEmpty.map { !$0.isEmpty }
         let birthdayIsEmpty = mainChildInfoView.birthdayTextField.rx.text.orEmpty.map { !$0.isEmpty }
         

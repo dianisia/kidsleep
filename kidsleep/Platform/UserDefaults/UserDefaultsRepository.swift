@@ -19,6 +19,7 @@ class UserDefaultsRepository: Repository {
         return UserInfo(
             name: UserDefaults.standard.string(forKey: "name") ?? "" ,
             birthday: UserDefaults.standard.string(forKey: "birthday") ?? "",
+            gender: UserDefaults.standard.integer(forKey: "gender") ?? 0,
             breakfast: UserDefaults.standard.string(forKey: "breakfast") ?? "",
             firstDaySleep: UserDefaults.standard.string(forKey: "firstDaySleep") ?? "",
             dinner: UserDefaults.standard.string(forKey: "dinner") ?? "",

@@ -28,10 +28,6 @@ class CustomSegmentControl: UISegmentedControl {
         setup()
     }
     
-    override class func prepareForInterfaceBuilder() {
-        super.prepareForInterfaceBuilder()
-    }
-    
     private func setup() {
         selectedSegmentTintColor = selectedTintColor
         backgroundColor = .black
