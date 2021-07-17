@@ -9,7 +9,7 @@ final class APICaller {
     }
     
     @discardableResult
-    public func getStories(completion: @escaping (Error?, [Story]?) -> Void) -> URLSessionTask? {
+    func getStories(completion: @escaping (Error?, [Story]?) -> Void) -> URLSessionTask? {
         let headers: HTTPHeaders = [
             "content-type": "application/json",
             "x-apikey": Constants.apiKey,
@@ -22,10 +22,20 @@ final class APICaller {
                 if let array = value as? [[String: Any]] {
                     var result = [Story]()
                     for val in array {
-                        guard let text = val["text"] as? String, let url = val["image"] as? String else {
+                        guard
+                            let text = val["text"] as? String,
+                            let url = val["image"] as? String,
+                            let title = val["title"] as? String,
+                            let id = val["_id"] as? String
+                        else {
                             continue
                         }
-                        result.append(Story(text: text, imageURL: URL(string: url)))
+                        result.append(Story(
+                            id: id,
+                            title: title,
+                            text: text,
+                            imageURL: URL(string: url)
+                        ))
                     }
                     completion(nil, result)
                 }

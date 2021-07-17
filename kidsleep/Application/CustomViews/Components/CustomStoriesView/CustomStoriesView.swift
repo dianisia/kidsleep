@@ -7,7 +7,7 @@ class CustomStoriesView: UIView, UIScrollViewDelegate {
     private let bag = DisposeBag()
     
     var collectionView: UICollectionView!
-    var stories: Observable<[Story]> = Observable.empty()
+    var stories = BehaviorRelay<[Story]>(value: [])
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,17 +36,11 @@ class CustomStoriesView: UIView, UIScrollViewDelegate {
         collectionView.rx.setDelegate(self).disposed(by: bag)
     }
     
-    func configure(with viewModel: StoriesViewModel) {
-        let output = viewModel.transform(input: StoriesViewModel.Input())
-        output.stories.bind(to: collectionView.rx.items(cellIdentifier: CustomStoriesViewCell.identifier, cellType: CustomStoriesViewCell.self)) { row, data, cell in
+    func configure(with stories: BehaviorRelay<[Story]>) {
+        self.stories = stories
+        self.stories.bind(to: collectionView.rx.items(cellIdentifier: CustomStoriesViewCell.identifier, cellType: CustomStoriesViewCell.self)) { row, data, cell in
             cell.configure(story: data)
         }
         .disposed(by: bag)
-        
-        collectionView.rx.itemSelected
-            .subscribe(onNext: { indexPath in
-                print(indexPath)
-            })
-            .disposed(by: bag)
     }
 }
