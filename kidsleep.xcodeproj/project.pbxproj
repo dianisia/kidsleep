@@ -9,24 +9,18 @@
 /* Begin PBXBuildFile section */
 		C9B816951AC9B9B8F4C39896 /* Pods_kidsleep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFACB7F9EBE269C007A138AE /* Pods_kidsleep.framework */; };
 		E423D9C8268B780500DF2222 /* CustomSongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E423D9C7268B780500DF2222 /* CustomSongView.swift */; };
-		E423D9CA268B782800DF2222 /* CustomSongView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E423D9C9268B782800DF2222 /* CustomSongView.xib */; };
-		E42B95AE2689C09900F2312E /* CustomDataPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = E42B95AD2689C09900F2312E /* CustomDataPicker.xib */; };
 		E42B95B02689C1E500F2312E /* CustomDataPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B95AF2689C1E500F2312E /* CustomDataPicker.swift */; };
 		E42B95B22689D61900F2312E /* CustomInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B95B12689D61900F2312E /* CustomInput.swift */; };
-		E42B95B52689DF7300F2312E /* CustomTimePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = E42B95B42689DF7300F2312E /* CustomTimePicker.xib */; };
 		E42B95B72689DF8200F2312E /* CustomTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B95B62689DF8200F2312E /* CustomTimePicker.swift */; };
 		E439A4872685F7910056FA74 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E439A4862685F7910056FA74 /* CustomSegmentedControl.swift */; };
-		E439A4892685F8B80056FA74 /* CustomSegmentControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = E439A4882685F8B80056FA74 /* CustomSegmentControl.xib */; };
 		E43C04D12689F475000FD441 /* MainChildInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E43C04D02689F475000FD441 /* MainChildInfoView.xib */; };
 		E43C04D32689F487000FD441 /* MainChildInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C04D22689F487000FD441 /* MainChildInfoView.swift */; };
 		E43C04D6268A2D5D000FD441 /* ScheduleInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E43C04D5268A2D5D000FD441 /* ScheduleInfoView.xib */; };
 		E43C04D8268A2D74000FD441 /* ScheduleInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C04D7268A2D74000FD441 /* ScheduleInfoView.swift */; };
 		E43C04DC268B2F79000FD441 /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C04DB268B2F79000FD441 /* CustomSwitch.swift */; };
-		E43C04DE268B2F9B000FD441 /* CustomSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = E43C04DD268B2F9B000FD441 /* CustomSwitch.xib */; };
 		E48943EA2685E3F4007DF356 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48943E92685E3F4007DF356 /* Onboarding.storyboard */; };
 		E48943EC2685E60D007DF356 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48943EB2685E60D007DF356 /* OnboardingViewController.swift */; };
 		E48943EF2685ECBF007DF356 /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48943EE2685ECBF007DF356 /* CustomPageControl.swift */; };
-		E48943F12685ECD3007DF356 /* CustomPageControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = E48943F02685ECD3007DF356 /* CustomPageControl.xib */; };
 		E48B0289268C85C80068F438 /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48B0288268C85C80068F438 /* App.storyboard */; };
 		E48B028B268C85ED0068F438 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B028A268C85ED0068F438 /* AppViewController.swift */; };
 		E48B028D268C935F0068F438 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B028C268C935F0068F438 /* OnboardingViewModel.swift */; };
@@ -43,7 +37,6 @@
 		E48B02A92697269C0068F438 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B02A82697269C0068F438 /* Story.swift */; };
 		E48BE64F269DA48600B8C8D3 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48BE64E269DA48600B8C8D3 /* Song.swift */; };
 		E4921C7F2686188C00DB247D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4921C7E2686188C00DB247D /* CustomTextField.swift */; };
-		E4921C81268618EC00DB247D /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4921C80268618EC00DB247D /* CustomTextField.xib */; };
 		E4A38C90269ED60900D041CA /* SongsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A38C8F269ED60900D041CA /* SongsViewModel.swift */; };
 		E4A38C9226A0343500D041CA /* OnboardingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A38C9126A0343500D041CA /* OnboardingManager.swift */; };
 		E4A38C9526A0566E00D041CA /* SongsPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A38C9426A0566E00D041CA /* SongsPlayerView.swift */; };
@@ -59,14 +52,12 @@
 		E4A7F48D2684B1CE00BEB391 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4A7F48C2684B1CE00BEB391 /* Montserrat-Bold.ttf */; };
 		E4A7F48F2684B1D900BEB391 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4A7F48E2684B1D900BEB391 /* Montserrat-Medium.ttf */; };
 		E4A7F4932684C23100BEB391 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A7F4912684C23100BEB391 /* CustomButton.swift */; };
-		E4A7F4942684C23100BEB391 /* CustomButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4A7F4922684C23100BEB391 /* CustomButton.xib */; };
 		E4A7F4962684DF4E00BEB391 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E4A7F4952684DF4D00BEB391 /* Montserrat-SemiBold.ttf */; };
 		E4A7F4992684E11100BEB391 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A7F4982684E11100BEB391 /* Extensions.swift */; };
 		E4BD1C4826973FDF00F66B08 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD1C4726973FDF00F66B08 /* APICaller.swift */; };
 		E4BD1C4B269846B600F66B08 /* CustomEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD1C4A269846B600F66B08 /* CustomEventsView.swift */; };
 		E4BD1C4D269872EF00F66B08 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD1C4C269872EF00F66B08 /* Events.swift */; };
 		E4BD1C4F26988A4B00F66B08 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD1C4E26988A4B00F66B08 /* EventsViewModel.swift */; };
-		E4BE2271268B8583006E002E /* SongsInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4BE2270268B8583006E002E /* SongsInfoView.xib */; };
 		E4BE2273268B877D006E002E /* SongsInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BE2272268B877D006E002E /* SongsInfoView.swift */; };
 		E4DDF842269C559100BF1F1F /* HelpersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DDF841269C559100BF1F1F /* HelpersViewController.swift */; };
 		E4DDF845269C59E300BF1F1F /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DDF844269C59E300BF1F1F /* CustomSlider.swift */; };
@@ -77,24 +68,18 @@
 		BB8E9E1697F0288782162630 /* Pods-kidsleep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kidsleep.debug.xcconfig"; path = "Target Support Files/Pods-kidsleep/Pods-kidsleep.debug.xcconfig"; sourceTree = "<group>"; };
 		BFACB7F9EBE269C007A138AE /* Pods_kidsleep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kidsleep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E423D9C7268B780500DF2222 /* CustomSongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSongView.swift; sourceTree = "<group>"; };
-		E423D9C9268B782800DF2222 /* CustomSongView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSongView.xib; sourceTree = "<group>"; };
-		E42B95AD2689C09900F2312E /* CustomDataPicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomDataPicker.xib; sourceTree = "<group>"; };
 		E42B95AF2689C1E500F2312E /* CustomDataPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDataPicker.swift; sourceTree = "<group>"; };
 		E42B95B12689D61900F2312E /* CustomInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInput.swift; sourceTree = "<group>"; };
-		E42B95B42689DF7300F2312E /* CustomTimePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTimePicker.xib; sourceTree = "<group>"; };
 		E42B95B62689DF8200F2312E /* CustomTimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTimePicker.swift; sourceTree = "<group>"; };
 		E439A4862685F7910056FA74 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
-		E439A4882685F8B80056FA74 /* CustomSegmentControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSegmentControl.xib; sourceTree = "<group>"; };
 		E43C04D02689F475000FD441 /* MainChildInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainChildInfoView.xib; sourceTree = "<group>"; };
 		E43C04D22689F487000FD441 /* MainChildInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChildInfoView.swift; sourceTree = "<group>"; };
 		E43C04D5268A2D5D000FD441 /* ScheduleInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleInfoView.xib; sourceTree = "<group>"; };
 		E43C04D7268A2D74000FD441 /* ScheduleInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleInfoView.swift; sourceTree = "<group>"; };
 		E43C04DB268B2F79000FD441 /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
-		E43C04DD268B2F9B000FD441 /* CustomSwitch.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSwitch.xib; sourceTree = "<group>"; };
 		E48943E92685E3F4007DF356 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		E48943EB2685E60D007DF356 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		E48943EE2685ECBF007DF356 /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
-		E48943F02685ECD3007DF356 /* CustomPageControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomPageControl.xib; sourceTree = "<group>"; };
 		E48B0288268C85C80068F438 /* App.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
 		E48B028A268C85ED0068F438 /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		E48B028C268C935F0068F438 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
@@ -111,7 +96,6 @@
 		E48B02A82697269C0068F438 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		E48BE64E269DA48600B8C8D3 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		E4921C7E2686188C00DB247D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		E4921C80268618EC00DB247D /* CustomTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextField.xib; sourceTree = "<group>"; };
 		E4A38C8F269ED60900D041CA /* SongsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsViewModel.swift; sourceTree = "<group>"; };
 		E4A38C9126A0343500D041CA /* OnboardingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingManager.swift; sourceTree = "<group>"; };
 		E4A38C9426A0566E00D041CA /* SongsPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsPlayerView.swift; sourceTree = "<group>"; };
@@ -129,14 +113,12 @@
 		E4A7F48C2684B1CE00BEB391 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		E4A7F48E2684B1D900BEB391 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		E4A7F4912684C23100BEB391 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		E4A7F4922684C23100BEB391 /* CustomButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomButton.xib; sourceTree = "<group>"; };
 		E4A7F4952684DF4D00BEB391 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		E4A7F4982684E11100BEB391 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E4BD1C4726973FDF00F66B08 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		E4BD1C4A269846B600F66B08 /* CustomEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEventsView.swift; sourceTree = "<group>"; };
 		E4BD1C4C269872EF00F66B08 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		E4BD1C4E26988A4B00F66B08 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
-		E4BE2270268B8583006E002E /* SongsInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongsInfoView.xib; sourceTree = "<group>"; };
 		E4BE2272268B877D006E002E /* SongsInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsInfoView.swift; sourceTree = "<group>"; };
 		E4DDF841269C559100BF1F1F /* HelpersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpersViewController.swift; sourceTree = "<group>"; };
 		E4DDF844269C59E300BF1F1F /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
@@ -173,58 +155,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		E423D9C6268B77E100DF2222 /* CustomSongView */ = {
-			isa = PBXGroup;
-			children = (
-				E423D9C7268B780500DF2222 /* CustomSongView.swift */,
-				E423D9C9268B782800DF2222 /* CustomSongView.xib */,
-			);
-			path = CustomSongView;
-			sourceTree = "<group>";
-		};
-		E42B95AC2689C08500F2312E /* CustomDataPicker */ = {
-			isa = PBXGroup;
-			children = (
-				E42B95AD2689C09900F2312E /* CustomDataPicker.xib */,
-				E42B95AF2689C1E500F2312E /* CustomDataPicker.swift */,
-			);
-			path = CustomDataPicker;
-			sourceTree = "<group>";
-		};
-		E42B95B32689DF5900F2312E /* CustomTimePicker */ = {
-			isa = PBXGroup;
-			children = (
-				E42B95B42689DF7300F2312E /* CustomTimePicker.xib */,
-				E42B95B62689DF8200F2312E /* CustomTimePicker.swift */,
-			);
-			path = CustomTimePicker;
-			sourceTree = "<group>";
-		};
-		E439A4852685F7500056FA74 /* CustomSegmentedControl */ = {
-			isa = PBXGroup;
-			children = (
-				E439A4862685F7910056FA74 /* CustomSegmentedControl.swift */,
-				E439A4882685F8B80056FA74 /* CustomSegmentControl.xib */,
-			);
-			path = CustomSegmentedControl;
-			sourceTree = "<group>";
-		};
 		E43C04CD2689F43B000FD441 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				E4DDF843269C59CF00BF1F1F /* CustomSlider */,
-				E4BD1C49269846A300F66B08 /* CustomEventsView */,
-				E48B02A22696F6BB0068F438 /* CustomStoriesView */,
-				E48B029F2696ED010068F438 /* CustomStoriesViewCell */,
-				E48B02982694B49B0068F438 /* MainChildCard */,
-				E423D9C6268B77E100DF2222 /* CustomSongView */,
-				E43C04DA268B2F4C000FD441 /* CustomSwitch */,
-				E42B95B32689DF5900F2312E /* CustomTimePicker */,
-				E42B95AC2689C08500F2312E /* CustomDataPicker */,
-				E4921C7D2686186700DB247D /* CustomTextField */,
-				E439A4852685F7500056FA74 /* CustomSegmentedControl */,
-				E48943ED2685EC36007DF356 /* CustomPageControl */,
-				E4A7F4902684C1A400BEB391 /* CustomButton */,
+				E4DDF844269C59E300BF1F1F /* CustomSlider.swift */,
+				E4BD1C4A269846B600F66B08 /* CustomEventsView.swift */,
+				E48B02A32696F6DD0068F438 /* CustomStoriesView.swift */,
+				E48B02A02696ED260068F438 /* CustomStroriesViewCell.swift */,
+				E48B02992694B4B30068F438 /* MainChildCart.swift */,
+				E423D9C7268B780500DF2222 /* CustomSongView.swift */,
+				E43C04DB268B2F79000FD441 /* CustomSwitch.swift */,
+				E42B95B62689DF8200F2312E /* CustomTimePicker.swift */,
+				E42B95AF2689C1E500F2312E /* CustomDataPicker.swift */,
+				E4921C7E2686188C00DB247D /* CustomTextField.swift */,
+				E439A4862685F7910056FA74 /* CustomSegmentedControl.swift */,
+				E48943EE2685ECBF007DF356 /* CustomPageControl.swift */,
+				E4A7F4912684C23100BEB391 /* CustomButton.swift */,
 				E4A38E31268499ED00E44AD8 /* GradientView.swift */,
 				E42B95B12689D61900F2312E /* CustomInput.swift */,
 			);
@@ -260,24 +206,6 @@
 			path = ScheduleInfoView;
 			sourceTree = "<group>";
 		};
-		E43C04DA268B2F4C000FD441 /* CustomSwitch */ = {
-			isa = PBXGroup;
-			children = (
-				E43C04DB268B2F79000FD441 /* CustomSwitch.swift */,
-				E43C04DD268B2F9B000FD441 /* CustomSwitch.xib */,
-			);
-			path = CustomSwitch;
-			sourceTree = "<group>";
-		};
-		E48943ED2685EC36007DF356 /* CustomPageControl */ = {
-			isa = PBXGroup;
-			children = (
-				E48943EE2685ECBF007DF356 /* CustomPageControl.swift */,
-				E48943F02685ECD3007DF356 /* CustomPageControl.xib */,
-			);
-			path = CustomPageControl;
-			sourceTree = "<group>";
-		};
 		E48B028E268F03E60068F438 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,30 +223,6 @@
 			path = UserDefaults;
 			sourceTree = "<group>";
 		};
-		E48B02982694B49B0068F438 /* MainChildCard */ = {
-			isa = PBXGroup;
-			children = (
-				E48B02992694B4B30068F438 /* MainChildCart.swift */,
-			);
-			path = MainChildCard;
-			sourceTree = "<group>";
-		};
-		E48B029F2696ED010068F438 /* CustomStoriesViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				E48B02A02696ED260068F438 /* CustomStroriesViewCell.swift */,
-			);
-			path = CustomStoriesViewCell;
-			sourceTree = "<group>";
-		};
-		E48B02A22696F6BB0068F438 /* CustomStoriesView */ = {
-			isa = PBXGroup;
-			children = (
-				E48B02A32696F6DD0068F438 /* CustomStoriesView.swift */,
-			);
-			path = CustomStoriesView;
-			sourceTree = "<group>";
-		};
 		E48B02A5269711A50068F438 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -329,15 +233,6 @@
 				E4A38C8F269ED60900D041CA /* SongsViewModel.swift */,
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		E4921C7D2686186700DB247D /* CustomTextField */ = {
-			isa = PBXGroup;
-			children = (
-				E4921C7E2686188C00DB247D /* CustomTextField.swift */,
-				E4921C80268618EC00DB247D /* CustomTextField.xib */,
-			);
-			path = CustomTextField;
 			sourceTree = "<group>";
 		};
 		E4A38C8D269ED53100D041CA /* Views */ = {
@@ -467,15 +362,6 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		E4A7F4902684C1A400BEB391 /* CustomButton */ = {
-			isa = PBXGroup;
-			children = (
-				E4A7F4912684C23100BEB391 /* CustomButton.swift */,
-				E4A7F4922684C23100BEB391 /* CustomButton.xib */,
-			);
-			path = CustomButton;
-			sourceTree = "<group>";
-		};
 		E4A7F4972684E0F900BEB391 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -493,29 +379,12 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		E4BD1C49269846A300F66B08 /* CustomEventsView */ = {
-			isa = PBXGroup;
-			children = (
-				E4BD1C4A269846B600F66B08 /* CustomEventsView.swift */,
-			);
-			path = CustomEventsView;
-			sourceTree = "<group>";
-		};
 		E4BE226D268B8438006E002E /* SongsInfoView */ = {
 			isa = PBXGroup;
 			children = (
-				E4BE2270268B8583006E002E /* SongsInfoView.xib */,
 				E4BE2272268B877D006E002E /* SongsInfoView.swift */,
 			);
 			path = SongsInfoView;
-			sourceTree = "<group>";
-		};
-		E4DDF843269C59CF00BF1F1F /* CustomSlider */ = {
-			isa = PBXGroup;
-			children = (
-				E4DDF844269C59E300BF1F1F /* CustomSlider.swift */,
-			);
-			path = CustomSlider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -578,24 +447,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4A7F48D2684B1CE00BEB391 /* Montserrat-Bold.ttf in Resources */,
-				E48943F12685ECD3007DF356 /* CustomPageControl.xib in Resources */,
-				E43C04DE268B2F9B000FD441 /* CustomSwitch.xib in Resources */,
 				E43C04D12689F475000FD441 /* MainChildInfoView.xib in Resources */,
 				E4A38E262684859100E44AD8 /* LaunchScreen.storyboard in Resources */,
-				E4A7F4942684C23100BEB391 /* CustomButton.xib in Resources */,
 				E4A7F48B2684B1BC00BEB391 /* Montserrat-Black.ttf in Resources */,
 				E4A38E232684859100E44AD8 /* Assets.xcassets in Resources */,
 				E4A7F48F2684B1D900BEB391 /* Montserrat-Medium.ttf in Resources */,
-				E439A4892685F8B80056FA74 /* CustomSegmentControl.xib in Resources */,
 				E43C04D6268A2D5D000FD441 /* ScheduleInfoView.xib in Resources */,
-				E4921C81268618EC00DB247D /* CustomTextField.xib in Resources */,
-				E423D9CA268B782800DF2222 /* CustomSongView.xib in Resources */,
 				E48943EA2685E3F4007DF356 /* Onboarding.storyboard in Resources */,
 				E48B0289268C85C80068F438 /* App.storyboard in Resources */,
-				E4BE2271268B8583006E002E /* SongsInfoView.xib in Resources */,
 				E4A7F4962684DF4E00BEB391 /* Montserrat-SemiBold.ttf in Resources */,
-				E42B95B52689DF7300F2312E /* CustomTimePicker.xib in Resources */,
-				E42B95AE2689C09900F2312E /* CustomDataPicker.xib in Resources */,
 				E4A38E212684858C00E44AD8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
