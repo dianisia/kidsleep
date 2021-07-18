@@ -8,6 +8,7 @@ class AppViewController: UIViewController {
     @IBOutlet weak var eventsView: CustomEventsView!
 
     var stories = BehaviorRelay<[Story]>(value: [])
+    var events: Driver<[EventInput]> = Driver.just([])
     
     private let viewModel: MainViewModel = MainViewModel()
     private let storiesViewModel: StoriesViewModel = StoriesViewModel()
@@ -18,7 +19,7 @@ class AppViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        eventsView.configure(with: eventsViewModel)
+//        eventsView.configure(with: eventsViewModel)
         bindModel()
     
         storiesView.collectionView.rx.itemSelected
@@ -55,5 +56,11 @@ class AppViewController: UIViewController {
         stories = storiesViewModel.transform(input: StoriesViewModel.Input()).stories
         storiesView.configure(with: stories)
         
+        events = eventsViewModel.transform().events
+        events.do(onNext: { values in
+            self.eventsView.configure(with: values)
+        })
+        .drive()
+        .disposed(by: bag)
     }
 }

@@ -4,24 +4,13 @@ import RxCocoa
 class MainViewModel {
     private let bag = DisposeBag()
     private var user: UserInfo
-    private var events = [(Events, Int)]()
+    private var events = [(String, Int)]()
     private var nextEv = BehaviorRelay<(String, Int)>(value: ("", 0))
     static private let checkEventInterval = 30
     
     init() {
         let repository = UserDefaultsRepository()
         user = repository.get()
-        events = [
-            (Events.breakfast, user.breakfast),
-            (Events.firstDaySleep, user.firstDaySleep),
-            (Events.dinner, user.dinner),
-            (Events.brunch, user.brunch),
-            (Events.secondDaySleep, user.secondDaySleep),
-            (Events.secondBrunch, user.secondBrunch),
-            (Events.eveningMeal, user.eveningMeal),
-            (Events.nightSleep, user.nightSleep),
-            (Events.nightMeal, user.nightMeal)
-        ]
     }
     
     struct Input {
@@ -87,7 +76,7 @@ class MainViewModel {
                 nextEvent = event.0
             }
         }
-        return (nextEvent.rawValue, minTime)
+        return (nextEvent, minTime)
     }
     
 }

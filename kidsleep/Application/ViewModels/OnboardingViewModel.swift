@@ -9,16 +9,8 @@ final class OnboardingViewModel {
     let name = BehaviorSubject<String>(value: "")
     let birthday = BehaviorSubject<String>(value: "")
     let gender = BehaviorSubject<Int>(value: 0)
-    let breakfast = BehaviorSubject<String>(value: "")
-    let firstDaySleep = BehaviorSubject<String>(value: "")
-    let dinner = BehaviorSubject<String>(value: "")
-    let brunch = BehaviorSubject<String>(value: "")
-    let secondDaySleep = BehaviorSubject<String>(value: "")
-    let secondBrunch = BehaviorSubject<String>(value: "")
-    let eveningMeal = BehaviorSubject<String>(value: "")
-    let nightSleep = BehaviorSubject<String>(value: "")
-    let nightMeal = BehaviorSubject<String>(value: "")
-    
+    let events = BehaviorSubject<[UserEvent]>(value: [])
+  
     init(repository: Repository) {
         self.repository = repository
     }
@@ -28,40 +20,25 @@ final class OnboardingViewModel {
             name: try! name.value(),
             birthday: try! birthday.value(),
             gender: try! gender.value(),
-            breakfast: timeStringToMinutes(time: try! breakfast.value()),
-            firstDaySleep: timeStringToMinutes(time: try! firstDaySleep.value()),
-            dinner:  timeStringToMinutes(time: try! dinner.value()),
-            brunch: timeStringToMinutes(time: try! brunch.value()),
-            secondDaySleep: timeStringToMinutes(time: try! secondDaySleep.value()),
-            secondBrunch: timeStringToMinutes(time: try! secondBrunch.value()),
-            eveningMeal: timeStringToMinutes(time: try! eveningMeal.value()),
-            nightSleep: timeStringToMinutes(time: try! nightSleep.value()),
-            nightMeal: timeStringToMinutes(time: try! nightMeal.value())
+            events: try! events.value()
         )
         repository.save(info: info)
         OnboardingManager.shared.setOnboarded()
         NotificationManager.shared.requestAuthorization() { granted in
             print(granted)
-            self.setReminder(event: Events.breakfast, minutes: info.breakfast)
-            self.setReminder(event: Events.firstDaySleep, minutes: info.firstDaySleep)
-            self.setReminder(event: Events.dinner, minutes: info.dinner)
-            self.setReminder(event: Events.brunch, minutes: info.brunch)
-            self.setReminder(event: Events.secondDaySleep, minutes: info.secondDaySleep)
-            self.setReminder(event: Events.secondBrunch, minutes: info.secondBrunch)
-            self.setReminder(event: Events.secondDaySleep, minutes: info.secondDaySleep)
-            self.setReminder(event: Events.eveningMeal, minutes: info.eveningMeal)
-            self.setReminder(event: Events.nightSleep, minutes: info.nightSleep)
-            self.setReminder(event: Events.nightMeal, minutes: info.nightMeal)
+            for event in info.events {
+                self.setReminder(event: event.title, minutes: event.value)
+            }
         }
     }
 
-    private func setReminder(event: Events, minutes: Int) {
+    private func setReminder(event: String, minutes: Int) {
         var date = DateComponents()
         let tmp = getHoursAndMinutesFromString(totalMinutes: minutes)
         date.hour = tmp.hours
         date.minute = tmp.minutes
         let reminder = Reminder(reminderType: .calendar, date: date, repeats: true)
-        NotificationManager.shared.scheduleNotification(task: Task(name: event.rawValue, reminder: reminder))
+        NotificationManager.shared.scheduleNotification(task: Task(name: event, reminder: reminder))
     }
     
 }

@@ -2,6 +2,12 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+struct EventInput {
+    var label: String
+    var value: String
+    var type: EventType?
+}
+
 class EventsViewModel {
     private var user: UserInfo
     
@@ -9,15 +15,7 @@ class EventsViewModel {
     }
     
     struct Output {
-        let breakfast: Driver<String>
-        let firstDaySleep: Driver<String>
-        let dinner: Driver<String>
-        let brunch: Driver<String>
-        let secondDaySleep: Driver<String>
-        let secondBrunch: Driver<String>
-        let eveningMeal: Driver<String>
-        let nightSleep: Driver<String>
-        let nightMeal: Driver<String>
+        let events: Driver<[EventInput]>
     }
     
     init() {
@@ -26,16 +24,11 @@ class EventsViewModel {
     }
     
     func transform() -> Output {
-        return Output(
-            breakfast: Driver.just(minutesToString(totalMinutes: user.breakfast)),
-            firstDaySleep: Driver.just(minutesToString(totalMinutes: user.firstDaySleep)),
-            dinner: Driver.just(minutesToString(totalMinutes: user.dinner)),
-            brunch: Driver.just(minutesToString(totalMinutes: user.brunch)),
-            secondDaySleep: Driver.just(minutesToString(totalMinutes: user.secondDaySleep)),
-            secondBrunch: Driver.just(minutesToString(totalMinutes: user.secondBrunch)),
-            eveningMeal: Driver.just(minutesToString(totalMinutes: user.eveningMeal)),
-            nightSleep: Driver.just(minutesToString(totalMinutes: user.nightSleep)),
-            nightMeal: Driver.just(minutesToString(totalMinutes: user.nightMeal))
-        )
+        let data = user.events.map { EventInput(
+            label: $0.title,
+            value: minutesToString(totalMinutes: $0.value),
+            type: $0.type
+        ) }
+        return Output(events: Driver.just(data))
     }
 }
