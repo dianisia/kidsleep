@@ -17,18 +17,18 @@ class UserDefaultsRepository: Repository {
     
     func get() -> UserInfo {
         return UserInfo(
-            name: UserDefaults.standard.string(forKey: "name") ?? "" ,
+            name: UserDefaults.standard.string(forKey: "name") ?? "",
             birthday: UserDefaults.standard.string(forKey: "birthday") ?? "",
-            gender: UserDefaults.standard.integer(forKey: "gender") ?? 0,
-            breakfast: UserDefaults.standard.string(forKey: "breakfast") ?? "",
-            firstDaySleep: UserDefaults.standard.string(forKey: "firstDaySleep") ?? "",
-            dinner: UserDefaults.standard.string(forKey: "dinner") ?? "",
-            brunch: UserDefaults.standard.string(forKey: "brunch") ?? "",
-            secondDaySleep: UserDefaults.standard.string(forKey: "secondDaySleep") ?? "",
-            secondBrunch: UserDefaults.standard.string(forKey: "secondBrunch") ?? "",
-            eveningMeal: UserDefaults.standard.string(forKey: "eveningMeal") ?? "",
-            nightSleep: UserDefaults.standard.string(forKey: "nightSleep") ?? "",
-            nightMeal: UserDefaults.standard.string(forKey: "nightMeal") ?? ""
+            gender: UserDefaults.standard.integer(forKey: "gender"),
+            breakfast: UserDefaults.standard.integer(forKey: "breakfast"),
+            firstDaySleep: UserDefaults.standard.integer(forKey: "firstDaySleep"),
+            dinner: UserDefaults.standard.integer(forKey: "dinner"),
+            brunch: UserDefaults.standard.integer(forKey: "brunch"),
+            secondDaySleep: UserDefaults.standard.integer(forKey: "secondDaySleep"),
+            secondBrunch: UserDefaults.standard.integer(forKey: "secondBrunch"),
+            eveningMeal: UserDefaults.standard.integer(forKey: "eveningMeal"),
+            nightSleep: UserDefaults.standard.integer(forKey: "nightSleep"),
+            nightMeal: UserDefaults.standard.integer(forKey: "nightMeal")
         )
     }
     

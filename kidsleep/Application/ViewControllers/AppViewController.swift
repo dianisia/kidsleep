@@ -20,7 +20,7 @@ class AppViewController: UIViewController {
         super.viewDidLoad()
         eventsView.configure(with: eventsViewModel)
         bindModel()
-        
+    
         storiesView.collectionView.rx.itemSelected
             .subscribe(onNext: { [unowned self]indexPath in
                 storyDetailsViewController.configure(with: stories.value)
@@ -28,7 +28,6 @@ class AppViewController: UIViewController {
                 present(storyDetailsViewController, animated: true, completion: nil)
             })
             .disposed(by: bag)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {

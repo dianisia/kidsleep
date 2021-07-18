@@ -12,15 +12,15 @@ class MainViewModel {
         let repository = UserDefaultsRepository()
         user = repository.get()
         events = [
-            (Events.breakfast, timeStringToMinutes(time: user.breakfast)),
-            (Events.firstDaySleep, timeStringToMinutes(time: user.firstDaySleep)),
-            (Events.dinner, timeStringToMinutes(time: user.dinner)),
-            (Events.brunch, timeStringToMinutes(time: user.brunch)),
-            (Events.secondDaySleep, timeStringToMinutes(time: user.secondDaySleep)),
-            (Events.secondBrunch, timeStringToMinutes(time: user.secondBrunch)),
-            (Events.eveningMeal, timeStringToMinutes(time: user.eveningMeal)),
-            (Events.nightSleep, timeStringToMinutes(time: user.nightSleep)),
-            (Events.nightMeal, timeStringToMinutes(time: user.nightMeal))
+            (Events.breakfast, user.breakfast),
+            (Events.firstDaySleep, user.firstDaySleep),
+            (Events.dinner, user.dinner),
+            (Events.brunch, user.brunch),
+            (Events.secondDaySleep, user.secondDaySleep),
+            (Events.secondBrunch, user.secondBrunch),
+            (Events.eveningMeal, user.eveningMeal),
+            (Events.nightSleep, user.nightSleep),
+            (Events.nightMeal, user.nightMeal)
         ]
     }
     

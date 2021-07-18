@@ -27,15 +27,15 @@ class EventsViewModel {
     
     func transform() -> Output {
         return Output(
-            breakfast: Driver.just(user.breakfast),
-            firstDaySleep: Driver.just(user.firstDaySleep),
-            dinner: Driver.just(user.dinner),
-            brunch: Driver.just(user.brunch),
-            secondDaySleep: Driver.just(user.secondDaySleep),
-            secondBrunch: Driver.just(user.secondBrunch),
-            eveningMeal: Driver.just(user.eveningMeal),
-            nightSleep: Driver.just(user.nightSleep),
-            nightMeal: Driver.just(user.nightMeal)
+            breakfast: Driver.just(minutesToString(totalMinutes: user.breakfast)),
+            firstDaySleep: Driver.just(minutesToString(totalMinutes: user.firstDaySleep)),
+            dinner: Driver.just(minutesToString(totalMinutes: user.dinner)),
+            brunch: Driver.just(minutesToString(totalMinutes: user.brunch)),
+            secondDaySleep: Driver.just(minutesToString(totalMinutes: user.secondDaySleep)),
+            secondBrunch: Driver.just(minutesToString(totalMinutes: user.secondBrunch)),
+            eveningMeal: Driver.just(minutesToString(totalMinutes: user.eveningMeal)),
+            nightSleep: Driver.just(minutesToString(totalMinutes: user.nightSleep)),
+            nightMeal: Driver.just(minutesToString(totalMinutes: user.nightMeal))
         )
     }
 }

@@ -4,13 +4,13 @@ struct UserInfo {
     let name: String
     let birthday: String
     let gender: Int
-    let breakfast: String
-    let firstDaySleep: String
-    let dinner: String
-    let brunch: String
-    let secondDaySleep: String
-    let secondBrunch: String
-    let eveningMeal: String
-    let nightSleep: String
-    let nightMeal: String
+    let breakfast: Int
+    let firstDaySleep: Int
+    let dinner: Int
+    let brunch: Int
+    let secondDaySleep: Int
+    let secondBrunch: Int
+    let eveningMeal: Int
+    let nightSleep: Int
+    let nightMeal: Int
 }

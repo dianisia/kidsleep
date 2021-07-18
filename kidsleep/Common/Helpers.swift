@@ -60,3 +60,9 @@ func timeStringToMinutes(time: String) -> Int {
     }
     return (Int(t[0]) ?? 0) * 60 + (Int(t[1]) ?? 0)
 }
+
+func minutesToString(totalMinutes: Int) -> String {
+    let hours = totalMinutes / 60
+    let minutes = totalMinutes - hours * 60
+    return "\(String(format: "%02d", hours)):\(String(format: "%02d", minutes))"
+}
