@@ -25,7 +25,7 @@ class NotificationManager {
     func scheduleNotification(task: Task) {
         let content = UNMutableNotificationContent()
         content.title = task.name
-        content.body = "Gentle reminder for your task!"
+        content.body = "Совсем скоро \(task.name.lowercased())"
         
         var trigger: UNNotificationTrigger?
         switch task.reminder.reminderType {

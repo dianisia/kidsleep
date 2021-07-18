@@ -40,20 +40,28 @@ final class OnboardingViewModel {
         )
         repository.save(info: info)
         OnboardingManager.shared.setOnboarded()
-    }
-
-    private func setReminders() {
-        var date = DateComponents()
-        date.hour = 18
-        date.minute = 20
-        let reminder = Reminder(reminderType: .calendar, date: date, repeats: false)
-        NotificationManager.shared.scheduleNotification(task: Task(name: "Test 18 20", reminder: reminder))
-        
         NotificationManager.shared.requestAuthorization() { granted in
             print(granted)
+            self.setReminder(event: Events.breakfast, minutes: info.breakfast)
+            self.setReminder(event: Events.firstDaySleep, minutes: info.firstDaySleep)
+            self.setReminder(event: Events.dinner, minutes: info.dinner)
+            self.setReminder(event: Events.brunch, minutes: info.brunch)
+            self.setReminder(event: Events.secondDaySleep, minutes: info.secondDaySleep)
+            self.setReminder(event: Events.secondBrunch, minutes: info.secondBrunch)
+            self.setReminder(event: Events.secondDaySleep, minutes: info.secondDaySleep)
+            self.setReminder(event: Events.eveningMeal, minutes: info.eveningMeal)
+            self.setReminder(event: Events.nightSleep, minutes: info.nightSleep)
+            self.setReminder(event: Events.nightMeal, minutes: info.nightMeal)
         }
-//        let reminder = Reminder(reminderType: .time, timeInterval: TimeInterval(10), repeats: false)
-//        NotificationManager.shared.scheduleNotification(task: Task(name: "Test", reminder: reminder))
+    }
+
+    private func setReminder(event: Events, minutes: Int) {
+        var date = DateComponents()
+        let tmp = getHoursAndMinutesFromString(totalMinutes: minutes)
+        date.hour = tmp.hours
+        date.minute = tmp.minutes
+        let reminder = Reminder(reminderType: .calendar, date: date, repeats: false)
+        NotificationManager.shared.scheduleNotification(task: Task(name: event.rawValue, reminder: reminder))
     }
     
 }
