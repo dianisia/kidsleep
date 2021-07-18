@@ -37,7 +37,7 @@ class NotificationManager {
             }
         case .calendar:
             if let date = task.reminder.date {
-                trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
+                trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: task.reminder.repeats)
             }
         default:
             return

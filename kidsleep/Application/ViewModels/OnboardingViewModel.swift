@@ -60,7 +60,7 @@ final class OnboardingViewModel {
         let tmp = getHoursAndMinutesFromString(totalMinutes: minutes)
         date.hour = tmp.hours
         date.minute = tmp.minutes
-        let reminder = Reminder(reminderType: .calendar, date: date, repeats: false)
+        let reminder = Reminder(reminderType: .calendar, date: date, repeats: true)
         NotificationManager.shared.scheduleNotification(task: Task(name: event.rawValue, reminder: reminder))
     }
     
