@@ -42,7 +42,7 @@ class OnboardingViewController: UIViewController {
         onboardingScreens.append(scheduleInfoView)
         
         songsInfoView = collectionView.dequeueReusableCell(withReuseIdentifier: onboardingScreensInfo[2].cell, for: IndexPath(item: 2, section: 0)) as! SongsInfoView
-        songsInfoView.configure(with: songsViewModel.transform(input: SongsViewModel.Input()).songs)
+        songsInfoView.configure(with: songsViewModel.transform().songs)
         onboardingScreens.append(songsInfoView)
         
         collectionView.reloadData()

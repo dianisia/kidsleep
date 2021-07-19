@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  kidsleep
-//
-//  Created by Диана Мансурова on 24.06.2021.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -24,8 +17,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let storyboard = UIStoryboard(name: "App", bundle: nil)
             initialViewController = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
         } else {
-            let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
-            initialViewController = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController")
+            let storyboard = UIStoryboard(name: "Greeting", bundle: nil)
+            initialViewController = storyboard.instantiateViewController(withIdentifier: "GreetingViewController")
         }
         window.rootViewController = initialViewController
         window.makeKeyAndVisible()

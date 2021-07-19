@@ -2,7 +2,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ViewController: UIViewController {
+class GreetingViewController: UIViewController {
     @IBOutlet weak var startButton: CustomButton!
     
     let disposeBag = DisposeBag()

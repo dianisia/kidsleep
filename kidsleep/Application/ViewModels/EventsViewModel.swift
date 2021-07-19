@@ -2,11 +2,8 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class EventsViewModel {
+final class EventsViewModel: ViewModelType {
     private var user: UserInfo
-    
-    struct Input {
-    }
     
     struct Output {
         let breakfast: Driver<String>

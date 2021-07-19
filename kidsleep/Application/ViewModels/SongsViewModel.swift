@@ -1,10 +1,6 @@
 import Foundation
 
-class SongsViewModel {
-    struct Input {
-        
-    }
-    
+final class SongsViewModel: ViewModelType {
     struct Output {
         let songs: [Song]
     }
@@ -17,7 +13,7 @@ class SongsViewModel {
         Song(name: "Name 5", artist: "", duration: 483345703756, sourceURL: URL(string: "https://storage.googleapis.com/great-dev/oss/musicplayer/bensound-extremeaction.mp3"))
     ]
     
-    func transform(input: Input) -> Output {
+    func transform() -> Output {
         return Output(songs: songs)
     }
 }

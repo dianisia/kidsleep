@@ -30,7 +30,7 @@ class HelpersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let output = songsViewModel.transform(input: SongsViewModel.Input())
+        let output = songsViewModel.transform()
         songs = output.songs
         nighLightButton.layer.cornerRadius = 16
         setupSongsPlayer()

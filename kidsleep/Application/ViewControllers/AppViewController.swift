@@ -40,7 +40,7 @@ class AppViewController: UIViewController {
     }
     
     private func bindModel() {
-        let output = viewModel.transform(input: MainViewModel.Input())
+        let output = viewModel.transform()
         
         output.name.drive(mainChildCardView.nameLabel.rx.text)
             .disposed(by: bag)
@@ -52,7 +52,7 @@ class AppViewController: UIViewController {
         })
         .disposed(by: bag)
         
-        stories = storiesViewModel.transform(input: StoriesViewModel.Input()).stories
+        stories = storiesViewModel.transform().stories
         storiesView.configure(with: stories)
         
     }
