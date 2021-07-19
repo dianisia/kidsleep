@@ -5,7 +5,7 @@ import RxCocoa
 
 class OnboardingViewController: UIViewController {
     typealias ViewModelType = OnboardingViewModel
-    var viewModel: OnboardingViewModel! = OnboardingViewModel(repository: UserDefaultsRepository())
+    var viewModel: OnboardingViewModel! = OnboardingViewModel(repository: DIContainer.getRepository())
     var songsViewModel = SongsViewModel()
     
     @IBOutlet weak var collectionView: UICollectionView!

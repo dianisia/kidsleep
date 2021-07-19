@@ -41,7 +41,6 @@ final class OnboardingViewModel {
         repository.save(info: info)
         OnboardingManager.shared.setOnboarded()
         NotificationManager.shared.requestAuthorization() { granted in
-            print(granted)
             self.setReminder(event: Events.breakfast, minutes: info.breakfast)
             self.setReminder(event: Events.firstDaySleep, minutes: info.firstDaySleep)
             self.setReminder(event: Events.dinner, minutes: info.dinner)

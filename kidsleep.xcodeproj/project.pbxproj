@@ -19,6 +19,7 @@
 		E43C04D8268A2D74000FD441 /* ScheduleInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C04D7268A2D74000FD441 /* ScheduleInfoView.swift */; };
 		E43C04DC268B2F79000FD441 /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C04DB268B2F79000FD441 /* CustomSwitch.swift */; };
 		E460275326A5816700B712FF /* CustomSegmentedProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E460275226A5816700B712FF /* CustomSegmentedProgressBar.swift */; };
+		E460275526A5CB5100B712FF /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E460275426A5CB5100B712FF /* DIContainer.swift */; };
 		E48943EA2685E3F4007DF356 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48943E92685E3F4007DF356 /* Onboarding.storyboard */; };
 		E48943EC2685E60D007DF356 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48943EB2685E60D007DF356 /* OnboardingViewController.swift */; };
 		E48943EF2685ECBF007DF356 /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48943EE2685ECBF007DF356 /* CustomPageControl.swift */; };
@@ -81,6 +82,7 @@
 		E43C04D7268A2D74000FD441 /* ScheduleInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleInfoView.swift; sourceTree = "<group>"; };
 		E43C04DB268B2F79000FD441 /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
 		E460275226A5816700B712FF /* CustomSegmentedProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedProgressBar.swift; sourceTree = "<group>"; };
+		E460275426A5CB5100B712FF /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		E48943E92685E3F4007DF356 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		E48943EB2685E60D007DF356 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		E48943EE2685ECBF007DF356 /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 			children = (
 				E48B028F268F03F90068F438 /* ViewModelType.swift */,
 				E48B029D2695E8740068F438 /* Helpers.swift */,
+				E460275426A5CB5100B712FF /* DIContainer.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				E4DDF842269C559100BF1F1F /* HelpersViewController.swift in Sources */,
 				E48B02A7269711CA0068F438 /* StoriesViewModel.swift in Sources */,
 				E4A38C9726A07C8500D041CA /* StoryDetailsViewController.swift in Sources */,
+				E460275526A5CB5100B712FF /* DIContainer.swift in Sources */,
 				E4A38C9526A0566E00D041CA /* SongsPlayerView.swift in Sources */,
 				E4A38E1E2684858C00E44AD8 /* GreetingViewController.swift in Sources */,
 				E4A7F4992684E11100BEB391 /* Extensions.swift in Sources */,
