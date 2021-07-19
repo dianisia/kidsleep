@@ -2,7 +2,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class AppViewController: UIViewController {
+class MainViewController: UIViewController {
     @IBOutlet weak var mainChildCardView: MainChildCard!
     @IBOutlet weak var storiesView: CustomStoriesView!
     @IBOutlet weak var eventsView: CustomEventsView!

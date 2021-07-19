@@ -22,7 +22,7 @@
 		E48943EC2685E60D007DF356 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48943EB2685E60D007DF356 /* OnboardingViewController.swift */; };
 		E48943EF2685ECBF007DF356 /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48943EE2685ECBF007DF356 /* CustomPageControl.swift */; };
 		E48B0289268C85C80068F438 /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48B0288268C85C80068F438 /* App.storyboard */; };
-		E48B028B268C85ED0068F438 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B028A268C85ED0068F438 /* AppViewController.swift */; };
+		E48B028B268C85ED0068F438 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B028A268C85ED0068F438 /* MainViewController.swift */; };
 		E48B028D268C935F0068F438 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B028C268C935F0068F438 /* OnboardingViewModel.swift */; };
 		E48B0290268F03F90068F438 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B028F268F03F90068F438 /* ViewModelType.swift */; };
 		E48B0292268F58AD0068F438 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B0291268F58AC0068F438 /* UserInfo.swift */; };
@@ -83,7 +83,7 @@
 		E48943EB2685E60D007DF356 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		E48943EE2685ECBF007DF356 /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
 		E48B0288268C85C80068F438 /* App.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
-		E48B028A268C85ED0068F438 /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
+		E48B028A268C85ED0068F438 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E48B028C268C935F0068F438 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		E48B028F268F03F90068F438 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		E48B0291268F58AC0068F438 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
@@ -254,7 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				E4A38E1D2684858C00E44AD8 /* GreetingViewController.swift */,
-				E48B028A268C85ED0068F438 /* AppViewController.swift */,
+				E48B028A268C85ED0068F438 /* MainViewController.swift */,
 				E48943EB2685E60D007DF356 /* OnboardingViewController.swift */,
 				E4DDF841269C559100BF1F1F /* HelpersViewController.swift */,
 				E4DDF846269C78E900BF1F1F /* NightLightViewController.swift */,
@@ -528,7 +528,7 @@
 				E48B029C2695C1BD0068F438 /* MainViewModel.swift in Sources */,
 				E423D9C8268B780500DF2222 /* CustomSongView.swift in Sources */,
 				E4A38C9226A0343500D041CA /* OnboardingManager.swift in Sources */,
-				E48B028B268C85ED0068F438 /* AppViewController.swift in Sources */,
+				E48B028B268C85ED0068F438 /* MainViewController.swift in Sources */,
 				E42B95B72689DF8200F2312E /* CustomTimePicker.swift in Sources */,
 				E4BE2273268B877D006E002E /* SongsInfoView.swift in Sources */,
 				E43C04D8268A2D74000FD441 /* ScheduleInfoView.swift in Sources */,
