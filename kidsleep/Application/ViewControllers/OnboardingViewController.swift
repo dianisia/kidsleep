@@ -27,6 +27,15 @@ class OnboardingViewController: UIViewController {
     private var scheduleInfoView = ScheduleInfoView()
     private var songsInfoView = SongsInfoView()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setNeedsStatusBarAppearanceUpdate()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         onboardingScreensInfo.forEach { screenInfo in
