@@ -5,7 +5,7 @@ import SDWebImage
 class CustomStoriesViewCell: UICollectionViewCell {
     static let identifier = "CustomStoriesViewCell"
     
-    private var storyTextLabel = UILabel()
+    private var storyTitleLabel = UILabel()
     private var storyImageView = UIImageView()
     
     override init(frame: CGRect) {
@@ -23,7 +23,7 @@ class CustomStoriesViewCell: UICollectionViewCell {
     }
     
     func configure(story: Story) {
-        storyTextLabel.text = story.text
+        storyTitleLabel.text = story.title
         storyImageView.sd_setImage(with: story.imageURL, completed: nil)
     }
     
@@ -43,14 +43,14 @@ class CustomStoriesViewCell: UICollectionViewCell {
         storyImageView.clipsToBounds = true
         storyImageView.contentMode = .scaleAspectFill
         
-        storyTextLabel = UILabel(frame: CGRect(x: 0, y: storyImageView.frame.maxY + 3, width: 95, height: 48))
-        storyTextLabel.font = UIFont(name: "Montserrat-Medium", size: 11)!
-        storyTextLabel.center.x = bounds.size.width / 2
-        storyTextLabel.textColor = .white
-        storyTextLabel.numberOfLines = 3
-        storyTextLabel.textAlignment = .center
+        storyTitleLabel = UILabel(frame: CGRect(x: 0, y: storyImageView.frame.maxY + 3, width: 95, height: 48))
+        storyTitleLabel.font = UIFont(name: "Montserrat-Medium", size: 11)!
+        storyTitleLabel.center.x = bounds.size.width / 2
+        storyTitleLabel.textColor = .white
+        storyTitleLabel.numberOfLines = 3
+        storyTitleLabel.textAlignment = .center
         
         addSubview(storyImageView)
-        addSubview(storyTextLabel)
+        addSubview(storyTitleLabel)
     }
 }

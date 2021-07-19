@@ -13,7 +13,7 @@ class StoryDetailsViewController: UIViewController {
         let lbl = UILabel()
         lbl.font = UIFont(name: "Montserrat-Medium", size: 14)!
         lbl.textColor = UIColor.white
-        lbl.numberOfLines = 5
+        lbl.numberOfLines = 0
         return lbl
     }()
     
@@ -21,7 +21,7 @@ class StoryDetailsViewController: UIViewController {
         let lbl = UILabel()
         lbl.font = UIFont(name: "Montserrat-Bold", size: 24)!
         lbl.textColor = UIColor(rgb: 0x6634F5)
-        lbl.numberOfLines = 3
+        lbl.numberOfLines = 0
         return lbl
     }()
     private var stories = [Story]()
