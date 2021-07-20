@@ -95,16 +95,10 @@ class OnboardingViewController: UIViewController {
     }
     
     private func setInformationLabelText(currentPage: Int) {
-        switch currentPage {
-        case 0:
-            informationLabel.text = "Расскажите нам о своих детях, чтобы мы могли предложить рекомендуемый режим сна для них"
-        case 1:
-            informationLabel.text = "Для ребенка возрастом от 1 года, мы рекомендуем такой распорядок дня, но вы можете отредактировать его:"
-        case 2:
-            informationLabel.text = "Мы поможем вам укладывать ребенка спать с помощью подборки успокаивающих звуков, советов и подсказок"
-        default:
-            informationLabel.text = "Zzzzz..."
+        guard currentPage < Constants.onboardingTexts.count else {
+            return
         }
+        informationLabel.text = Constants.onboardingTexts[currentPage]
     }
     
     private func bindMainChildInfo() {
