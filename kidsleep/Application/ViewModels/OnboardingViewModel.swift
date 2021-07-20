@@ -28,15 +28,15 @@ final class OnboardingViewModel {
             name: try! name.value(),
             birthday: try! birthday.value(),
             gender: try! gender.value(),
-            breakfast: timeStringToMinutes(time: try! breakfast.value()),
-            firstDaySleep: timeStringToMinutes(time: try! firstDaySleep.value()),
-            dinner:  timeStringToMinutes(time: try! dinner.value()),
-            brunch: timeStringToMinutes(time: try! brunch.value()),
-            secondDaySleep: timeStringToMinutes(time: try! secondDaySleep.value()),
-            secondBrunch: timeStringToMinutes(time: try! secondBrunch.value()),
-            eveningMeal: timeStringToMinutes(time: try! eveningMeal.value()),
-            nightSleep: timeStringToMinutes(time: try! nightSleep.value()),
-            nightMeal: timeStringToMinutes(time: try! nightMeal.value())
+            breakfast: Converter.timeStringToMinutes(time: try! breakfast.value()),
+            firstDaySleep: Converter.timeStringToMinutes(time: try! firstDaySleep.value()),
+            dinner:  Converter.timeStringToMinutes(time: try! dinner.value()),
+            brunch: Converter.timeStringToMinutes(time: try! brunch.value()),
+            secondDaySleep: Converter.timeStringToMinutes(time: try! secondDaySleep.value()),
+            secondBrunch: Converter.timeStringToMinutes(time: try! secondBrunch.value()),
+            eveningMeal: Converter.timeStringToMinutes(time: try! eveningMeal.value()),
+            nightSleep: Converter.timeStringToMinutes(time: try! nightSleep.value()),
+            nightMeal: Converter.timeStringToMinutes(time: try! nightMeal.value())
         )
         repository.save(info: info)
         OnboardingManager.shared.setOnboarded()
@@ -56,7 +56,7 @@ final class OnboardingViewModel {
 
     private func setReminder(event: Events, minutes: Int) {
         var date = DateComponents()
-        let tmp = getHoursAndMinutesFromString(totalMinutes: minutes)
+        let tmp = Converter.getHoursAndMinutesFromString(totalMinutes: minutes)
         date.hour = tmp.hours
         date.minute = tmp.minutes
         let reminder = Reminder(reminderType: .calendar, date: date, repeats: true)

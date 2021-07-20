@@ -24,15 +24,15 @@ final class EventsViewModel: ViewModelType {
     
     func transform() -> Output {
         return Output(
-            breakfast: Driver.just(minutesToString(totalMinutes: user.breakfast)),
-            firstDaySleep: Driver.just(minutesToString(totalMinutes: user.firstDaySleep)),
-            dinner: Driver.just(minutesToString(totalMinutes: user.dinner)),
-            brunch: Driver.just(minutesToString(totalMinutes: user.brunch)),
-            secondDaySleep: Driver.just(minutesToString(totalMinutes: user.secondDaySleep)),
-            secondBrunch: Driver.just(minutesToString(totalMinutes: user.secondBrunch)),
-            eveningMeal: Driver.just(minutesToString(totalMinutes: user.eveningMeal)),
-            nightSleep: Driver.just(minutesToString(totalMinutes: user.nightSleep)),
-            nightMeal: Driver.just(minutesToString(totalMinutes: user.nightMeal))
+            breakfast: Driver.just(Converter.minutesToString(totalMinutes: user.breakfast)),
+            firstDaySleep: Driver.just(Converter.minutesToString(totalMinutes: user.firstDaySleep)),
+            dinner: Driver.just(Converter.minutesToString(totalMinutes: user.dinner)),
+            brunch: Driver.just(Converter.minutesToString(totalMinutes: user.brunch)),
+            secondDaySleep: Driver.just(Converter.minutesToString(totalMinutes: user.secondDaySleep)),
+            secondBrunch: Driver.just(Converter.minutesToString(totalMinutes: user.secondBrunch)),
+            eveningMeal: Driver.just(Converter.minutesToString(totalMinutes: user.eveningMeal)),
+            nightSleep: Driver.just(Converter.minutesToString(totalMinutes: user.nightSleep)),
+            nightMeal: Driver.just(Converter.minutesToString(totalMinutes: user.nightMeal))
         )
     }
 }
