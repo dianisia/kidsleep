@@ -5,7 +5,7 @@ import RxCocoa
 
 class OnboardingViewController: UIViewController {
     typealias ViewModelType = OnboardingViewModel
-    var viewModel: OnboardingViewModel! = OnboardingViewModel(repository: UserDefaultsRepository())
+    var viewModel: OnboardingViewModel! = OnboardingViewModel(repository: DIContainer.getRepository())
     var songsViewModel = SongsViewModel()
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -27,6 +27,15 @@ class OnboardingViewController: UIViewController {
     private var scheduleInfoView = ScheduleInfoView()
     private var songsInfoView = SongsInfoView()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setNeedsStatusBarAppearanceUpdate()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         onboardingScreensInfo.forEach { screenInfo in
@@ -42,7 +51,7 @@ class OnboardingViewController: UIViewController {
         onboardingScreens.append(scheduleInfoView)
         
         songsInfoView = collectionView.dequeueReusableCell(withReuseIdentifier: onboardingScreensInfo[2].cell, for: IndexPath(item: 2, section: 0)) as! SongsInfoView
-        songsInfoView.configure(with: songsViewModel.transform(input: SongsViewModel.Input()).songs)
+        songsInfoView.configure(with: songsViewModel.transform().songs)
         onboardingScreens.append(songsInfoView)
         
         collectionView.reloadData()

@@ -18,11 +18,13 @@
 		E43C04D6268A2D5D000FD441 /* ScheduleInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E43C04D5268A2D5D000FD441 /* ScheduleInfoView.xib */; };
 		E43C04D8268A2D74000FD441 /* ScheduleInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C04D7268A2D74000FD441 /* ScheduleInfoView.swift */; };
 		E43C04DC268B2F79000FD441 /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C04DB268B2F79000FD441 /* CustomSwitch.swift */; };
+		E460275326A5816700B712FF /* CustomSegmentedProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E460275226A5816700B712FF /* CustomSegmentedProgressBar.swift */; };
+		E460275526A5CB5100B712FF /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E460275426A5CB5100B712FF /* DIContainer.swift */; };
 		E48943EA2685E3F4007DF356 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48943E92685E3F4007DF356 /* Onboarding.storyboard */; };
 		E48943EC2685E60D007DF356 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48943EB2685E60D007DF356 /* OnboardingViewController.swift */; };
 		E48943EF2685ECBF007DF356 /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48943EE2685ECBF007DF356 /* CustomPageControl.swift */; };
 		E48B0289268C85C80068F438 /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48B0288268C85C80068F438 /* App.storyboard */; };
-		E48B028B268C85ED0068F438 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B028A268C85ED0068F438 /* AppViewController.swift */; };
+		E48B028B268C85ED0068F438 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B028A268C85ED0068F438 /* MainViewController.swift */; };
 		E48B028D268C935F0068F438 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B028C268C935F0068F438 /* OnboardingViewModel.swift */; };
 		E48B0290268F03F90068F438 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B028F268F03F90068F438 /* ViewModelType.swift */; };
 		E48B0292268F58AD0068F438 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48B0291268F58AC0068F438 /* UserInfo.swift */; };
@@ -45,8 +47,8 @@
 		E4A38CBB26A470D600D041CA /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A38CBA26A470D600D041CA /* Task.swift */; };
 		E4A38E1A2684858C00E44AD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A38E192684858C00E44AD8 /* AppDelegate.swift */; };
 		E4A38E1C2684858C00E44AD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A38E1B2684858C00E44AD8 /* SceneDelegate.swift */; };
-		E4A38E1E2684858C00E44AD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A38E1D2684858C00E44AD8 /* ViewController.swift */; };
-		E4A38E212684858C00E44AD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4A38E1F2684858C00E44AD8 /* Main.storyboard */; };
+		E4A38E1E2684858C00E44AD8 /* GreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A38E1D2684858C00E44AD8 /* GreetingViewController.swift */; };
+		E4A38E212684858C00E44AD8 /* Greeting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4A38E1F2684858C00E44AD8 /* Greeting.storyboard */; };
 		E4A38E232684859100E44AD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4A38E222684859100E44AD8 /* Assets.xcassets */; };
 		E4A38E262684859100E44AD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4A38E242684859100E44AD8 /* LaunchScreen.storyboard */; };
 		E4A38E32268499ED00E44AD8 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A38E31268499ED00E44AD8 /* GradientView.swift */; };
@@ -79,11 +81,13 @@
 		E43C04D5268A2D5D000FD441 /* ScheduleInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleInfoView.xib; sourceTree = "<group>"; };
 		E43C04D7268A2D74000FD441 /* ScheduleInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleInfoView.swift; sourceTree = "<group>"; };
 		E43C04DB268B2F79000FD441 /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
+		E460275226A5816700B712FF /* CustomSegmentedProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedProgressBar.swift; sourceTree = "<group>"; };
+		E460275426A5CB5100B712FF /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		E48943E92685E3F4007DF356 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		E48943EB2685E60D007DF356 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		E48943EE2685ECBF007DF356 /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
 		E48B0288268C85C80068F438 /* App.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
-		E48B028A268C85ED0068F438 /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
+		E48B028A268C85ED0068F438 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E48B028C268C935F0068F438 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		E48B028F268F03F90068F438 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		E48B0291268F58AC0068F438 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
@@ -107,8 +111,8 @@
 		E4A38E162684858C00E44AD8 /* kidsleep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kidsleep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4A38E192684858C00E44AD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4A38E1B2684858C00E44AD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E4A38E1D2684858C00E44AD8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E4A38E202684858C00E44AD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E4A38E1D2684858C00E44AD8 /* GreetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewController.swift; sourceTree = "<group>"; };
+		E4A38E202684858C00E44AD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Greeting.storyboard; sourceTree = "<group>"; };
 		E4A38E222684859100E44AD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4A38E252684859100E44AD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4A38E272684859100E44AD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -177,6 +181,7 @@
 				E4A7F4912684C23100BEB391 /* CustomButton.swift */,
 				E4A38E31268499ED00E44AD8 /* GradientView.swift */,
 				E42B95B12689D61900F2312E /* CustomInput.swift */,
+				E460275226A5816700B712FF /* CustomSegmentedProgressBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 			children = (
 				E48B028F268F03F90068F438 /* ViewModelType.swift */,
 				E48B029D2695E8740068F438 /* Helpers.swift */,
+				E460275426A5CB5100B712FF /* DIContainer.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -242,7 +248,7 @@
 		E4A38C8D269ED53100D041CA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E4A38E1F2684858C00E44AD8 /* Main.storyboard */,
+				E4A38E1F2684858C00E44AD8 /* Greeting.storyboard */,
 				E48943E92685E3F4007DF356 /* Onboarding.storyboard */,
 				E48B0288268C85C80068F438 /* App.storyboard */,
 				E4A38E242684859100E44AD8 /* LaunchScreen.storyboard */,
@@ -253,8 +259,8 @@
 		E4A38C8E269ED55800D041CA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E4A38E1D2684858C00E44AD8 /* ViewController.swift */,
-				E48B028A268C85ED0068F438 /* AppViewController.swift */,
+				E4A38E1D2684858C00E44AD8 /* GreetingViewController.swift */,
+				E48B028A268C85ED0068F438 /* MainViewController.swift */,
 				E48943EB2685E60D007DF356 /* OnboardingViewController.swift */,
 				E4DDF841269C559100BF1F1F /* HelpersViewController.swift */,
 				E4DDF846269C78E900BF1F1F /* NightLightViewController.swift */,
@@ -462,7 +468,7 @@
 				E48943EA2685E3F4007DF356 /* Onboarding.storyboard in Resources */,
 				E48B0289268C85C80068F438 /* App.storyboard in Resources */,
 				E4A7F4962684DF4E00BEB391 /* Montserrat-SemiBold.ttf in Resources */,
-				E4A38E212684858C00E44AD8 /* Main.storyboard in Resources */,
+				E4A38E212684858C00E44AD8 /* Greeting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,8 +524,9 @@
 				E4DDF842269C559100BF1F1F /* HelpersViewController.swift in Sources */,
 				E48B02A7269711CA0068F438 /* StoriesViewModel.swift in Sources */,
 				E4A38C9726A07C8500D041CA /* StoryDetailsViewController.swift in Sources */,
+				E460275526A5CB5100B712FF /* DIContainer.swift in Sources */,
 				E4A38C9526A0566E00D041CA /* SongsPlayerView.swift in Sources */,
-				E4A38E1E2684858C00E44AD8 /* ViewController.swift in Sources */,
+				E4A38E1E2684858C00E44AD8 /* GreetingViewController.swift in Sources */,
 				E4A7F4992684E11100BEB391 /* Extensions.swift in Sources */,
 				E4A38E1A2684858C00E44AD8 /* AppDelegate.swift in Sources */,
 				E4A38CBB26A470D600D041CA /* Task.swift in Sources */,
@@ -528,9 +535,10 @@
 				E48B029C2695C1BD0068F438 /* MainViewModel.swift in Sources */,
 				E423D9C8268B780500DF2222 /* CustomSongView.swift in Sources */,
 				E4A38C9226A0343500D041CA /* OnboardingManager.swift in Sources */,
-				E48B028B268C85ED0068F438 /* AppViewController.swift in Sources */,
+				E48B028B268C85ED0068F438 /* MainViewController.swift in Sources */,
 				E42B95B72689DF8200F2312E /* CustomTimePicker.swift in Sources */,
 				E4BE2273268B877D006E002E /* SongsInfoView.swift in Sources */,
+				E460275326A5816700B712FF /* CustomSegmentedProgressBar.swift in Sources */,
 				E43C04D8268A2D74000FD441 /* ScheduleInfoView.swift in Sources */,
 				E4921C7F2686188C00DB247D /* CustomTextField.swift in Sources */,
 				E48B0297268F59050068F438 /* Repository.swift in Sources */,
@@ -566,12 +574,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E4A38E1F2684858C00E44AD8 /* Main.storyboard */ = {
+		E4A38E1F2684858C00E44AD8 /* Greeting.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E4A38E202684858C00E44AD8 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Greeting.storyboard;
 			sourceTree = "<group>";
 		};
 		E4A38E242684859100E44AD8 /* LaunchScreen.storyboard */ = {

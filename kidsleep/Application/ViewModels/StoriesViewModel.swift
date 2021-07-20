@@ -2,7 +2,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class StoriesViewModel {
+final class StoriesViewModel: ViewModelType {
     // Dirty hack
     private var stories = BehaviorRelay<[Story]>(
         value: [
@@ -10,15 +10,12 @@ class StoriesViewModel {
             Story(id: "", title: "",text: "", imageURL: URL(string: "")),
             Story(id: "", title: "",text: "", imageURL: URL(string: ""))
         ])
-    struct Input {
-    
-    }
-    
+
     struct Output {
         let stories: BehaviorRelay<[Story]>
     }
     
-    func transform(input: Input) -> Output {
+    func transform() -> Output {
         requestStories()
         return Output(stories: stories)
     }

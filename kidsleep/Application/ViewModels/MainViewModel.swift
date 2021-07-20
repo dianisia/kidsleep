@@ -1,7 +1,7 @@
 import RxSwift
 import RxCocoa
 
-class MainViewModel {
+final class MainViewModel: ViewModelType {
     private let bag = DisposeBag()
     private var user: UserInfo
     private var events = [(String, Int)]()
@@ -13,17 +13,13 @@ class MainViewModel {
         user = repository.get()
     }
     
-    struct Input {
-        
-    }
-    
     struct Output {
         let name: Driver<String>
         let age: Driver<String>
         let nextEvent: Driver<(String, Int)>
     }
     
-    func transform(input: Input) -> Output {
+    func transform() -> Output {
         nextEv.accept(getNextEvent())
         
         Observable<Int>.interval(.seconds(Self.checkEventInterval), scheduler: MainScheduler.instance)

@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  kidsleep
-//
-//  Created by Диана Мансурова on 24.06.2021.
-//
-
 import UIKit
 
 @main

@@ -8,11 +8,8 @@ struct EventInput {
     var type: EventType?
 }
 
-class EventsViewModel {
+final class EventsViewModel: ViewModelType {
     private var user: UserInfo
-    
-    struct Input {
-    }
     
     struct Output {
         let events: Driver<[EventInput]>

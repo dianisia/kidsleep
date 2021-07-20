@@ -32,10 +32,10 @@
             </objects>
             <point key="canvasLocation" x="-226" y="447"/>
         </scene>
-        <!--App View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="pvh-GX-D01">
             <objects>
-                <viewController storyboardIdentifier="AppViewController" id="49l-t2-QBe" customClass="AppViewController" customModule="kidsleep" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="49l-t2-QBe" customClass="MainViewController" customModule="kidsleep" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5xy-bx-Puz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

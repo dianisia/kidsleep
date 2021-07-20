@@ -13,7 +13,7 @@ class StoryDetailsViewController: UIViewController {
         let lbl = UILabel()
         lbl.font = UIFont(name: "Montserrat-Medium", size: 14)!
         lbl.textColor = UIColor.white
-        lbl.numberOfLines = 5
+        lbl.numberOfLines = 0
         return lbl
     }()
     
@@ -21,24 +21,23 @@ class StoryDetailsViewController: UIViewController {
         let lbl = UILabel()
         lbl.font = UIFont(name: "Montserrat-Bold", size: 24)!
         lbl.textColor = UIColor(rgb: 0x6634F5)
-        lbl.numberOfLines = 3
+        lbl.numberOfLines = 0
         return lbl
     }()
+    
+    private var progressBar = CustomSegmentedProgressBar(numberOfSegments: 1)
+
     private var stories = [Story]()
     private var currentStory = 0
     
     override func viewDidLoad() {
         view.backgroundColor = .black
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(_:))))
-        //        let countDown = 10
-        //        Observable<Int>.timer(.seconds(0), period: .seconds(1), scheduler: MainScheduler.instance)
-        //                .take(countDown+1)
-        //                .subscribe(onCompleted: { [unowned self] in
-        //                    print("count down complete")
-        //                    dismiss(animated: true, completion: nil)
-        //                })
-        //            .disposed(by: bag)
         setup()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        progressBar.clear()
     }
     
     @objc private func handleTap(_ sender: UITapGestureRecognizer? = nil) {
@@ -47,6 +46,7 @@ class StoryDetailsViewController: UIViewController {
             dismiss(animated: true, completion: nil)
             return
         }
+        progressBar.skip()
         showContentForCurrentStory()
     }
     
@@ -60,9 +60,14 @@ class StoryDetailsViewController: UIViewController {
     }
     
     private func setup() {
+        progressBar = CustomSegmentedProgressBar(numberOfSegments: 7)
+        progressBar.frame = CGRect(x: 15, y: 20, width: view.frame.width - 30, height: 4)
+        progressBar.topColor = UIColor(rgb: 0x6634F5)
+        view.addSubview(progressBar)
+        
         view.addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: progressBar.bottomAnchor, constant: 20).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
         
