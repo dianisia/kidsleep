@@ -15,6 +15,7 @@ class MainChildCard: UIView {
             eventTimeLabel.text = makeNextEventTimeString(minutes: minutesToNextEvent)
         }
     }
+
     
     private let nameLabelFont = UIFont(name: "Montserrat-SemiBold", size: 18)!
     private let labelFont = UIFont(name: "Montserrat-SemiBold", size: 16)!
@@ -102,6 +103,6 @@ class MainChildCard: UIView {
         let minutesInHour = 60
         let hours = Int(minutes / minutesInHour)
         let minutes = minutes - hours * minutesInHour
-        return formTimeString(hours: hours, minutes: minutes)
+        return Converter.formTimeString(hours: hours, minutes: minutes)
     }
 }

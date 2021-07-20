@@ -49,7 +49,7 @@ final class MainViewModel: ViewModelType {
         let diffInSeconds = currEpoch - date
         let years = Int(diffInSeconds / secondsInYear)
         let months = Int((diffInSeconds - (Double(years) * secondsInYear)) / secondsInMonth)
-        let result = formAgeString(years: years, months: months)
+        let result = Converter.formAgeString(years: years, months: months)
         return result
     }
     
@@ -58,7 +58,7 @@ final class MainViewModel: ViewModelType {
         let minutesInDay = 24 * minutesInHour
         let cal = Calendar.current
         let nowComponents = cal.dateComponents([Calendar.Component.hour, Calendar.Component.minute], from: Date())
-        let current =  timeStringToMinutes(time: "\(nowComponents.hour ?? 0):\(nowComponents.minute ?? 0)")
+        let current = Converter.timeStringToMinutes(time: "\(nowComponents.hour ?? 0):\(nowComponents.minute ?? 0)")
         
         var minTime = minutesInDay
         var nextEvent = events[0].0

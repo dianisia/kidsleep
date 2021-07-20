@@ -33,7 +33,7 @@ final class OnboardingViewModel {
 
     private func setReminder(event: String, minutes: Int) {
         var date = DateComponents()
-        let tmp = getHoursAndMinutesFromString(totalMinutes: minutes)
+        let tmp = Converter.getHoursAndMinutesFromString(totalMinutes: minutes)
         date.hour = tmp.hours
         date.minute = tmp.minutes
         let reminder = Reminder(reminderType: .calendar, date: date, repeats: true)
