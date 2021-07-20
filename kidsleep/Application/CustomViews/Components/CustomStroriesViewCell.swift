@@ -17,11 +17,7 @@ class CustomStoriesViewCell: UICollectionViewCell {
         super.init(coder: coder)
         setup()
     }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-    }
-    
+        
     func configure(story: Story) {
         storyTitleLabel.text = story.title
         storyImageView.sd_setImage(with: story.imageURL, completed: nil)

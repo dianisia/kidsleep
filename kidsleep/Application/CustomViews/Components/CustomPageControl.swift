@@ -20,10 +20,6 @@ class CustomPageControl: UIPageControl {
         setupPageControl()
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-    }
-    
     private func setupPageControl() {
         pageIndicatorTintColor = pageIndicatorColor
         currentPageIndicatorTintColor = currPageColor

@@ -16,7 +16,6 @@ class MainChildCard: UIView {
         }
     }
 
-    
     private let nameLabelFont = UIFont(name: "Montserrat-SemiBold", size: 18)!
     private let labelFont = UIFont(name: "Montserrat-SemiBold", size: 16)!
     private let eventTimeFont = UIFont(name: "Montserrat-SemiBold", size: 22)!
@@ -37,10 +36,6 @@ class MainChildCard: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setup()
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
     }
     
     private func setup() {

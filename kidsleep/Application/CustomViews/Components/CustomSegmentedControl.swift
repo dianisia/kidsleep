@@ -23,11 +23,6 @@ class CustomSegmentControl: UISegmentedControl {
         setup()
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        setup()
-    }
-    
     private func setup() {
         selectedSegmentTintColor = selectedTintColor
         backgroundColor = .black

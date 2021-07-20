@@ -8,12 +8,7 @@ class CustomButton: UIButton {
             setTitle(text, for: .normal)
         }
     }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        setupButton()
-    }
-    
+        
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupButton()

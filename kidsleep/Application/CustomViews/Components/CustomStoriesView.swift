@@ -19,10 +19,6 @@ class CustomStoriesView: UIView, UIScrollViewDelegate {
         setup()
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-    }
-    
     private func setup() {
         backgroundColor = .black
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()

@@ -87,11 +87,7 @@ class CustomEventsView: UIView {
         super.init(coder: coder)
         setup()
     }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-    }
-    
+
     func configure(with viewModel: EventsViewModel) {
         let output = viewModel.transform()
         output.breakfast.drive(breakfastTimeInput.rx.text)
