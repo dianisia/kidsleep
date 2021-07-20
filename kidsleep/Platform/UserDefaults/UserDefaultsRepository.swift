@@ -10,7 +10,15 @@ class UserDefaultsRepository: Repository {
     
     func get() -> UserInfo {
         let eventsData = UserDefaults.standard.object(forKey: "events")
-        let events: [UserEvent] = try! JSONDecoder().decode([UserEvent].self, from: eventsData as! Data)
+        print(eventsData)
+        var events = [UserEvent]()
+        if let data = eventsData as? Data {
+            do {
+                events = try JSONDecoder().decode([UserEvent].self, from: data)
+            } catch {
+                
+            }
+        }
         return UserInfo(
             name: UserDefaults.standard.string(forKey: "name") ?? "",
             birthday: UserDefaults.standard.string(forKey: "birthday") ?? "",

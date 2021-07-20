@@ -125,6 +125,29 @@ class OnboardingViewController: UIViewController {
     }
     
     private func bindScheduleInfoView() {
+        let breakfast = scheduleInfoView.breakfast.rx.text.orEmpty.map{ $0 }
+        let brunch = scheduleInfoView.brunch.rx.text.orEmpty.map{ $0 }
+        
+        let events = BehaviorSubject.combineLatest(
+            scheduleInfoView.breakfast.rx.text.orEmpty.asObservable(),
+            scheduleInfoView.brunch.rx.text.orEmpty.asObservable()
+        ) {
+            print(type(of: $0))
+            print(type(of: $1))
+//            return $0 + $1
+            return [
+                BreakfastEvent(value: Converter.timeStringToMinutes(time: $0)),
+                BrunchEvent(value: Converter.timeStringToMinutes(time: $0))
+            ]
+//            return $0 + $1
+        }
+//        .subscribe(onNext: { value in
+//            print(value)
+//        })
+//        .disposed(by: disposeBag)
+        
+        viewModel.events.bind(to: events)
+        
 //        scheduleInfoView.breakfast.rx.text.orEmpty.bind(to: viewModel.breakfast)
 //            .disposed(by: disposeBag)
 //        scheduleInfoView.brunch.rx.text.orEmpty.bind(to: viewModel.brunch)
