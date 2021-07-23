@@ -3,6 +3,7 @@ import UIKit
 
 @IBDesignable
 class SongsInfoView: UICollectionViewCell {
+    static let cellId = "cellSongs"
     private var songs = [Song]()
     
     override init(frame: CGRect) {

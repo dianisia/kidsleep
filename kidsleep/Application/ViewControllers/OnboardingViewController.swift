@@ -16,13 +16,7 @@ class OnboardingViewController: UIViewController {
     private var disposeBag = DisposeBag()
     private var currentPage = BehaviorSubject<Int>(value: 0)
     private var onboardingScreens: [UICollectionViewCell] = []
-    
-    private var onboardingScreensInfo = [
-        (xib: "MainChildInfoView", cell: "cell_info"),
-        (xib: "ScheduleInfoView", cell: "cell_schedule"),
-        (xib: "SongsInfoView", cell: "cell_songs"),
-    ]
-    
+
     private var mainChildInfoView = MainChildInfoView()
     private var scheduleInfoView = ScheduleInfoView()
     private var songsInfoView = SongsInfoView()
@@ -38,27 +32,60 @@ class OnboardingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        onboardingScreensInfo.forEach { screenInfo in
-            self.collectionView.register(UINib(nibName: screenInfo.xib, bundle: nil), forCellWithReuseIdentifier: screenInfo.cell)
-        }
-        collectionView.register(SongsInfoView.self, forCellWithReuseIdentifier: "cell_songs")
-        
-        mainChildInfoView = collectionView.dequeueReusableCell(withReuseIdentifier: onboardingScreensInfo[0].cell, for: IndexPath(item: 0, section: 0)) as! MainChildInfoView
+        setupMainChildInfoScreen()
+        setupScheduleInfoScreen()
+        setupSongsScreen()
+        collectionView.reloadData()
+        bindUI()
+    }
+    
+    private func setupMainChildInfoScreen() {
+        collectionView.register(UINib(nibName: "MainChildInfoView", bundle: nil), forCellWithReuseIdentifier: MainChildInfoView.cellId)
+        mainChildInfoView = collectionView.dequeueReusableCell(withReuseIdentifier: MainChildInfoView.cellId, for: IndexPath(item: 0, section: 0)) as! MainChildInfoView
         onboardingScreens.append(mainChildInfoView)
         
-        scheduleInfoView = collectionView.dequeueReusableCell(withReuseIdentifier: onboardingScreensInfo[1].cell, for: IndexPath(item: 1, section: 0)) as! ScheduleInfoView
+        mainChildInfoView.birthdayTextField.rx.text.orEmpty.bind(to: viewModel.birthday)
+            .disposed(by: disposeBag)
+        mainChildInfoView.nameTextField.rx.text.orEmpty.bind(to: viewModel.name)
+            .disposed(by: disposeBag)
+        mainChildInfoView.genderSegmentControl.rx.selectedSegmentIndex.bind(to: viewModel.gender)
+            .disposed(by: disposeBag)
+    }
+    
+    private func setupScheduleInfoScreen() {
+        collectionView.register(UINib(nibName: "ScheduleInfoView", bundle: nil), forCellWithReuseIdentifier: ScheduleInfoView.cellId)
+        scheduleInfoView = collectionView.dequeueReusableCell(withReuseIdentifier: ScheduleInfoView.cellId, for: IndexPath(item: 1, section: 0)) as! ScheduleInfoView
         scheduleInfoView.instantiate()
         onboardingScreens.append(scheduleInfoView)
         
-        songsInfoView = collectionView.dequeueReusableCell(withReuseIdentifier: onboardingScreensInfo[2].cell, for: IndexPath(item: 2, section: 0)) as! SongsInfoView
+        scheduleInfoView.breakfast.rx.text.orEmpty.bind(to: viewModel.breakfast)
+            .disposed(by: disposeBag)
+        scheduleInfoView.brunch.rx.text.orEmpty.bind(to: viewModel.brunch)
+            .disposed(by: disposeBag)
+        scheduleInfoView.dinner.rx.text.orEmpty.bind(to: viewModel.dinner)
+            .disposed(by: disposeBag)
+        scheduleInfoView.eveningMeal.rx.text.orEmpty.bind(to: viewModel.eveningMeal)
+            .disposed(by: disposeBag)
+        scheduleInfoView.firstDaySleep.rx.text.orEmpty.bind(to: viewModel.firstDaySleep)
+            .disposed(by: disposeBag)
+        scheduleInfoView.nightSleep.rx.text.orEmpty.bind(to: viewModel.nightSleep)
+            .disposed(by: disposeBag)
+        scheduleInfoView.nightMeal.rx.text.orEmpty.bind(to: viewModel.nightMeal)
+            .disposed(by: disposeBag)
+        scheduleInfoView.secondBrunch.rx.text.orEmpty.bind(to: viewModel.secondBrunch)
+            .disposed(by: disposeBag)
+        scheduleInfoView.secondDaySleep.rx.text.orEmpty.bind(to: viewModel.secondDaySleep)
+            .disposed(by: disposeBag)
+    }
+    
+    private func setupSongsScreen() {
+        collectionView.register(SongsInfoView.self, forCellWithReuseIdentifier: SongsInfoView.cellId)
+        songsInfoView = collectionView.dequeueReusableCell(withReuseIdentifier: SongsInfoView.cellId, for: IndexPath(item: 2, section: 0)) as! SongsInfoView
         songsInfoView.configure(with: songsViewModel.transform().songs)
         onboardingScreens.append(songsInfoView)
-        
-        collectionView.reloadData()
-        
-        bindMainChildInfo()
-        bindScheduleInfoView()
-        
+    }
+    
+    private func bindUI() {
         viewModel.currentPage.bind(onNext: {[unowned self] page in
             pageController.currentPage = page
         })
@@ -101,36 +128,6 @@ class OnboardingViewController: UIViewController {
         collectionView.isPagingEnabled = false
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         collectionView.isPagingEnabled = true
-    }
-    
-    private func bindMainChildInfo() {
-        mainChildInfoView.birthdayTextField.rx.text.orEmpty.bind(to: viewModel.birthday)
-            .disposed(by: disposeBag)
-        mainChildInfoView.nameTextField.rx.text.orEmpty.bind(to: viewModel.name)
-            .disposed(by: disposeBag)
-        mainChildInfoView.genderSegmentControl.rx.selectedSegmentIndex.bind(to: viewModel.gender)
-            .disposed(by: disposeBag)
-    }
-    
-    private func bindScheduleInfoView() {
-        scheduleInfoView.breakfast.rx.text.orEmpty.bind(to: viewModel.breakfast)
-            .disposed(by: disposeBag)
-        scheduleInfoView.brunch.rx.text.orEmpty.bind(to: viewModel.brunch)
-            .disposed(by: disposeBag)
-        scheduleInfoView.dinner.rx.text.orEmpty.bind(to: viewModel.dinner)
-            .disposed(by: disposeBag)
-        scheduleInfoView.eveningMeal.rx.text.orEmpty.bind(to: viewModel.eveningMeal)
-            .disposed(by: disposeBag)
-        scheduleInfoView.firstDaySleep.rx.text.orEmpty.bind(to: viewModel.firstDaySleep)
-            .disposed(by: disposeBag)
-        scheduleInfoView.nightSleep.rx.text.orEmpty.bind(to: viewModel.nightSleep)
-            .disposed(by: disposeBag)
-        scheduleInfoView.nightMeal.rx.text.orEmpty.bind(to: viewModel.nightMeal)
-            .disposed(by: disposeBag)
-        scheduleInfoView.secondBrunch.rx.text.orEmpty.bind(to: viewModel.secondBrunch)
-            .disposed(by: disposeBag)
-        scheduleInfoView.secondDaySleep.rx.text.orEmpty.bind(to: viewModel.secondDaySleep)
-            .disposed(by: disposeBag)
     }
 }
 

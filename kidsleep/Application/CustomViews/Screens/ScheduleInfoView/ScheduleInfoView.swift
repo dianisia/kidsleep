@@ -3,6 +3,8 @@ import UIKit
 
 @IBDesignable
 class ScheduleInfoView: UICollectionViewCell {
+    static let cellId = "cellSchedule"
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var breakfast: CustomTimePicker!
     @IBOutlet weak var firstDaySleep: CustomTimePicker!

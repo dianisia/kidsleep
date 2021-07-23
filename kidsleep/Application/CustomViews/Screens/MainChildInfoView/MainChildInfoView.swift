@@ -3,6 +3,7 @@ import UIKit
 
 
 class MainChildInfoView: UICollectionViewCell {
+    static let cellId = "cellMainInfo"
     @IBOutlet weak var nameTextField: CustomTextField!
     @IBOutlet weak var genderSegmentControl: CustomSegmentControl!
     @IBOutlet weak var birthdayTextField: CustomDataPicker!
