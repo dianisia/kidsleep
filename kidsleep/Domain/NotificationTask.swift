@@ -1,6 +1,6 @@
 import Foundation
 
-struct Task {
+struct NotificationTask {
     let id = UUID().uuidString
     let name: String
     let reminder: Reminder

@@ -3,25 +3,29 @@ import RxCocoa
 
 final class MainViewModel: ViewModelType {
     private let bag = DisposeBag()
-    private var user: UserInfo
-    private var events = [(Events, Int)]()
+    private var user: Observable<UserInfo>
+    private var events = BehaviorRelay<[(Events, Int)]>(value: [])
     private var nextEv = BehaviorRelay<(String, Int)>(value: ("", 0))
     static private let checkEventInterval = 30
     
-    init() {
-        let repository = UserDefaultsRepository()
-        user = repository.get()
-        events = [
-            (Events.breakfast, user.breakfast),
-            (Events.firstDaySleep, user.firstDaySleep),
-            (Events.dinner, user.dinner),
-            (Events.brunch, user.brunch),
-            (Events.secondDaySleep, user.secondDaySleep),
-            (Events.secondBrunch, user.secondBrunch),
-            (Events.eveningMeal, user.eveningMeal),
-            (Events.nightSleep, user.nightSleep),
-            (Events.nightMeal, user.nightMeal)
-        ]
+    init(serviceProvider: ServiceProviderType) {
+        user = serviceProvider.userInfoService.get()
+        user.subscribe(onNext: { [unowned self] userInfo in
+            let newEvents = [
+                (Events.breakfast, userInfo.breakfast),
+                (Events.firstDaySleep, userInfo.firstDaySleep),
+                (Events.dinner, userInfo.dinner),
+                (Events.brunch, userInfo.brunch),
+                (Events.secondDaySleep, userInfo.secondDaySleep),
+                (Events.secondBrunch, userInfo.secondBrunch),
+                (Events.eveningMeal, userInfo.eveningMeal),
+                (Events.nightSleep, userInfo.nightSleep),
+                (Events.nightMeal, userInfo.nightMeal)
+            ]
+            events.accept(newEvents)
+            nextEv.accept(getNextEvent(events: newEvents))
+        })
+        .disposed(by: bag)
     }
     
     struct Output {
@@ -31,46 +35,40 @@ final class MainViewModel: ViewModelType {
     }
     
     func transform() -> Output {
-        nextEv.accept(getNextEvent())
+        let name: Driver<String> = user
+            .map { userInfo in
+                return userInfo.name
+            }
+            .asDriver(onErrorJustReturn: "")
         
-        Observable<Int>.interval(.seconds(Self.checkEventInterval), scheduler: MainScheduler.instance)
-            .subscribe(onNext: { [unowned self] _ in
-                nextEv.accept(getNextEvent())
+        let age: Driver<String> = user
+            .map { userInfo in
+                return Converter.convertBirthdayToAge(birthday: userInfo.birthday)
+            }
+            .asDriver(onErrorJustReturn: "")
+        
+        let scheduller = Observable<Int>.interval(.seconds(Self.checkEventInterval), scheduler: MainScheduler.instance)
+        
+        Observable.combineLatest(scheduller, events)
+            .bind(onNext: { [unowned self] in
+                nextEv.accept(getNextEvent(events: $1))
             })
             .disposed(by: bag)
-        
+                    
         return Output(
-            name: Driver.just(getName()),
-            age: Driver.just(getAge()),
+            name: name,
+            age: age,
             nextEvent: nextEv.asDriver()
         )
     }
     
-    private func getName() -> String {
-        return user.name
-    }
-    
-    private func getAge() -> String {
-        let secondsInYear = Double(86400 * 365)
-        let secondsInMonth = Double(86400 * 30)
-        let currEpoch = NSDate().timeIntervalSince1970
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd.mm.yyyy"
-        let date = dateFormatter.date(from: user.birthday)?.timeIntervalSince1970 ?? 0
-        let diffInSeconds = currEpoch - date
-        let years = Int(diffInSeconds / secondsInYear)
-        let months = Int((diffInSeconds - (Double(years) * secondsInYear)) / secondsInMonth)
-        let result = Converter.formAgeString(years: years, months: months)
-        return result
-    }
-    
-    private func getNextEvent() -> (String, Int) {
+    private func getNextEvent(events: [(Events, Int)]) -> (String, Int) {
         let minutesInHour = 60
         let minutesInDay = 24 * minutesInHour
         let cal = Calendar.current
         let nowComponents = cal.dateComponents([Calendar.Component.hour, Calendar.Component.minute], from: Date())
         let current = Converter.timeStringToMinutes(time: "\(nowComponents.hour ?? 0):\(nowComponents.minute ?? 0)")
-        
+
         var minTime = minutesInDay
         var nextEvent = events[0].0
         for event in events {

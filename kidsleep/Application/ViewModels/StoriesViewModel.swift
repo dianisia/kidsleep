@@ -3,13 +3,18 @@ import RxSwift
 import RxCocoa
 
 final class StoriesViewModel: ViewModelType {
+    private var serviceProvider: ServiceProviderType
     // Dirty hack
     private var stories = BehaviorRelay<[Story]>(
         value: [
             Story(id: "", title: "", text: "", imageURL: URL(string: "")),
-            Story(id: "", title: "",text: "", imageURL: URL(string: "")),
-            Story(id: "", title: "",text: "", imageURL: URL(string: ""))
+            Story(id: "", title: "", text: "", imageURL: URL(string: "")),
+            Story(id: "", title: "", text: "", imageURL: URL(string: ""))
         ])
+    
+    init(serviceProvider: ServiceProviderType) {
+        self.serviceProvider = serviceProvider
+    }
 
     struct Output {
         let stories: BehaviorRelay<[Story]>
@@ -21,8 +26,8 @@ final class StoriesViewModel: ViewModelType {
     }
     
     private func requestStories() {
-        DispatchQueue.global(qos: .utility).async {
-            APICaller.shared.getStories {[unowned self] error, result in
+        DispatchQueue.global(qos: .utility).async {[unowned self] in
+            serviceProvider.apiService.getStories {[unowned self] error, result in
                 guard error == nil, let result = result, result.count > 0 else {
                     return stories.accept([])
                 }

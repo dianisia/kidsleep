@@ -1,8 +1,13 @@
 import Foundation
 import Alamofire
 
-final class APICaller {
-    static let shared = APICaller()
+protocol APIServiceType {
+    @discardableResult
+    func getStories(completion: @escaping (Error?, [Story]?) -> Void) -> URLSessionTask?
+}
+
+final class APIService: APIServiceType {
+    static let shared = APIService()
     struct Constants {
         static let baseUrl = "https://kidsleep-e0e6.restdb.io/rest"
         static let apiKey = "35b8a542e0dd8b221449e3812acc5ef817217"

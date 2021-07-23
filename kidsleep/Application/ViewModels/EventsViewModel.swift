@@ -2,8 +2,10 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-final class EventsViewModel: ViewModelType {
-    private var user: UserInfo
+final class EventsViewModel {
+    private let disposeBag = DisposeBag()
+    private var user: Observable<UserInfo>
+    private var serviceProvider: ServiceProviderType
     
     struct Output {
         let breakfast: Driver<String>
@@ -17,22 +19,50 @@ final class EventsViewModel: ViewModelType {
         let nightMeal: Driver<String>
     }
     
-    init() {
-        let repository = UserDefaultsRepository()
-        user = repository.get()
+    init(serviceProvider: ServiceProviderType) {
+        self.serviceProvider = serviceProvider
+        user = serviceProvider.userInfoService.get()
     }
     
     func transform() -> Output {
+        let breakfast: Driver<String> = user
+            .map { Converter.minutesToString($0.breakfast) }
+            .asDriver(onErrorJustReturn: "00:00")
+        let firstDaySleep: Driver<String> = user
+            .map { Converter.minutesToString($0.firstDaySleep) }
+            .asDriver(onErrorJustReturn: "00:00")
+        let dinner: Driver<String> = user
+            .map { Converter.minutesToString($0.dinner) }
+            .asDriver(onErrorJustReturn: "00:00")
+        let brunch: Driver<String> = user
+            .map { Converter.minutesToString($0.brunch) }
+            .asDriver(onErrorJustReturn: "00:00")
+        let secondDaySleep: Driver<String> = user
+            .map { Converter.minutesToString($0.secondDaySleep) }
+            .asDriver(onErrorJustReturn: "00:00")
+        let secondBrunch: Driver<String> = user
+            .map { Converter.minutesToString($0.secondBrunch) }
+            .asDriver(onErrorJustReturn: "00:00")
+        let eveningMeal: Driver<String> = user
+            .map { Converter.minutesToString($0.eveningMeal) }
+            .asDriver(onErrorJustReturn: "00:00")
+        let nightSleep: Driver<String> = user
+            .map { Converter.minutesToString($0.nightSleep) }
+            .asDriver(onErrorJustReturn: "00:00")
+        let nightMeal: Driver<String> = user
+            .map { Converter.minutesToString($0.nightMeal) }
+            .asDriver(onErrorJustReturn: "00:00")
+        
         return Output(
-            breakfast: Driver.just(Converter.minutesToString(totalMinutes: user.breakfast)),
-            firstDaySleep: Driver.just(Converter.minutesToString(totalMinutes: user.firstDaySleep)),
-            dinner: Driver.just(Converter.minutesToString(totalMinutes: user.dinner)),
-            brunch: Driver.just(Converter.minutesToString(totalMinutes: user.brunch)),
-            secondDaySleep: Driver.just(Converter.minutesToString(totalMinutes: user.secondDaySleep)),
-            secondBrunch: Driver.just(Converter.minutesToString(totalMinutes: user.secondBrunch)),
-            eveningMeal: Driver.just(Converter.minutesToString(totalMinutes: user.eveningMeal)),
-            nightSleep: Driver.just(Converter.minutesToString(totalMinutes: user.nightSleep)),
-            nightMeal: Driver.just(Converter.minutesToString(totalMinutes: user.nightMeal))
+            breakfast: breakfast,
+            firstDaySleep: firstDaySleep,
+            dinner: dinner,
+            brunch: brunch,
+            secondDaySleep: secondDaySleep,
+            secondBrunch: secondBrunch,
+            eveningMeal: eveningMeal,
+            nightSleep: nightSleep,
+            nightMeal: nightMeal
         )
     }
 }

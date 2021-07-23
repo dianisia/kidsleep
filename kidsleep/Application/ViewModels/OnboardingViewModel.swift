@@ -6,8 +6,7 @@ final class OnboardingViewModel {
     private let titles = Constants.onboardingTexts
     
     private let disposeBag = DisposeBag()
-    private var repository: Repository
-
+   
     let name = BehaviorSubject<String>(value: "")
     let birthday = BehaviorSubject<String>(value: "")
     let gender = BehaviorSubject<Int>(value: 0)
@@ -28,8 +27,10 @@ final class OnboardingViewModel {
     
     lazy var buttonTitle = currentPage.map({ $0 == 2 ? "Начать" : "Продолжить" })
     
-    init(repository: Repository) {
-        self.repository = repository
+    private var serviceProvider: ServiceProvider
+    
+    init(serviceProvider: ServiceProvider) {
+        self.serviceProvider = serviceProvider
         isNextButtonEnabled = Observable.combineLatest(name, birthday) {
             return !$0.isEmpty && !$1.isEmpty
         }
@@ -62,18 +63,21 @@ final class OnboardingViewModel {
             nightSleep: Converter.timeStringToMinutes(time: try! nightSleep.value()),
             nightMeal: Converter.timeStringToMinutes(time: try! nightMeal.value())
         )
-        repository.save(info: info)
+        
+        serviceProvider.userInfoService.save(info)
         OnboardingManager.shared.setOnboarded()
-        NotificationManager.shared.requestAuthorization() { granted in
-            self.setReminder(event: Events.breakfast, minutes: info.breakfast)
-            self.setReminder(event: Events.firstDaySleep, minutes: info.firstDaySleep)
-            self.setReminder(event: Events.dinner, minutes: info.dinner)
-            self.setReminder(event: Events.brunch, minutes: info.brunch)
-            self.setReminder(event: Events.secondBrunch, minutes: info.secondBrunch)
-            self.setReminder(event: Events.secondDaySleep, minutes: info.secondDaySleep)
-            self.setReminder(event: Events.eveningMeal, minutes: info.eveningMeal)
-            self.setReminder(event: Events.nightSleep, minutes: info.nightSleep)
-            self.setReminder(event: Events.nightMeal, minutes: info.nightMeal)
+        NotificationService.shared.requestAuthorization() { granted in
+            if (granted) {
+                self.setReminder(event: Events.breakfast, minutes: info.breakfast)
+                self.setReminder(event: Events.firstDaySleep, minutes: info.firstDaySleep)
+                self.setReminder(event: Events.dinner, minutes: info.dinner)
+                self.setReminder(event: Events.brunch, minutes: info.brunch)
+                self.setReminder(event: Events.secondBrunch, minutes: info.secondBrunch)
+                self.setReminder(event: Events.secondDaySleep, minutes: info.secondDaySleep)
+                self.setReminder(event: Events.eveningMeal, minutes: info.eveningMeal)
+                self.setReminder(event: Events.nightSleep, minutes: info.nightSleep)
+                self.setReminder(event: Events.nightMeal, minutes: info.nightMeal)
+            }
         }
     }
 
@@ -83,7 +87,7 @@ final class OnboardingViewModel {
         date.hour = tmp.hours
         date.minute = tmp.minutes
         let reminder = Reminder(reminderType: .calendar, date: date, repeats: true)
-        NotificationManager.shared.scheduleNotification(task: Task(name: event.rawValue, reminder: reminder))
+        serviceProvider.notificationService.scheduleNotification(task: NotificationTask(name: event.rawValue, reminder: reminder))
     }
     
 }

@@ -62,7 +62,7 @@ class Converter {
         return (Int(t[0]) ?? 0) * 60 + (Int(t[1]) ?? 0)
     }
 
-    static func minutesToString(totalMinutes: Int) -> String {
+    static func minutesToString(_ totalMinutes: Int) -> String {
         let tmp = getHoursAndMinutesFromString(totalMinutes: totalMinutes)
         return "\(String(format: "%02d",tmp.hours)):\(String(format: "%02d", tmp.minutes))"
     }
@@ -71,6 +71,20 @@ class Converter {
         let hours = totalMinutes / 60
         let minutes = totalMinutes - hours * 60
         return (hours: hours, minutes: minutes)
+    }
+    
+    static func convertBirthdayToAge(birthday: String) -> String {
+        let secondsInYear = Double(86400 * 365)
+        let secondsInMonth = Double(86400 * 30)
+        let currEpoch = NSDate().timeIntervalSince1970
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.mm.yyyy"
+        let date = dateFormatter.date(from: birthday)?.timeIntervalSince1970 ?? 0
+        let diffInSeconds = currEpoch - date
+        let years = Int(diffInSeconds / secondsInYear)
+        let months = Int((diffInSeconds - (Double(years) * secondsInYear)) / secondsInMonth)
+        let result = Converter.formAgeString(years: years, months: months)
+        return result
     }
 }
 

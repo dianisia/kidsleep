@@ -1,8 +1,13 @@
 import Foundation
 import UserNotifications
 
-class NotificationManager {
-    static let shared = NotificationManager()
+protocol NotificationServiceType {
+    func requestAuthorization(completion: @escaping (Bool) -> Void)
+    func scheduleNotification(task: NotificationTask)
+}
+
+class NotificationService: NotificationServiceType {
+    static let shared = NotificationService()
     var settings: UNNotificationSettings?
     
     func requestAuthorization(completion: @escaping (Bool) -> Void) {
@@ -14,7 +19,7 @@ class NotificationManager {
             }
     }
     
-    func fetchNotificationSettings() {
+    private func fetchNotificationSettings() {
         UNUserNotificationCenter.current().getNotificationSettings { settings in
             DispatchQueue.main.async {
                 self.settings = settings
@@ -22,7 +27,7 @@ class NotificationManager {
         }
     }
     
-    func scheduleNotification(task: Task) {
+    func scheduleNotification(task: NotificationTask) {
         let content = UNMutableNotificationContent()
         content.title = task.name
         content.body = "Совсем скоро \(task.name.lowercased())"

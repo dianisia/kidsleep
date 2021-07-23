@@ -8,10 +8,10 @@ class MainViewController: UIViewController {
     @IBOutlet weak var eventsView: CustomEventsView!
 
     var stories = BehaviorRelay<[Story]>(value: [])
-    
-    private let viewModel: MainViewModel = MainViewModel()
-    private let storiesViewModel: StoriesViewModel = StoriesViewModel()
-    private let eventsViewModel: EventsViewModel = EventsViewModel()
+
+    private let viewModel: MainViewModel = MainViewModel(serviceProvider: DIContainer.serviceProvider)
+    private let storiesViewModel: StoriesViewModel = StoriesViewModel(serviceProvider: DIContainer.serviceProvider)
+    private let eventsViewModel: EventsViewModel = EventsViewModel(serviceProvider: DIContainer.serviceProvider)
     private let storyDetailsViewController = StoryDetailsViewController()
     
     private let bag = DisposeBag()
