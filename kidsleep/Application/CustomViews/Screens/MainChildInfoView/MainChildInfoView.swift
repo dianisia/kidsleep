@@ -6,4 +6,8 @@ class MainChildInfoView: UICollectionViewCell {
     @IBOutlet weak var nameTextField: CustomTextField!
     @IBOutlet weak var genderSegmentControl: CustomSegmentControl!
     @IBOutlet weak var birthdayTextField: CustomDataPicker!
+    
+    override func didMoveToWindow() {
+        birthdayTextField.setMaximumDate(date: Date())
+    }
 }

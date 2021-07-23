@@ -30,11 +30,15 @@ class CustomDataPicker: CustomInput {
         inputAccessoryView = toolBar
     }
     
-    @objc func datePickerDone() {
+    func setMaximumDate(date: Date) {
+        datePicker.maximumDate = date
+    }
+    
+    @objc private func datePickerDone() {
         resignFirstResponder()
     }
     
-    @objc func dateChanged() {
+    @objc private func dateChanged() {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy"
         text = "\(dateFormatter.string(from: datePicker.date))"
