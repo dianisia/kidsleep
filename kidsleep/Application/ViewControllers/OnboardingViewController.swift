@@ -59,46 +59,48 @@ class OnboardingViewController: UIViewController {
         bindMainChildInfo()
         bindScheduleInfoView()
         
+        viewModel.currentPage.bind(onNext: {[unowned self] page in
+            pageController.currentPage = page
+        })
+        .disposed(by: disposeBag)
+        
+        viewModel.pageTitle.bind(to: informationLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        viewModel.buttonTitle.bind(to: nextButton.rx.title())
+            .disposed(by: disposeBag)
+        
+        viewModel.isNextButtonEnabled.bind(to: nextButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+        
         nextButton.rx.tap.bind { [unowned self] in
             self.onNextButtonTapped()
         }
         .disposed(by: disposeBag)
-        
-        currentPage.subscribe(onNext: { [unowned self] value in
-            pageController.currentPage = value
-            setInformationLabelText(currentPage: value)
-        })
-        .disposed(by: disposeBag)
     }
-
+    
     private func onNextButtonTapped() {
-        let currPageValue = try! currentPage.value()
-        
-        if (currPageValue == onboardingScreens.count - 1) {
-            viewModel.save()
-            let storyboard = UIStoryboard(name: "App", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
-            vc.modalPresentationStyle = .overCurrentContext
-            present(vc, animated: true, completion: nil)
+        if (pageController.currentPage == onboardingScreens.count - 1) {
+            viewModel.finishOnboarding()
+            openMain()
             return
         }
-        
-        currentPage.onNext(currPageValue + 1)
-        let indexPath = IndexPath(item: currPageValue + 1, section: 0)
+        let screenNumber = pageController.currentPage + 1
+        showNextScreen(screenNumber: screenNumber)
+    }
+    
+    private func openMain() {
+        let storyboard = UIStoryboard(name: "App", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
+        vc.modalPresentationStyle = .overCurrentContext
+        present(vc, animated: true, completion: nil)
+    }
+    
+    private func showNextScreen(screenNumber: Int) {
+        let indexPath = IndexPath(item: screenNumber, section: 0)
         collectionView.isPagingEnabled = false
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         collectionView.isPagingEnabled = true
-        
-        if (currPageValue == onboardingScreens.count - 2) {
-            nextButton.setTitle("Начать", for: .normal)
-        }
-    }
-    
-    private func setInformationLabelText(currentPage: Int) {
-        guard currentPage < Constants.onboardingTexts.count else {
-            return
-        }
-        informationLabel.text = Constants.onboardingTexts[currentPage]
     }
     
     private func bindMainChildInfo() {
@@ -108,14 +110,6 @@ class OnboardingViewController: UIViewController {
             .disposed(by: disposeBag)
         mainChildInfoView.genderSegmentControl.rx.selectedSegmentIndex.bind(to: viewModel.gender)
             .disposed(by: disposeBag)
-        let nameIsEmpty = mainChildInfoView.nameTextField.rx.text.orEmpty.map { !$0.isEmpty }
-        let birthdayIsEmpty = mainChildInfoView.birthdayTextField.rx.text.orEmpty.map { !$0.isEmpty }
-        
-        Observable.combineLatest(nameIsEmpty, birthdayIsEmpty) {
-            return $0 && $1
-        }
-        .bind(to: nextButton.rx.isEnabled)
-        .disposed(by: disposeBag)
     }
     
     private func bindScheduleInfoView() {
@@ -153,8 +147,9 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
         return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let width = scrollView.frame.width
-        currentPage.onNext(Int(scrollView.contentOffset.x / width))
+        let newPage = Int(scrollView.contentOffset.x / width)
+        viewModel.currentPage.accept(newPage)
     }
 }

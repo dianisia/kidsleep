@@ -3,9 +3,11 @@ import RxSwift
 import RxCocoa
 
 final class OnboardingViewModel {
+    private let titles = Constants.onboardingTexts
+    
     private let disposeBag = DisposeBag()
     private var repository: Repository
-    
+
     let name = BehaviorSubject<String>(value: "")
     let birthday = BehaviorSubject<String>(value: "")
     let gender = BehaviorSubject<Int>(value: 0)
@@ -19,11 +21,33 @@ final class OnboardingViewModel {
     let nightSleep = BehaviorSubject<String>(value: "")
     let nightMeal = BehaviorSubject<String>(value: "")
     
+    let currentPage = BehaviorRelay<Int>(value: 0)
+    let pageTitle = BehaviorRelay<String>(value: "")
+    var isNextButtonEnabled: Observable<Bool>
+    let isFinished = BehaviorRelay<Bool>(value: false)
+    
+    lazy var buttonTitle = currentPage.map({ $0 == 2 ? "Начать" : "Продолжить" })
+    
     init(repository: Repository) {
         self.repository = repository
+        isNextButtonEnabled = Observable.combineLatest(name, birthday) {
+            return !$0.isEmpty && !$1.isEmpty
+        }
+        
+        currentPage
+            .map({[unowned self] in self.titles[$0]})
+            .bind(to: pageTitle)
+            .disposed(by: disposeBag)
     }
     
-    func save() {
+    private func openMain() {
+        let storyboard = UIStoryboard(name: "App", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
+        vc.modalPresentationStyle = .overCurrentContext
+        UIApplication.shared.windows[0].rootViewController = vc
+    }
+    
+    func finishOnboarding() {
         let info = UserInfo(
             name: try! name.value(),
             birthday: try! birthday.value(),
@@ -45,7 +69,6 @@ final class OnboardingViewModel {
             self.setReminder(event: Events.firstDaySleep, minutes: info.firstDaySleep)
             self.setReminder(event: Events.dinner, minutes: info.dinner)
             self.setReminder(event: Events.brunch, minutes: info.brunch)
-            self.setReminder(event: Events.secondDaySleep, minutes: info.secondDaySleep)
             self.setReminder(event: Events.secondBrunch, minutes: info.secondBrunch)
             self.setReminder(event: Events.secondDaySleep, minutes: info.secondDaySleep)
             self.setReminder(event: Events.eveningMeal, minutes: info.eveningMeal)
