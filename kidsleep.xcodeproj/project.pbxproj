@@ -190,15 +190,13 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		E43C04CE2689F44B000FD441 /* Screens */ = {
+		E43C04CE2689F44B000FD441 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E4A38C9326A0564800D041CA /* SongsPlayerView */,
-				E4BE226D268B8438006E002E /* SongsInfoView */,
-				E43C04D4268A2D45000FD441 /* ScheduleInfoView */,
-				E43C04CF2689F455000FD441 /* MainChildInfoView */,
+				E460276A26AEB73F00B712FF /* Cells */,
+				E4A38C9426A0566E00D041CA /* SongsPlayerView.swift */,
 			);
-			path = Screens;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E43C04CF2689F455000FD441 /* MainChildInfoView */ = {
@@ -217,6 +215,16 @@
 				E43C04D7268A2D74000FD441 /* ScheduleInfoView.swift */,
 			);
 			path = ScheduleInfoView;
+			sourceTree = "<group>";
+		};
+		E460276A26AEB73F00B712FF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E43C04CF2689F455000FD441 /* MainChildInfoView */,
+				E4BE2272268B877D006E002E /* SongsInfoView.swift */,
+				E43C04D4268A2D45000FD441 /* ScheduleInfoView */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		E48B028E268F03E60068F438 /* Common */ = {
@@ -263,14 +271,6 @@
 				E4A38C9626A07C8500D041CA /* StoryDetailsViewController.swift */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		E4A38C9326A0564800D041CA /* SongsPlayerView */ = {
-			isa = PBXGroup;
-			children = (
-				E4A38C9426A0566E00D041CA /* SongsPlayerView.swift */,
-			);
-			path = SongsPlayerView;
 			sourceTree = "<group>";
 		};
 		E4A38E0D2684858C00E44AD8 = {
@@ -334,7 +334,7 @@
 		E4A38E30268499D400E44AD8 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				E43C04CE2689F44B000FD441 /* Screens */,
+				E43C04CE2689F44B000FD441 /* Views */,
 				E43C04CD2689F43B000FD441 /* Components */,
 			);
 			path = CustomViews;
@@ -379,14 +379,6 @@
 				E460276826AACE8400B712FF /* BaseService.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		E4BE226D268B8438006E002E /* SongsInfoView */ = {
-			isa = PBXGroup;
-			children = (
-				E4BE2272268B877D006E002E /* SongsInfoView.swift */,
-			);
-			path = SongsInfoView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
