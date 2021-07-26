@@ -32,8 +32,8 @@ class CustomStoriesView: UIView, UIScrollViewDelegate {
         collectionView.rx.setDelegate(self).disposed(by: bag)
     }
     
-    func configure(with stories: BehaviorRelay<[Story]>) {
-        self.stories = stories
+    func configure(with stories: StoriesViewModel.Output) {
+        self.stories = stories.stories
         self.stories.bind(to: collectionView.rx.items(cellIdentifier: CustomStoriesViewCell.identifier, cellType: CustomStoriesViewCell.self)) { row, data, cell in
             cell.configure(story: data)
         }

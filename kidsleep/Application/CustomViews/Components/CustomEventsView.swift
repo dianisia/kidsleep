@@ -88,25 +88,24 @@ class CustomEventsView: UIView {
         setup()
     }
 
-    func configure(with viewModel: EventsViewModel) {
-        let output = viewModel.transform()
-        output.breakfast.drive(breakfastTimeInput.rx.text)
+    func configure(with data: EventsViewModel.Output) {
+        data.breakfast.drive(breakfastTimeInput.rx.text)
             .disposed(by: bag)
-        output.firstDaySleep.drive(firstdaySleepTimeInput.rx.text)
+        data.firstDaySleep.drive(firstdaySleepTimeInput.rx.text)
             .disposed(by: bag)
-        output.brunch.drive(brunchTimeInput.rx.text)
+        data.brunch.drive(brunchTimeInput.rx.text)
             .disposed(by: bag)
-        output.dinner.drive(dinnerTimeInput.rx.text)
+        data.dinner.drive(dinnerTimeInput.rx.text)
             .disposed(by: bag)
-        output.secondDaySleep.drive(secondDaySleepInput.rx.text)
+        data.secondDaySleep.drive(secondDaySleepInput.rx.text)
             .disposed(by: bag)
-        output.secondBrunch.drive(secondBrunchTimeInput.rx.text)
+        data.secondBrunch.drive(secondBrunchTimeInput.rx.text)
             .disposed(by: bag)
-        output.eveningMeal.drive(eveningMealTimeInput.rx.text)
+        data.eveningMeal.drive(eveningMealTimeInput.rx.text)
             .disposed(by: bag)
-        output.nightSleep.drive(nightSleepTimeInput.rx.text)
+        data.nightSleep.drive(nightSleepTimeInput.rx.text)
             .disposed(by: bag)
-        output.nightMeal.drive(nightMealTimeInput.rx.text)
+        data.nightMeal.drive(nightMealTimeInput.rx.text)
             .disposed(by: bag)
     }
     
@@ -121,7 +120,10 @@ class CustomEventsView: UIView {
         addSubview(eveningMealTimeInput)
         addSubview(nightSleepTimeInput)
         addSubview(nightMealTimeInput)
-            
+        setupConstraints()
+    }
+    
+    private func setupConstraints() {
         addConstraintToElement(item: breakfastTimeInput)
         breakfastTimeInput.topAnchor.constraint(equalTo: topAnchor, constant: 12).isActive = true
 

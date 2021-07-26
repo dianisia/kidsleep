@@ -1,7 +1,15 @@
 import RxSwift
 import RxCocoa
 
-final class MainViewModel: ViewModelType {
+extension MainViewModel {
+    struct Output {
+        let name: Driver<String>
+        let age: Driver<String>
+        let nextEvent: Driver<(String, Int)>
+    }
+}
+
+final class MainViewModel {
     private let bag = DisposeBag()
     private var user: Observable<UserInfo>
     private var events = BehaviorRelay<[(Events, Int)]>(value: [])
@@ -26,12 +34,6 @@ final class MainViewModel: ViewModelType {
             nextEv.accept(getNextEvent(events: newEvents))
         })
         .disposed(by: bag)
-    }
-    
-    struct Output {
-        let name: Driver<String>
-        let age: Driver<String>
-        let nextEvent: Driver<(String, Int)>
     }
     
     func transform() -> Output {

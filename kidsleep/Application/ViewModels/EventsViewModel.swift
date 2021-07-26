@@ -2,11 +2,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-final class EventsViewModel {
-    private let disposeBag = DisposeBag()
-    private var user: Observable<UserInfo>
-    private var serviceProvider: ServiceProviderType
-    
+extension EventsViewModel {
     struct Output {
         let breakfast: Driver<String>
         let firstDaySleep: Driver<String>
@@ -18,6 +14,12 @@ final class EventsViewModel {
         let nightSleep: Driver<String>
         let nightMeal: Driver<String>
     }
+}
+
+final class EventsViewModel {
+    private let disposeBag = DisposeBag()
+    private var user: Observable<UserInfo>
+    private var serviceProvider: ServiceProviderType
     
     init(serviceProvider: ServiceProviderType) {
         self.serviceProvider = serviceProvider

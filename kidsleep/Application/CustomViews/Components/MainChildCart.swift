@@ -4,6 +4,7 @@ import RxSwift
 
 @IBDesignable
 class MainChildCard: UIView {
+    private let bag = DisposeBag()
     var eventType = "Event" {
         didSet {
             infoLabel.text = makeEventInfoString(event: eventType)
@@ -89,7 +90,7 @@ class MainChildCard: UIView {
         button.center.x = bounds.size.width / 2.0
         addSubview(button)
     }
-    
+
     private func makeEventInfoString(event: String) -> String {
         return "По графику дня, \(event.lowercased()) через"
     }
@@ -99,5 +100,17 @@ class MainChildCard: UIView {
         let hours = Int(minutes / minutesInHour)
         let minutes = minutes - hours * minutesInHour
         return Converter.formTimeString(hours: hours, minutes: minutes)
+    }
+    
+    func configure(with data: MainViewModel.Output) {
+        data.name.drive(nameLabel.rx.text)
+            .disposed(by: bag)
+        data.age.drive(ageLabel.rx.text)
+            .disposed(by: bag)
+        data.nextEvent.drive(onNext: {[unowned self] event in
+            eventType = event.0
+            minutesToNextEvent = event.1
+        })
+        .disposed(by: bag)
     }
 }

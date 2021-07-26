@@ -2,6 +2,12 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+extension StoriesViewModel {
+    struct Output {
+        let stories: BehaviorRelay<[Story]>
+    }
+}
+
 final class StoriesViewModel: ViewModelType {
     private var serviceProvider: ServiceProviderType
     // Dirty hack
@@ -16,10 +22,6 @@ final class StoriesViewModel: ViewModelType {
         self.serviceProvider = serviceProvider
     }
 
-    struct Output {
-        let stories: BehaviorRelay<[Story]>
-    }
-    
     func transform() -> Output {
         requestStories()
         return Output(stories: stories)

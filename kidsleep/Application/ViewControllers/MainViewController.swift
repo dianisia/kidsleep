@@ -18,7 +18,6 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        eventsView.configure(with: eventsViewModel)
         bindModels()
     
         storiesView.collectionView.rx.itemSelected
@@ -40,19 +39,11 @@ class MainViewController: UIViewController {
     }
     
     private func bindModels() {
-        let mainInfoOutput = mainViewModel.transform()
+        mainChildCardView.configure(with: mainViewModel.transform())
+        eventsView.configure(with: eventsViewModel.transform())
         
-        mainInfoOutput.name.drive(mainChildCardView.nameLabel.rx.text)
-            .disposed(by: bag)
-        mainInfoOutput.age.drive(mainChildCardView.ageLabel.rx.text)
-            .disposed(by: bag)
-        mainInfoOutput.nextEvent.drive(onNext: {[unowned self] event in
-            mainChildCardView.eventType = event.0
-            mainChildCardView.minutesToNextEvent = event.1
-        })
-        .disposed(by: bag)
-        
-        stories = storiesViewModel.transform().stories
-        storiesView.configure(with: stories)
+        let storiesViewModelOutput = storiesViewModel.transform()
+        stories = storiesViewModelOutput.stories
+        storiesView.configure(with: storiesViewModelOutput)
     }
 }
