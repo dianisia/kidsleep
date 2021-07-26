@@ -64,20 +64,28 @@ class StoryDetailsViewController: UIViewController {
         progressBar.frame = CGRect(x: 15, y: 20, width: view.frame.width - 30, height: 4)
         progressBar.topColor = UIColor(rgb: 0x6634F5)
         view.addSubview(progressBar)
-        
         view.addSubview(titleLabel)
+        view.addSubview(textLabel)
+        view.addSubview(imageView)
+        setupConstraints()
+    }
+    
+    private func setupConstraints() {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.topAnchor.constraint(equalTo: progressBar.bottomAnchor, constant: 20).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
         
-        view.addSubview(textLabel)
         textLabel.translatesAutoresizingMaskIntoConstraints = false
         textLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 16).isActive = true
         textLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
         textLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
         
-        view.addSubview(imageView)
+        textLabel.translatesAutoresizingMaskIntoConstraints = false
+        textLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 16).isActive = true
+        textLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
+        textLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
+        
         imageView.image = UIImage(named: "big_child")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.topAnchor.constraint(equalTo: textLabel.bottomAnchor, constant: 16).isActive = true

@@ -9,9 +9,9 @@ class MainViewController: UIViewController {
 
     var stories = BehaviorRelay<[Story]>(value: [])
 
-    private let viewModel: MainViewModel = MainViewModel(serviceProvider: DIContainer.serviceProvider)
-    private let storiesViewModel: StoriesViewModel = StoriesViewModel(serviceProvider: DIContainer.serviceProvider)
-    private let eventsViewModel: EventsViewModel = EventsViewModel(serviceProvider: DIContainer.serviceProvider)
+    private let mainViewModel = MainViewModel(serviceProvider: DIContainer.serviceProvider)
+    private let storiesViewModel = StoriesViewModel(serviceProvider: DIContainer.serviceProvider)
+    private let eventsViewModel = EventsViewModel(serviceProvider: DIContainer.serviceProvider)
     private let storyDetailsViewController = StoryDetailsViewController()
     
     private let bag = DisposeBag()
@@ -19,10 +19,10 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         eventsView.configure(with: eventsViewModel)
-        bindModel()
+        bindModels()
     
         storiesView.collectionView.rx.itemSelected
-            .subscribe(onNext: { [unowned self]indexPath in
+            .subscribe(onNext: { [unowned self] indexPath in
                 storyDetailsViewController.configure(with: stories.value)
                 storyDetailsViewController.setCurrentStory(tappedStoryIndex: indexPath.row)
                 present(storyDetailsViewController, animated: true, completion: nil)
@@ -39,14 +39,14 @@ class MainViewController: UIViewController {
         .lightContent
     }
     
-    private func bindModel() {
-        let output = viewModel.transform()
+    private func bindModels() {
+        let mainInfoOutput = mainViewModel.transform()
         
-        output.name.drive(mainChildCardView.nameLabel.rx.text)
+        mainInfoOutput.name.drive(mainChildCardView.nameLabel.rx.text)
             .disposed(by: bag)
-        output.age.drive(mainChildCardView.ageLabel.rx.text)
+        mainInfoOutput.age.drive(mainChildCardView.ageLabel.rx.text)
             .disposed(by: bag)
-        output.nextEvent.drive(onNext: {[unowned self] event in
+        mainInfoOutput.nextEvent.drive(onNext: {[unowned self] event in
             mainChildCardView.eventType = event.0
             mainChildCardView.minutesToNextEvent = event.1
         })
@@ -54,6 +54,5 @@ class MainViewController: UIViewController {
         
         stories = storiesViewModel.transform().stories
         storiesView.configure(with: stories)
-        
     }
 }
