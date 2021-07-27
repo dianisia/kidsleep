@@ -29,7 +29,7 @@ final class StoriesViewModel: ViewModelType {
     
     private func requestStories() {
         DispatchQueue.global(qos: .utility).async {[unowned self] in
-            serviceProvider.apiService.getStories {[unowned self] error, result in
+            serviceProvider.apiService.getStories { error, result in
                 guard error == nil, let result = result, result.count > 0 else {
                     return stories.accept([])
                 }
